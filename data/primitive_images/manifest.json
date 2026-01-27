@@ -1,0 +1,446 @@
+{
+  "Disneyland": {
+    "file": "disneyland.png",
+    "tier": 1,
+    "source": "exact",
+    "approx_char": "若",
+    "note": null,
+    "approximate": false
+  },
+  "Eiffel Tower": {
+    "file": "eiffel_tower.png",
+    "tier": 1,
+    "source": "exact",
+    "approx_char": "高",
+    "note": null,
+    "approximate": false
+  },
+  "Frankenbowser": {
+    "file": "frankenbowser.png",
+    "tier": 2,
+    "source": "approximate",
+    "approx_char": "尢",
+    "note": "尴 without 监",
+    "approximate": true
+  },
+  "Hercules": {
+    "file": "hercules.png",
+    "tier": 1,
+    "source": "exact",
+    "approx_char": "甚",
+    "note": null,
+    "approximate": false
+  },
+  "Magellan": {
+    "file": "magellan.png",
+    "tier": 1,
+    "source": "exact",
+    "approx_char": "旁",
+    "note": null,
+    "approximate": false
+  },
+  "Thanksgiving": {
+    "file": "thanksgiving.png",
+    "tier": 2,
+    "source": "approximate",
+    "approx_char": "栽",
+    "note": "≈载 without 车",
+    "approximate": true
+  },
+  "animal legs": {
+    "file": "animal_legs.png",
+    "tier": 2,
+    "source": "approximate",
+    "approx_char": "八",
+    "note": "only－口 from 只",
+    "approximate": true
+  },
+  "apron": {
+    "file": "apron.png",
+    "tier": 2,
+    "source": "approximate",
+    "approx_char": "冠",
+    "note": "≈冖+巾",
+    "approximate": true
+  },
+  "banner": {
+    "file": "banner.png",
+    "tier": 2,
+    "source": "approximate",
+    "approx_char": "㫃",
+    "note": "施 without 也",
+    "approximate": true
+  },
+  "barrette": {
+    "file": "barrette.png",
+    "tier": 2,
+    "source": "approximate",
+    "approx_char": "衣",
+    "note": "丧 without 十丷",
+    "approximate": true
+  },
+  "belch": {
+    "file": "belch.png",
+    "tier": 2,
+    "source": "approximate",
+    "approx_char": "㕣",
+    "note": "船 without 舟",
+    "approximate": true
+  },
+  "belt": {
+    "file": "belt.png",
+    "tier": 1,
+    "source": "exact",
+    "approx_char": "冂",
+    "note": null,
+    "approximate": false
+  },
+  "birdhouse": {
+    "file": "birdhouse.png",
+    "tier": 2,
+    "source": "approximate",
+    "approx_char": "受",
+    "note": "without 又",
+    "approximate": true
+  },
+  "bullfighter": {
+    "file": "bullfighter.png",
+    "tier": 2,
+    "source": "approximate",
+    "approx_char": "监",
+    "note": "鉴 without 金",
+    "approximate": true
+  },
+  "cadet": {
+    "file": "cadet.png",
+    "tier": 1,
+    "source": "exact",
+    "approx_char": "曹",
+    "note": null,
+    "approximate": false
+  },
+  "cast": {
+    "file": "cast.png",
+    "tier": 1,
+    "source": "exact",
+    "approx_char": "勹",
+    "note": null,
+    "approximate": false
+  },
+  "caverns": {
+    "file": "caverns.png",
+    "tier": 3,
+    "source": "placeholder",
+    "note": "席 without 巾 — 广+廿 top",
+    "approximate": false
+  },
+  "chapel": {
+    "file": "chapel.png",
+    "tier": 2,
+    "source": "approximate",
+    "approx_char": "宀",
+    "note": "索 without 糸",
+    "approximate": true
+  },
+  "chocolate turtle": {
+    "file": "chocolate_turtle.png",
+    "tier": 2,
+    "source": "approximate",
+    "approx_char": "将",
+    "note": "酱 without 酉",
+    "approximate": true
+  },
+  "chop": {
+    "file": "chop.png",
+    "tier": 2,
+    "source": "approximate",
+    "approx_char": "卩",
+    "note": "节 without 艹",
+    "approximate": true
+  },
+  "city walls": {
+    "file": "city_walls.png",
+    "tier": 1,
+    "source": "exact",
+    "approx_char": "阝",
+    "note": null,
+    "approximate": false
+  },
+  "cornstalk": {
+    "file": "cornstalk.png",
+    "tier": 2,
+    "source": "approximate",
+    "approx_char": "丰",
+    "note": "奉 without 大",
+    "approximate": true
+  },
+  "crutches": {
+    "file": "crutches.png",
+    "tier": 3,
+    "source": "placeholder",
+    "note": "介 without 𠆢 — two falling strokes",
+    "approximate": false
+  },
+  "decapitation": {
+    "file": "decapitation.png",
+    "tier": 2,
+    "source": "approximate",
+    "approx_char": "梁",
+    "note": "粱 without 米",
+    "approximate": true
+  },
+  "dog kennel": {
+    "file": "dog_kennel.png",
+    "tier": 1,
+    "source": "exact",
+    "approx_char": "因",
+    "note": null,
+    "approximate": false
+  },
+  "dunce": {
+    "file": "dunce.png",
+    "tier": 2,
+    "source": "approximate",
+    "approx_char": "侵",
+    "note": "浸 without 氵",
+    "approximate": true
+  },
+  "fencing foil": {
+    "file": "fencing_foil.png",
+    "tier": 2,
+    "source": "approximate",
+    "approx_char": "刂",
+    "note": "坚 without 圣",
+    "approximate": true
+  },
+  "flophouse": {
+    "file": "flophouse.png",
+    "tier": 1,
+    "source": "exact",
+    "approx_char": "家",
+    "note": null,
+    "approximate": false
+  },
+  "greenhouse": {
+    "file": "greenhouse.png",
+    "tier": 2,
+    "source": "approximate",
+    "approx_char": "宝",
+    "note": "≈荣 without 木",
+    "approximate": true
+  },
+  "grow up": {
+    "file": "grow_up.png",
+    "tier": 2,
+    "source": "approximate",
+    "approx_char": "龶",
+    "note": "毒 without 母",
+    "approximate": true
+  },
+  "hamster cage": {
+    "file": "hamster_cage.png",
+    "tier": 2,
+    "source": "approximate",
+    "approx_char": "塞",
+    "note": "赛 without 贝",
+    "approximate": true
+  },
+  "infant": {
+    "file": "infant.png",
+    "tier": 3,
+    "source": "placeholder",
+    "note": "充 without 儿 — top 亠厶 part",
+    "approximate": false
+  },
+  "key": {
+    "file": "key.png",
+    "tier": 2,
+    "source": "approximate",
+    "approx_char": "⺈",
+    "note": "侯 without 亻矢",
+    "approximate": true
+  },
+  "letter opener": {
+    "file": "letter_opener.png",
+    "tier": 2,
+    "source": "approximate",
+    "approx_char": "卯",
+    "note": "贸 without 贝",
+    "approximate": true
+  },
+  "lidded crock": {
+    "file": "lidded_crock.png",
+    "tier": 2,
+    "source": "approximate",
+    "approx_char": "吉",
+    "note": "inner part of 周",
+    "approximate": true
+  },
+  "mending": {
+    "file": "mending.png",
+    "tier": 2,
+    "source": "approximate",
+    "approx_char": "走",
+    "note": "without 十",
+    "approximate": true
+  },
+  "miser": {
+    "file": "miser.png",
+    "tier": 1,
+    "source": "exact",
+    "approx_char": "我",
+    "note": null,
+    "approximate": false
+  },
+  "outhouse": {
+    "file": "outhouse.png",
+    "tier": 2,
+    "source": "approximate",
+    "approx_char": "尚",
+    "note": "赏 without 贝",
+    "approximate": true
+  },
+  "owl": {
+    "file": "owl.png",
+    "tier": 2,
+    "source": "approximate",
+    "approx_char": "应",
+    "note": "without 广",
+    "approximate": true
+  },
+  "plow": {
+    "file": "plow.png",
+    "tier": 2,
+    "source": "approximate",
+    "approx_char": "乚",
+    "note": "以 without 丶人",
+    "approximate": true
+  },
+  "pointed tail": {
+    "file": "pointed_tail.png",
+    "tier": 2,
+    "source": "approximate",
+    "approx_char": "与",
+    "note": "without 丨一",
+    "approximate": true
+  },
+  "quarter": {
+    "file": "quarter.png",
+    "tier": 2,
+    "source": "approximate",
+    "approx_char": "拳",
+    "note": "眷 without 目",
+    "approximate": true
+  },
+  "razor wire": {
+    "file": "razor_wire.png",
+    "tier": 2,
+    "source": "approximate",
+    "approx_char": "那",
+    "note": "without 阝",
+    "approximate": true
+  },
+  "salad": {
+    "file": "salad.png",
+    "tier": 2,
+    "source": "approximate",
+    "approx_char": "龷",
+    "note": "昔 without 日",
+    "approximate": true
+  },
+  "scarecrow": {
+    "file": "scarecrow.png",
+    "tier": 2,
+    "source": "approximate",
+    "approx_char": "择",
+    "note": "泽 without 氵",
+    "approximate": true
+  },
+  "schoolhouse": {
+    "file": "schoolhouse.png",
+    "tier": 2,
+    "source": "approximate",
+    "approx_char": "学",
+    "note": "top part only — ⺍冖 without 子",
+    "approximate": true
+  },
+  "silage": {
+    "file": "silage.png",
+    "tier": 2,
+    "source": "approximate",
+    "approx_char": "垂",
+    "note": "without top/bottom 一",
+    "approximate": true
+  },
+  "slingshot": {
+    "file": "slingshot.png",
+    "tier": 2,
+    "source": "approximate",
+    "approx_char": "与",
+    "note": "without bottom 一",
+    "approximate": true
+  },
+  "sparkler": {
+    "file": "sparkler.png",
+    "tier": 3,
+    "source": "placeholder",
+    "note": "率 without 玄十 — 亠幺幺",
+    "approximate": false
+  },
+  "staples": {
+    "file": "staples.png",
+    "tier": 2,
+    "source": "approximate",
+    "approx_char": "𠂇",
+    "note": "印 without 卩",
+    "approximate": true
+  },
+  "stepladder": {
+    "file": "stepladder.png",
+    "tier": 1,
+    "source": "exact",
+    "approx_char": "登",
+    "note": null,
+    "approximate": false
+  },
+  "tool": {
+    "file": "tool.png",
+    "tier": 2,
+    "source": "approximate",
+    "approx_char": "具",
+    "note": "without 目",
+    "approximate": true
+  },
+  "tucked under the arm": {
+    "file": "tucked_under_the_arm.png",
+    "tier": 2,
+    "source": "approximate",
+    "approx_char": "又",
+    "note": "史 without 口",
+    "approximate": true
+  },
+  "wall": {
+    "file": "wall.png",
+    "tier": 2,
+    "source": "approximate",
+    "approx_char": "云",
+    "note": "会 without 亼",
+    "approximate": true
+  },
+  "wool": {
+    "file": "wool.png",
+    "tier": 2,
+    "source": "approximate",
+    "approx_char": "差",
+    "note": "without 工",
+    "approximate": true
+  },
+  "zipper": {
+    "file": "zipper.png",
+    "tier": 2,
+    "source": "approximate",
+    "approx_char": "與",
+    "note": "舆 without 车",
+    "approximate": true
+  }
+}

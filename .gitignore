@@ -1,0 +1,20 @@
+# Generated outputs
+*.apkg
+
+# Large binary data (not for git)
+data/*.pdf
+data/*.xlsx
+
+# Screenshots (copyrighted book content)
+data/primitive_screenshots/
+
+# Python
+__pycache__/
+*.pyc
+
+# Empty / unused dirs
+data/nonunicode_prims/
+src/
+
+# OS
+.DS_Store

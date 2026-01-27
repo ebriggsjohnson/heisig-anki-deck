@@ -1,0 +1,4041 @@
+[
+  {
+    "character": "訁",
+    "codepoint": "U+8A01",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-8A01",
+    "frequency": 98,
+    "ids": "^言$(G)"
+  },
+  {
+    "character": "糹",
+    "codepoint": "U+7CF9",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-7CF9",
+    "frequency": 95,
+    "ids": "^⿱幺{86}$(G)"
+  },
+  {
+    "character": "釒",
+    "codepoint": "U+91D2",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-91D2",
+    "frequency": 76,
+    "ids": "^釒$(G)"
+  },
+  {
+    "character": "𥫗",
+    "codepoint": "U+25AD7",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-25AD7",
+    "frequency": 73,
+    "ids": "^𥫗$(GV)"
+  },
+  {
+    "character": "刂",
+    "codepoint": "U+5202",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-5202",
+    "frequency": 50,
+    "ids": "^⿰丨亅$(GHTJK)"
+  },
+  {
+    "character": "㇒",
+    "codepoint": "U+31D2",
+    "unicode_name": "CJK STROKE P",
+    "frequency": 49,
+    "ids": "?"
+  },
+  {
+    "character": "丿",
+    "codepoint": "U+4E3F",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-4E3F",
+    "frequency": 39,
+    "ids": "^丿$(GHTJKPV)"
+  },
+  {
+    "character": "彳",
+    "codepoint": "U+5F73",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-5F73",
+    "frequency": 39,
+    "ids": "^⿱𰀪丨$(GHTJKP)"
+  },
+  {
+    "character": "𤣩",
+    "codepoint": "U+248E9",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-248E9",
+    "frequency": 38,
+    "ids": "^𤣩$(HT)"
+  },
+  {
+    "character": "𧾷",
+    "codepoint": "U+27FB7",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-27FB7",
+    "frequency": 33,
+    "ids": "^⿱口止$(JV)"
+  },
+  {
+    "character": "罒",
+    "codepoint": "U+7F52",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-7F52",
+    "frequency": 23,
+    "ids": "^⿴囗⿰丨丨$(GHTJP)"
+  },
+  {
+    "character": "乚",
+    "codepoint": "U+4E5A",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-4E5A",
+    "frequency": 21,
+    "ids": "^乚$(GHTJ)"
+  },
+  {
+    "character": "飠",
+    "codepoint": "U+98E0",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-98E0",
+    "frequency": 18,
+    "ids": "^飠$(GHJ)"
+  },
+  {
+    "character": "爫",
+    "codepoint": "U+722B",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-722B",
+    "frequency": 13,
+    "ids": "^⿱㇒𭕄$(GH[M]TV[B])"
+  },
+  {
+    "character": "虍",
+    "codepoint": "U+864D",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-864D",
+    "frequency": 13,
+    "ids": "^⿸{13}七$(GTJKP)"
+  },
+  {
+    "character": "𧘇",
+    "codepoint": "U+27607",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-27607",
+    "frequency": 11,
+    "ids": "^𧘇$(HV)"
+  },
+  {
+    "character": "巳",
+    "codepoint": "U+5DF3",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-5DF3",
+    "frequency": 11,
+    "ids": "^巳$(GHTJKPV)"
+  },
+  {
+    "character": "亅",
+    "codepoint": "U+4E85",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-4E85",
+    "frequency": 10,
+    "ids": "^亅$(GHTJKP)"
+  },
+  {
+    "character": "𫜹",
+    "codepoint": "U+2B739",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2B739",
+    "frequency": 10,
+    "ids": "^⿼{50}一$(MVU)"
+  },
+  {
+    "character": "僉",
+    "codepoint": "U+50C9",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-50C9",
+    "frequency": 10,
+    "ids": "^⿳{88}吅从$(GHTJKP)"
+  },
+  {
+    "character": "龶",
+    "codepoint": "U+9FB6",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-9FB6",
+    "frequency": 10,
+    "ids": "^⿻土一$(GU)"
+  },
+  {
+    "character": "𦍌",
+    "codepoint": "U+2634C",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2634C",
+    "frequency": 9,
+    "ids": "^⿱䒑土$(GHTJV)"
+  },
+  {
+    "character": "亍",
+    "codepoint": "U+4E8D",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-4E8D",
+    "frequency": 9,
+    "ids": "^⿱一丁$(GHTJKPV)"
+  },
+  {
+    "character": "牜",
+    "codepoint": "U+725C",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-725C",
+    "frequency": 9,
+    "ids": "^牜$(GHJ)"
+  },
+  {
+    "character": "覀",
+    "codepoint": "U+8980",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-8980",
+    "frequency": 9,
+    "ids": "^⿱一⿻口⿰丨丨$(GHJ)"
+  },
+  {
+    "character": "丬",
+    "codepoint": "U+4E2C",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-4E2C",
+    "frequency": 9,
+    "ids": "^⿰冫丨$(GHJ)"
+  },
+  {
+    "character": "䒑",
+    "codepoint": "U+4491",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-4491",
+    "frequency": 9,
+    "ids": "^⿱丷一$(HJ)"
+  },
+  {
+    "character": "廾",
+    "codepoint": "U+5EFE",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-5EFE",
+    "frequency": 8,
+    "ids": "^⿻一⿰丿丨$(GHTJKPV)"
+  },
+  {
+    "character": "巠",
+    "codepoint": "U+5DE0",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-5DE0",
+    "frequency": 8,
+    "ids": "^⿳一巛工$(GHTJK)"
+  },
+  {
+    "character": "𫩠",
+    "codepoint": "U+2BA60",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2BA60",
+    "frequency": 8,
+    "ids": "^⿱龸口$(M)"
+  },
+  {
+    "character": "𢦏",
+    "codepoint": "U+2298F",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2298F",
+    "frequency": 8,
+    "ids": "^⿽戈十$(GTJV)"
+  },
+  {
+    "character": "𰃮",
+    "codepoint": "U+300EE",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-300EE",
+    "frequency": 8,
+    "ids": "^⿱𭕄冖$(B)"
+  },
+  {
+    "character": "氺",
+    "codepoint": "U+6C3A",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-6C3A",
+    "frequency": 8,
+    "ids": "^⿰冫𰛅$(GHJK)"
+  },
+  {
+    "character": "𠃊",
+    "codepoint": "U+200CA",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-200CA",
+    "frequency": 8,
+    "ids": "^𠃊$(GHV)"
+  },
+  {
+    "character": "𠘨",
+    "codepoint": "U+20628",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-20628",
+    "frequency": 8,
+    "ids": "^⿰丿⺄$(JV)"
+  },
+  {
+    "character": "𰀁",
+    "codepoint": "U+30001",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-30001",
+    "frequency": 8,
+    "ids": "^⿻二丨$(VB)"
+  },
+  {
+    "character": "戔",
+    "codepoint": "U+6214",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-6214",
+    "frequency": 8,
+    "ids": "^⿱戈戈$(GHTJKP)"
+  },
+  {
+    "character": "昜",
+    "codepoint": "U+661C",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-661C",
+    "frequency": 8,
+    "ids": "^⿱旦勿$(GHTJKP)"
+  },
+  {
+    "character": "𭕄",
+    "codepoint": "U+2D544",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2D544",
+    "frequency": 7,
+    "ids": "^⿲丶丶㇒$(J)"
+  },
+  {
+    "character": "龷",
+    "codepoint": "U+9FB7",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-9FB7",
+    "frequency": 7,
+    "ids": "^⿱卄一$(GU)"
+  },
+  {
+    "character": "𠮛",
+    "codepoint": "U+20B9B",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-20B9B",
+    "frequency": 7,
+    "ids": "^⿱一口$(GT)"
+  },
+  {
+    "character": "咼",
+    "codepoint": "U+54BC",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-54BC",
+    "frequency": 6,
+    "ids": "^⿵冎口$(GHTJKPV)"
+  },
+  {
+    "character": "𡭔",
+    "codepoint": "U+21B54",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-21B54",
+    "frequency": 6,
+    "ids": "^⿲㇒丨丶$(G)"
+  },
+  {
+    "character": "夊",
+    "codepoint": "U+590A",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-590A",
+    "frequency": 6,
+    "ids": "^夊$(GHTJKP)"
+  },
+  {
+    "character": "龹",
+    "codepoint": "U+9FB9",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-9FB9",
+    "frequency": 6,
+    "ids": "^⿻丷夫$(G)"
+  },
+  {
+    "character": "丆",
+    "codepoint": "U+4E06",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-4E06",
+    "frequency": 6,
+    "ids": "^⿱一丿$(GK)"
+  },
+  {
+    "character": "𤇾",
+    "codepoint": "U+241FE",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-241FE",
+    "frequency": 6,
+    "ids": "^⿱炏冖$(GTJV)"
+  },
+  {
+    "character": "𱼀",
+    "codepoint": "U+31F00",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-31F00",
+    "frequency": 6,
+    "ids": "^⿻夕丶$(S)"
+  },
+  {
+    "character": "㑒",
+    "codepoint": "U+3452",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-3452",
+    "frequency": 6,
+    "ids": "^⿱𠆢⿱一⿻口人$(J)"
+  },
+  {
+    "character": "兀",
+    "codepoint": "U+5140",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-5140",
+    "frequency": 6,
+    "ids": "^⿱一儿$(GHTJKPV)"
+  },
+  {
+    "character": "丅",
+    "codepoint": "U+4E05",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-4E05",
+    "frequency": 6,
+    "ids": "^⿱一丨$(GTJ)"
+  },
+  {
+    "character": "睪",
+    "codepoint": "U+776A",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-776A",
+    "frequency": 6,
+    "ids": "^⿱罒幸$(GHTJKP)"
+  },
+  {
+    "character": "乂",
+    "codepoint": "U+4E42",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-4E42",
+    "frequency": 6,
+    "ids": "^乂$(GHTJKPV)"
+  },
+  {
+    "character": "柬",
+    "codepoint": "U+67EC",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-67EC",
+    "frequency": 6,
+    "ids": "^⿻木⿴囗丷$(GHTJKP)"
+  },
+  {
+    "character": "𰁜",
+    "codepoint": "U+3005C",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-3005C",
+    "frequency": 6,
+    "ids": "^⿱亠⿻⿰丨丨八$(B)"
+  },
+  {
+    "character": "臤",
+    "codepoint": "U+81E4",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-81E4",
+    "frequency": 6,
+    "ids": "^⿰臣又$(GHTJK)"
+  },
+  {
+    "character": "侖",
+    "codepoint": "U+4F96",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-4F96",
+    "frequency": 5,
+    "ids": "^⿱{88}𠕁$(GHTJKPV)"
+  },
+  {
+    "character": "咢",
+    "codepoint": "U+54A2",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-54A2",
+    "frequency": 5,
+    "ids": "^⿱吅亏$(GHTJKPV)"
+  },
+  {
+    "character": "𮥶",
+    "codepoint": "U+2E976",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2E976",
+    "frequency": 5,
+    "ids": "^⿱𠂉⿻一隹$(J)"
+  },
+  {
+    "character": "𫇦",
+    "codepoint": "U+2B1E6",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2B1E6",
+    "frequency": 5,
+    "ids": "^⿱艹冖$(GTV)"
+  },
+  {
+    "character": "冋",
+    "codepoint": "U+518B",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-518B",
+    "frequency": 5,
+    "ids": "^⿵冂口$(GTJ)"
+  },
+  {
+    "character": "髟",
+    "codepoint": "U+9ADF",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-9ADF",
+    "frequency": 5,
+    "ids": "^⿰镸彡$(GHTJKP)"
+  },
+  {
+    "character": "𦰩",
+    "codepoint": "U+26C29",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-26C29",
+    "frequency": 5,
+    "ids": "^⿱艹⿻𠮡人$(J)"
+  },
+  {
+    "character": "𠘧",
+    "codepoint": "U+20627",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-20627",
+    "frequency": 5,
+    "ids": "^⿰丿㇅$(GT)"
+  },
+  {
+    "character": "厷",
+    "codepoint": "U+53B7",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-53B7",
+    "frequency": 5,
+    "ids": "^⿸𠂇厶$(GTJKP)"
+  },
+  {
+    "character": "蜀",
+    "codepoint": "U+8700",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-8700",
+    "frequency": 5,
+    "ids": "^⿱罒𠣜$(GHTJKPV)"
+  },
+  {
+    "character": "𠃋",
+    "codepoint": "U+200CB",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-200CB",
+    "frequency": 5,
+    "ids": "^𠃋$(GHT)"
+  },
+  {
+    "character": "龰",
+    "codepoint": "U+9FB0",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-9FB0",
+    "frequency": 5,
+    "ids": "^⿺人⺊$(H)"
+  },
+  {
+    "character": "𠬤",
+    "codepoint": "U+20B24",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-20B24",
+    "frequency": 5,
+    "ids": "^⿱又𰀁$(GV)"
+  },
+  {
+    "character": "䜌",
+    "codepoint": "U+470C",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-470C",
+    "frequency": 5,
+    "ids": "^⿲糹言糸$(G)"
+  },
+  {
+    "character": "𡨄",
+    "codepoint": "U+21A04",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-21A04",
+    "frequency": 5,
+    "ids": "^⿳宀𠀎八$(GTV)"
+  },
+  {
+    "character": "𦥑",
+    "codepoint": "U+26951",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-26951",
+    "frequency": 5,
+    "ids": "^⿰{71}𫜹$(GHTJ)"
+  },
+  {
+    "character": "尢",
+    "codepoint": "U+5C22",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-5C22",
+    "frequency": 5,
+    "ids": "^⿸𠂇乚$(GHTJKP)"
+  },
+  {
+    "character": "𰀡",
+    "codepoint": "U+30021",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-30021",
+    "frequency": 5,
+    "ids": "^⿲丨丨又$(VB)"
+  },
+  {
+    "character": "㐮",
+    "codepoint": "U+342E",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-342E",
+    "frequency": 5,
+    "ids": "^⿳六𠀎𧘇$(GTJ)"
+  },
+  {
+    "character": "婁",
+    "codepoint": "U+5A41",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-5A41",
+    "frequency": 5,
+    "ids": "^⿱⿻⿱⿻口一口丨女$(GHTJKPV)"
+  },
+  {
+    "character": "冓",
+    "codepoint": "U+5193",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-5193",
+    "frequency": 4,
+    "ids": "^⿱𠀎冉$(GHTJKP)"
+  },
+  {
+    "character": "帚",
+    "codepoint": "U+5E1A",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-5E1A",
+    "frequency": 4,
+    "ids": "^⿳𫜹冖巾$(G)"
+  },
+  {
+    "character": "𠃍",
+    "codepoint": "U+200CD",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-200CD",
+    "frequency": 4,
+    "ids": "^𠃍$(HK)"
+  },
+  {
+    "character": "韱",
+    "codepoint": "U+97F1",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-97F1",
+    "frequency": 4,
+    "ids": "^⿹㦰韭$(GHTJKP)"
+  },
+  {
+    "character": "卄",
+    "codepoint": "U+5344",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-5344",
+    "frequency": 4,
+    "ids": "^⿻一⿰丨丨$(GTKP)"
+  },
+  {
+    "character": "匊",
+    "codepoint": "U+530A",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-530A",
+    "frequency": 4,
+    "ids": "^⿹勹米$(GHTJKP)"
+  },
+  {
+    "character": "戠",
+    "codepoint": "U+6220",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-6220",
+    "frequency": 4,
+    "ids": "^⿻音{97}$(GH)"
+  },
+  {
+    "character": "耂",
+    "codepoint": "U+8002",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-8002",
+    "frequency": 4,
+    "ids": "^⿻土㇒$(GHTJ)"
+  },
+  {
+    "character": "玨",
+    "codepoint": "U+73A8",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-73A8",
+    "frequency": 4,
+    "ids": "^⿰𤣩王$(GHTJP)"
+  },
+  {
+    "character": "卆",
+    "codepoint": "U+5346",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-5346",
+    "frequency": 4,
+    "ids": "^⿱九十$(GTJKP)"
+  },
+  {
+    "character": "彔",
+    "codepoint": "U+5F54",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-5F54",
+    "frequency": 4,
+    "ids": "^⿱彑氺$(GJK)"
+  },
+  {
+    "character": "丄",
+    "codepoint": "U+4E04",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-4E04",
+    "frequency": 4,
+    "ids": "^⿱丨一$(GHTJ)"
+  },
+  {
+    "character": "戎",
+    "codepoint": "U+620E",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-620E",
+    "frequency": 4,
+    "ids": "^⿹戈𠂇$(GHTJKPV)"
+  },
+  {
+    "character": "咠",
+    "codepoint": "U+54A0",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-54A0",
+    "frequency": 4,
+    "ids": "^⿱口耳$(GHTJKPV)"
+  },
+  {
+    "character": "闌",
+    "codepoint": "U+95CC",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-95CC",
+    "frequency": 4,
+    "ids": "^⿵門柬$(GHTJKPV)"
+  },
+  {
+    "character": "亘",
+    "codepoint": "U+4E98",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-4E98",
+    "frequency": 4,
+    "ids": "^⿱一旦$(GHTJKP)"
+  },
+  {
+    "character": "鹵",
+    "codepoint": "U+9E75",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-9E75",
+    "frequency": 4,
+    "ids": "^⿱⺊𱕻$(GHTJKPV)"
+  },
+  {
+    "character": "𠮷",
+    "codepoint": "U+20BB7",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-20BB7",
+    "frequency": 3,
+    "ids": "^⿱土口$(T)"
+  },
+  {
+    "character": "𠤎",
+    "codepoint": "U+2090E",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2090E",
+    "frequency": 3,
+    "ids": "^⿻乚㇒$(GTP)"
+  },
+  {
+    "character": "覃",
+    "codepoint": "U+8983",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-8983",
+    "frequency": 3,
+    "ids": "^⿱覀早$(GHTKP[V][S][B])"
+  },
+  {
+    "character": "䖵",
+    "codepoint": "U+45B5",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-45B5",
+    "frequency": 3,
+    "ids": "^⿰虫虫$(GTP)"
+  },
+  {
+    "character": "悤",
+    "codepoint": "U+60A4",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-60A4",
+    "frequency": 3,
+    "ids": "^⿱囱心$(GHTJKP)"
+  },
+  {
+    "character": "隺",
+    "codepoint": "U+96BA",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-96BA",
+    "frequency": 3,
+    "ids": "^⿻冖隹$(GTJKP)"
+  },
+  {
+    "character": "乀",
+    "codepoint": "U+4E40",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-4E40",
+    "frequency": 3,
+    "ids": "^乀$(GTJKP)"
+  },
+  {
+    "character": "耆",
+    "codepoint": "U+8006",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-8006",
+    "frequency": 3,
+    "ids": "^⿱老日$(GHTJKP)"
+  },
+  {
+    "character": "𰀢",
+    "codepoint": "U+30022",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-30022",
+    "frequency": 3,
+    "ids": "^⿲丨丨⿱𠂉丶$(VB)"
+  },
+  {
+    "character": "賁",
+    "codepoint": "U+8CC1",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-8CC1",
+    "frequency": 3,
+    "ids": "^⿱卉貝$(GHTJK)"
+  },
+  {
+    "character": "㦮",
+    "codepoint": "U+39AE",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-39AE",
+    "frequency": 3,
+    "ids": "^⿻戋一$(TJK)"
+  },
+  {
+    "character": "𠄌",
+    "codepoint": "U+2010C",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2010C",
+    "frequency": 3,
+    "ids": "^𠄌$(GHT)"
+  },
+  {
+    "character": "菐",
+    "codepoint": "U+83D0",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-83D0",
+    "frequency": 3,
+    "ids": "^⿳业䒑夫$(GTJ)"
+  },
+  {
+    "character": "蚤",
+    "codepoint": "U+86A4",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-86A4",
+    "frequency": 3,
+    "ids": "^⿱叉虫$(GV)"
+  },
+  {
+    "character": "劦",
+    "codepoint": "U+52A6",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-52A6",
+    "frequency": 3,
+    "ids": "^⿱力𠠴$(GHTJK)"
+  },
+  {
+    "character": "龴",
+    "codepoint": "U+9FB4",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-9FB4",
+    "frequency": 3,
+    "ids": "^⿱乛丶$(GU)"
+  },
+  {
+    "character": "龸",
+    "codepoint": "U+9FB8",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-9FB8",
+    "frequency": 3,
+    "ids": "^⿱⺌冖$(GU)"
+  },
+  {
+    "character": "冝",
+    "codepoint": "U+519D",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-519D",
+    "frequency": 3,
+    "ids": "^⿱冖且$(GTJK)"
+  },
+  {
+    "character": "卯",
+    "codepoint": "U+536F",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-536F",
+    "frequency": 3,
+    "ids": "^⿰𠂎卩$(GHTJKPV)"
+  },
+  {
+    "character": "巤",
+    "codepoint": "U+5DE4",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-5DE4",
+    "frequency": 3,
+    "ids": "^⿳巛龱{16}$(G[H]TJK[V][B])"
+  },
+  {
+    "character": "巿",
+    "codepoint": "U+5DFF",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-5DFF",
+    "frequency": 3,
+    "ids": "^⿻一巾$(GHTK)"
+  },
+  {
+    "character": "𬺰",
+    "codepoint": "U+2CEB0",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2CEB0",
+    "frequency": 3,
+    "ids": "^⿻一亅$(J)"
+  },
+  {
+    "character": "𫠣",
+    "codepoint": "U+2B823",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2B823",
+    "frequency": 3,
+    "ids": "^⿻⿻一𠃋⿻𠃌八$(U)"
+  },
+  {
+    "character": "叕",
+    "codepoint": "U+53D5",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-53D5",
+    "frequency": 3,
+    "ids": "^⿱双双$(GTJK)"
+  },
+  {
+    "character": "蒦",
+    "codepoint": "U+84A6",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-84A6",
+    "frequency": 3,
+    "ids": "^⿱艹隻$(GTJKP[V][S][B])"
+  },
+  {
+    "character": "巛",
+    "codepoint": "U+5DDB",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-5DDB",
+    "frequency": 3,
+    "ids": "^⿲𡿨𡿨𡿨$(GHTJKP)"
+  },
+  {
+    "character": "𣥂",
+    "codepoint": "U+23942",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-23942",
+    "frequency": 3,
+    "ids": "^㇯少丶$(GT)"
+  },
+  {
+    "character": "𠀃",
+    "codepoint": "U+20003",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-20003",
+    "frequency": 3,
+    "ids": "^⿱冂一$(GT)"
+  },
+  {
+    "character": "㐌",
+    "codepoint": "U+340C",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-340C",
+    "frequency": 3,
+    "ids": "^⿱𠂉也$(GTKPV)"
+  },
+  {
+    "character": "𢖻",
+    "codepoint": "U+225BB",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-225BB",
+    "frequency": 3,
+    "ids": "^⿱心夊$(GT)"
+  },
+  {
+    "character": "朔",
+    "codepoint": "U+6714",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-6714",
+    "frequency": 3,
+    "ids": "^⿰屰月$(GHTJKPV)"
+  },
+  {
+    "character": "䧹",
+    "codepoint": "U+49F9",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-49F9",
+    "frequency": 3,
+    "ids": "^⿸广倠$(GTV)"
+  },
+  {
+    "character": "𠬝",
+    "codepoint": "U+20B1D",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-20B1D",
+    "frequency": 3,
+    "ids": "^⿸卩又$(GTJV)"
+  },
+  {
+    "character": "𠬶",
+    "codepoint": "U+20B36",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-20B36",
+    "frequency": 3,
+    "ids": "^⿳𫜹冖又$([G]V[S][B])"
+  },
+  {
+    "character": "黽",
+    "codepoint": "U+9EFD",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-9EFD",
+    "frequency": 3,
+    "ids": "^⿷⿹{91}𰀄𫜹$(GHTJKP)"
+  },
+  {
+    "character": "𠃑",
+    "codepoint": "U+200D1",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-200D1",
+    "frequency": 2,
+    "ids": "^𠃑$(HT)"
+  },
+  {
+    "character": "彖",
+    "codepoint": "U+5F56",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-5F56",
+    "frequency": 2,
+    "ids": "^⿱彑𧰨$(GHTJKP)"
+  },
+  {
+    "character": "𤰔",
+    "codepoint": "U+24C14",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-24C14",
+    "frequency": 2,
+    "ids": "^⿻一由$(G)"
+  },
+  {
+    "character": "陏",
+    "codepoint": "U+964F",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-964F",
+    "frequency": 2,
+    "ids": "^⿰阝有$(GHTJKP)"
+  },
+  {
+    "character": "𠂒",
+    "codepoint": "U+20092",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-20092",
+    "frequency": 2,
+    "ids": "^⿰㇒土$(T)"
+  },
+  {
+    "character": "镸",
+    "codepoint": "U+9578",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-9578",
+    "frequency": 2,
+    "ids": "^⿱{76}厶$(GHTJK)"
+  },
+  {
+    "character": "𭔰",
+    "codepoint": "U+2D530",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2D530",
+    "frequency": 2,
+    "ids": "^⿰豆寸$(S)"
+  },
+  {
+    "character": "𦣻",
+    "codepoint": "U+268FB",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-268FB",
+    "frequency": 2,
+    "ids": "^⿱一自$(GTV)"
+  },
+  {
+    "character": "𢼄",
+    "codepoint": "U+22F04",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-22F04",
+    "frequency": 2,
+    "ids": "^⿰户攵$(GV)"
+  },
+  {
+    "character": "氶",
+    "codepoint": "U+6C36",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-6C36",
+    "frequency": 2,
+    "ids": "^⿱乛水$(GHTJK)"
+  },
+  {
+    "character": "奚",
+    "codepoint": "U+595A",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-595A",
+    "frequency": 2,
+    "ids": "^⿱爫𡗞$(GHTJKPV)"
+  },
+  {
+    "character": "𤔔",
+    "codepoint": "U+24514",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-24514",
+    "frequency": 2,
+    "ids": "^⿳爫龴𱏻$(GTPV)"
+  },
+  {
+    "character": "㳄",
+    "codepoint": "U+3CC4",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-3CC4",
+    "frequency": 2,
+    "ids": "^⿰氵欠$(GTKPV)"
+  },
+  {
+    "character": "匡",
+    "codepoint": "U+5321",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-5321",
+    "frequency": 2,
+    "ids": "^⿷匚王$(GHTJKPV)"
+  },
+  {
+    "character": "厄",
+    "codepoint": "U+5384",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-5384",
+    "frequency": 2,
+    "ids": "^⿸厂㔾$(GHTJKPV)"
+  },
+  {
+    "character": "厽",
+    "codepoint": "U+53BD",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-53BD",
+    "frequency": 2,
+    "ids": "^⿱厶厸$(GTJ)"
+  },
+  {
+    "character": "敕",
+    "codepoint": "U+6555",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-6555",
+    "frequency": 2,
+    "ids": "^⿰束攵$(GHTJKPV)"
+  },
+  {
+    "character": "𰧭",
+    "codepoint": "U+309ED",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-309ED",
+    "frequency": 2,
+    "ids": "^⿱士示$(S)"
+  },
+  {
+    "character": "褱",
+    "codepoint": "U+8931",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-8931",
+    "frequency": 2,
+    "ids": "^⿳亠⿱罒⿴{11}丨𧘇$(GHTP[V][B])"
+  },
+  {
+    "character": "㚘",
+    "codepoint": "U+3698",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-3698",
+    "frequency": 2,
+    "ids": "^⿰夫夫$(GTK)"
+  },
+  {
+    "character": "爻",
+    "codepoint": "U+723B",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-723B",
+    "frequency": 2,
+    "ids": "^⿱㐅乂$(GHTJKPV)"
+  },
+  {
+    "character": "毌",
+    "codepoint": "U+6BCC",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-6BCC",
+    "frequency": 2,
+    "ids": "^毌$(GHTJKP)"
+  },
+  {
+    "character": "𭕆",
+    "codepoint": "U+2D546",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2D546",
+    "frequency": 2,
+    "ids": "^⿱⺌贝$(G)"
+  },
+  {
+    "character": "臧",
+    "codepoint": "U+81E7",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-81E7",
+    "frequency": 2,
+    "ids": "^⿵{61}臣$(GHTJKPV)"
+  },
+  {
+    "character": "𠕁",
+    "codepoint": "U+20541",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-20541",
+    "frequency": 2,
+    "ids": "^⿵冂卄$(GT)"
+  },
+  {
+    "character": "乑",
+    "codepoint": "U+4E51",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-4E51",
+    "frequency": 2,
+    "ids": "^⿱㇒⿰𰀪𰀠$(GTJP)"
+  },
+  {
+    "character": "𣶒",
+    "codepoint": "U+23D92",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-23D92",
+    "frequency": 2,
+    "ids": "^⿻⿰片爿一$(GTV)"
+  },
+  {
+    "character": "㡭",
+    "codepoint": "U+386D",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-386D",
+    "frequency": 2,
+    "ids": "^⿺𠃊⿳𢆶一𢆶$(GT)"
+  },
+  {
+    "character": "朩",
+    "codepoint": "U+6729",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-6729",
+    "frequency": 2,
+    "ids": "^⿻𬺰八$(G)"
+  },
+  {
+    "character": "朁",
+    "codepoint": "U+6701",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-6701",
+    "frequency": 2,
+    "ids": "^⿱兓日$(G[V][B])"
+  },
+  {
+    "character": "畾",
+    "codepoint": "U+757E",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-757E",
+    "frequency": 2,
+    "ids": "^⿱田⿰田田$(GHTJKP)"
+  },
+  {
+    "character": "𠂢",
+    "codepoint": "U+200A2",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-200A2",
+    "frequency": 2,
+    "ids": "^⿸𠂆{15}$(GTP)"
+  },
+  {
+    "character": "𥃭",
+    "codepoint": "U+250ED",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-250ED",
+    "frequency": 2,
+    "ids": "^⿱十目$(G)"
+  },
+  {
+    "character": "丵",
+    "codepoint": "U+4E35",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-4E35",
+    "frequency": 2,
+    "ids": "^⿱业𢆉$(GTJP)"
+  },
+  {
+    "character": "𠂎",
+    "codepoint": "U+2008E",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2008E",
+    "frequency": 2,
+    "ids": "^⿰{39}丿$(V)"
+  },
+  {
+    "character": "豦",
+    "codepoint": "U+8C66",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-8C66",
+    "frequency": 2,
+    "ids": "^⿸虍豕$(GHTJKP)"
+  },
+  {
+    "character": "兟",
+    "codepoint": "U+515F",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-515F",
+    "frequency": 2,
+    "ids": "^⿰先先$(GHTJKP)"
+  },
+  {
+    "character": "𢆉",
+    "codepoint": "U+22189",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-22189",
+    "frequency": 2,
+    "ids": "^⿱丷干$(GTPV)"
+  },
+  {
+    "character": "㝵",
+    "codepoint": "U+3775",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-3775",
+    "frequency": 2,
+    "ids": "^⿱旦寸$(GTJKV)"
+  },
+  {
+    "character": "尌",
+    "codepoint": "U+5C0C",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-5C0C",
+    "frequency": 2,
+    "ids": "^⿰壴寸$(GHTJKP)"
+  },
+  {
+    "character": "𠔿",
+    "codepoint": "U+2053F",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2053F",
+    "frequency": 2,
+    "ids": "^⿵冂人$(G)"
+  },
+  {
+    "character": "忩",
+    "codepoint": "U+5FE9",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-5FE9",
+    "frequency": 2,
+    "ids": "^⿱公心$(GTJKP)"
+  },
+  {
+    "character": "㇈",
+    "codepoint": "U+31C8",
+    "unicode_name": "CJK STROKE HZWG",
+    "frequency": 2,
+    "ids": "?"
+  },
+  {
+    "character": "溥",
+    "codepoint": "U+6EA5",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-6EA5",
+    "frequency": 2,
+    "ids": "^⿰氵尃$(GHTJKP)"
+  },
+  {
+    "character": "𭥴",
+    "codepoint": "U+2D974",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2D974",
+    "frequency": 2,
+    "ids": "^⿱⿻𫩏丷日$(S)"
+  },
+  {
+    "character": "奞",
+    "codepoint": "U+595E",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-595E",
+    "frequency": 2,
+    "ids": "^⿱大隹$(GTJ)"
+  },
+  {
+    "character": "孰",
+    "codepoint": "U+5B70",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-5B70",
+    "frequency": 2,
+    "ids": "^⿰享{20}$(GHTP)"
+  },
+  {
+    "character": "尗",
+    "codepoint": "U+5C17",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-5C17",
+    "frequency": 2,
+    "ids": "^⿱上小$(GTJP)"
+  },
+  {
+    "character": "𧰨",
+    "codepoint": "U+27C28",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-27C28",
+    "frequency": 2,
+    "ids": "^㇯豕一$(GT)"
+  },
+  {
+    "character": "斿",
+    "codepoint": "U+65BF",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-65BF",
+    "frequency": 2,
+    "ids": "^⿰方⿱𠂉子$(GHTJKP)"
+  },
+  {
+    "character": "𰕎",
+    "codepoint": "U+3054E",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-3054E",
+    "frequency": 2,
+    "ids": "^⿰育攵$(U)"
+  },
+  {
+    "character": "𬜯",
+    "codepoint": "U+2C72F",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2C72F",
+    "frequency": 2,
+    "ids": "^⿱艹两$(GU)"
+  },
+  {
+    "character": "匈",
+    "codepoint": "U+5308",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-5308",
+    "frequency": 2,
+    "ids": "^⿹勹凶$(GHTJKPV)"
+  },
+  {
+    "character": "𣪠",
+    "codepoint": "U+23AA0",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-23AA0",
+    "frequency": 2,
+    "ids": "^⿰𨊥殳$(GTPV)"
+  },
+  {
+    "character": "宓",
+    "codepoint": "U+5B93",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-5B93",
+    "frequency": 2,
+    "ids": "^⿱宀必$(GHTJKP)"
+  },
+  {
+    "character": "𠃜",
+    "codepoint": "U+200DC",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-200DC",
+    "frequency": 2,
+    "ids": "^⿻尸丨$(G)"
+  },
+  {
+    "character": "羔",
+    "codepoint": "U+7F94",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-7F94",
+    "frequency": 2,
+    "ids": "^⿱𦍌灬$(GHTJKP)"
+  },
+  {
+    "character": "𤴔",
+    "codepoint": "U+24D14",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-24D14",
+    "frequency": 2,
+    "ids": "^⿱乛止$(JV)"
+  },
+  {
+    "character": "𫂱",
+    "codepoint": "U+2B0B1",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2B0B1",
+    "frequency": 2,
+    "ids": "^⿲丿米丨$(TU)"
+  },
+  {
+    "character": "盍",
+    "codepoint": "U+76CD",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-76CD",
+    "frequency": 2,
+    "ids": "^⿱去皿$(GHTJKP)"
+  },
+  {
+    "character": "厤",
+    "codepoint": "U+53A4",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-53A4",
+    "frequency": 2,
+    "ids": "^⿸厂秝$(GHTJKP)"
+  },
+  {
+    "character": "㒼",
+    "codepoint": "U+34BC",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-34BC",
+    "frequency": 2,
+    "ids": "^⿱廿⿻丨⿵冂𠓜$(GHTJK)"
+  },
+  {
+    "character": "㥯",
+    "codepoint": "U+396F",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-396F",
+    "frequency": 2,
+    "ids": "^⿱𤔌心$(GTJK)"
+  },
+  {
+    "character": "聂",
+    "codepoint": "U+8042",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-8042",
+    "frequency": 2,
+    "ids": "^⿱耳双$(G)"
+  },
+  {
+    "character": "𢇇",
+    "codepoint": "U+221C7",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-221C7",
+    "frequency": 2,
+    "ids": "^⿱𢆶丱$(GTPV)"
+  },
+  {
+    "character": "畀",
+    "codepoint": "U+7540",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-7540",
+    "frequency": 2,
+    "ids": "^⿱田丌$(GHTJKP)"
+  },
+  {
+    "character": "匂",
+    "codepoint": "U+5302",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-5302",
+    "frequency": 2,
+    "ids": "^⿹勹匕$(GJK)"
+  },
+  {
+    "character": "𡬠",
+    "codepoint": "U+21B20",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-21B20",
+    "frequency": 2,
+    "ids": "^⿰{18}寸$(GT)"
+  },
+  {
+    "character": "𧴪",
+    "codepoint": "U+27D2A",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-27D2A",
+    "frequency": 2,
+    "ids": "^⿱⺌貝$(GV)"
+  },
+  {
+    "character": "坴",
+    "codepoint": "U+5774",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-5774",
+    "frequency": 2,
+    "ids": "^⿱{114}土$(G[B])"
+  },
+  {
+    "character": "𱥻",
+    "codepoint": "U+3197B",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-3197B",
+    "frequency": 2,
+    "ids": "^⿰氵刅$(B)"
+  },
+  {
+    "character": "耤",
+    "codepoint": "U+8024",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-8024",
+    "frequency": 2,
+    "ids": "^⿰耒昔$(GHTJKP)"
+  },
+  {
+    "character": "睘",
+    "codepoint": "U+7758",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-7758",
+    "frequency": 2,
+    "ids": "^⿳罒𠮛𧘇$(GHTJKP)"
+  },
+  {
+    "character": "𱥯",
+    "codepoint": "U+3196F",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-3196F",
+    "frequency": 2,
+    "ids": "^⿱𠆢⿴{11}亅$(V)"
+  },
+  {
+    "character": "𦥯",
+    "codepoint": "U+2696F",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2696F",
+    "frequency": 2,
+    "ids": "^⿱⿴𦥑爻冖$(JU)"
+  },
+  {
+    "character": "㬎",
+    "codepoint": "U+3B0E",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-3B0E",
+    "frequency": 2,
+    "ids": "^⿱日𢇁$(GHTJK)"
+  },
+  {
+    "character": "埶",
+    "codepoint": "U+57F6",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-57F6",
+    "frequency": 2,
+    "ids": "^⿰坴{20}$(GTJP)"
+  },
+  {
+    "character": "舄",
+    "codepoint": "U+8204",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-8204",
+    "frequency": 2,
+    "ids": "^⿱臼{59}$(GHTJK)"
+  },
+  {
+    "character": "欶",
+    "codepoint": "U+6B36",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-6B36",
+    "frequency": 2,
+    "ids": "^⿰束欠$(GHTJKP)"
+  },
+  {
+    "character": "啚",
+    "codepoint": "U+555A",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-555A",
+    "frequency": 2,
+    "ids": "^⿳口十回$(GV[U][S])"
+  },
+  {
+    "character": "淮",
+    "codepoint": "U+6DEE",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-6DEE",
+    "frequency": 2,
+    "ids": "^⿰氵隹$(GHTJKPV)"
+  },
+  {
+    "character": "罙",
+    "codepoint": "U+7F59",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-7F59",
+    "frequency": 2,
+    "ids": "^⿱{80}木$(G)"
+  },
+  {
+    "character": "㇏",
+    "codepoint": "U+31CF",
+    "unicode_name": "CJK STROKE N",
+    "frequency": 2,
+    "ids": "?"
+  },
+  {
+    "character": "𠁤",
+    "codepoint": "U+20064",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-20064",
+    "frequency": 2,
+    "ids": "^⿻儿口$(GT)"
+  },
+  {
+    "character": "𡿺",
+    "codepoint": "U+21FFA",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-21FFA",
+    "frequency": 2,
+    "ids": "^⿱巛囟$(JV)"
+  },
+  {
+    "character": "遀",
+    "codepoint": "U+9040",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-9040",
+    "frequency": 2,
+    "ids": "^⿺辶⿱左⺝$(G)"
+  },
+  {
+    "character": "𫲸",
+    "codepoint": "U+2BCB8",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2BCB8",
+    "frequency": 2,
+    "ids": "^⿱宀丰$(G)"
+  },
+  {
+    "character": "帀",
+    "codepoint": "U+5E00",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-5E00",
+    "frequency": 2,
+    "ids": "^⿱一巾$(GTJKPV)"
+  },
+  {
+    "character": "𢚩",
+    "codepoint": "U+226A9",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-226A9",
+    "frequency": 2,
+    "ids": "^⿳爫𫜹心$(G)"
+  },
+  {
+    "character": "㇀",
+    "codepoint": "U+31C0",
+    "unicode_name": "CJK STROKE T",
+    "frequency": 2,
+    "ids": "?"
+  },
+  {
+    "character": "圼",
+    "codepoint": "U+573C",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-573C",
+    "frequency": 2,
+    "ids": "^⿱日土$(GT)"
+  },
+  {
+    "character": "𤴓",
+    "codepoint": "U+24D13",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-24D13",
+    "frequency": 2,
+    "ids": "^⿱一龰$(GHTP)"
+  },
+  {
+    "character": "丐",
+    "codepoint": "U+4E10",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-4E10",
+    "frequency": 2,
+    "ids": "^⿱⿸丅一㇉$(GHTJKPV)"
+  },
+  {
+    "character": "巽",
+    "codepoint": "U+5DFD",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-5DFD",
+    "frequency": 2,
+    "ids": "^⿱⿰巳巳共$(GHT[J]KPV)"
+  },
+  {
+    "character": "冥",
+    "codepoint": "U+51A5",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-51A5",
+    "frequency": 2,
+    "ids": "^⿱冖昗$(GHTJKPV)"
+  },
+  {
+    "character": "𭠍",
+    "codepoint": "U+2D80D",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2D80D",
+    "frequency": 2,
+    "ids": "^⿻𫠠㇒$(J)"
+  },
+  {
+    "character": "䩗",
+    "codepoint": "U+4A57",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-4A57",
+    "frequency": 2,
+    "ids": "^⿰革月$(GTJ)"
+  },
+  {
+    "character": "雔",
+    "codepoint": "U+96D4",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-96D4",
+    "frequency": 2,
+    "ids": "^⿰隹隹$(GHTKP)"
+  },
+  {
+    "character": "厃",
+    "codepoint": "U+5383",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-5383",
+    "frequency": 2,
+    "ids": "^⿱⺈厂$(GTJ)"
+  },
+  {
+    "character": "聶",
+    "codepoint": "U+8076",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-8076",
+    "frequency": 2,
+    "ids": "^⿱耳聑$(GHTJKP)"
+  },
+  {
+    "character": "叒",
+    "codepoint": "U+53D2",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-53D2",
+    "frequency": 2,
+    "ids": "^⿱又双$(GHTJK)"
+  },
+  {
+    "character": "𧈡",
+    "codepoint": "U+27221",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-27221",
+    "frequency": 2,
+    "ids": "^⿱又虫$(G)"
+  },
+  {
+    "character": "吂",
+    "codepoint": "U+5402",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-5402",
+    "frequency": 2,
+    "ids": "^⿱亡口$(GTJKP)"
+  },
+  {
+    "character": "𢎨",
+    "codepoint": "U+223A8",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-223A8",
+    "frequency": 2,
+    "ids": "^⿹弔㇒$(GTV)"
+  },
+  {
+    "character": "厓",
+    "codepoint": "U+5393",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-5393",
+    "frequency": 2,
+    "ids": "^⿸厂圭$(GHTJKPV)"
+  },
+  {
+    "character": "𱔞",
+    "codepoint": "U+3151E",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-3151E",
+    "frequency": 2,
+    "ids": "^⿳吅𠀎𧘇$(S)"
+  },
+  {
+    "character": "卦",
+    "codepoint": "U+5366",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-5366",
+    "frequency": 2,
+    "ids": "^⿰圭卜$(GHTJKPV)"
+  },
+  {
+    "character": "迶",
+    "codepoint": "U+8FF6",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-8FF6",
+    "frequency": 2,
+    "ids": "^⿺辶有$(GHTJK)"
+  },
+  {
+    "character": "䶹",
+    "codepoint": "U+4DB9",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-4DB9",
+    "frequency": 2,
+    "ids": "^⿻凵丿$(TU)"
+  },
+  {
+    "character": "荅",
+    "codepoint": "U+8345",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-8345",
+    "frequency": 2,
+    "ids": "^⿱艹合$(GHTJKP)"
+  },
+  {
+    "character": "𭾱",
+    "codepoint": "U+2DFB1",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2DFB1",
+    "frequency": 2,
+    "ids": "^⿱罒衣$(J)"
+  },
+  {
+    "character": "𰀂",
+    "codepoint": "U+30002",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-30002",
+    "frequency": 2,
+    "ids": "^⿻匚一$(U)"
+  },
+  {
+    "character": "貇",
+    "codepoint": "U+8C87",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-8C87",
+    "frequency": 2,
+    "ids": "^⿰豸艮$(GTJK)"
+  },
+  {
+    "character": "鼡",
+    "codepoint": "U+9F21",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-9F21",
+    "frequency": 2,
+    "ids": "^⿱𭕄𠂡$(GJ)"
+  },
+  {
+    "character": "𠪚",
+    "codepoint": "U+20A9A",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-20A9A",
+    "frequency": 2,
+    "ids": "^⿸厂敢$(GT)"
+  },
+  {
+    "character": "敖",
+    "codepoint": "U+6556",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-6556",
+    "frequency": 2,
+    "ids": "^⿰𫠤攵$(G)"
+  },
+  {
+    "character": "𠄠",
+    "codepoint": "U+20120",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-20120",
+    "frequency": 2,
+    "ids": "^⿱一一$(T)"
+  },
+  {
+    "character": "𰆊",
+    "codepoint": "U+3018A",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-3018A",
+    "frequency": 2,
+    "ids": "^⿹𠃌丨$(U)"
+  },
+  {
+    "character": "𠫔",
+    "codepoint": "U+20AD4",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-20AD4",
+    "frequency": 2,
+    "ids": "^⿱一厶$(GT)"
+  },
+  {
+    "character": "隋",
+    "codepoint": "U+968B",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-968B",
+    "frequency": 2,
+    "ids": "^⿰阝⿱左⺝$(GHJKP)"
+  },
+  {
+    "character": "攴",
+    "codepoint": "U+6534",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-6534",
+    "frequency": 2,
+    "ids": "^⿱⺊又$(GHTJKP)"
+  },
+  {
+    "character": "𬎿",
+    "codepoint": "U+2C3BF",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2C3BF",
+    "frequency": 2,
+    "ids": "^⿱丷田$(G)"
+  },
+  {
+    "character": "軗",
+    "codepoint": "U+8ED7",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-8ED7",
+    "frequency": 2,
+    "ids": "^⿰車殳$(GHT)"
+  },
+  {
+    "character": "㒸",
+    "codepoint": "U+34B8",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-34B8",
+    "frequency": 2,
+    "ids": "^⿱丷豕$(GT)"
+  },
+  {
+    "character": "𠄎",
+    "codepoint": "U+2010E",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2010E",
+    "frequency": 1,
+    "ids": "^𠄎$(GHT)"
+  },
+  {
+    "character": "𬐚",
+    "codepoint": "U+2C41A",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2C41A",
+    "frequency": 1,
+    "ids": "^⿱𠂉𠱄$(U)"
+  },
+  {
+    "character": "甹",
+    "codepoint": "U+7539",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-7539",
+    "frequency": 1,
+    "ids": "^⿱由丂$(GHTJKP)"
+  },
+  {
+    "character": "𫵖",
+    "codepoint": "U+2BD56",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2BD56",
+    "frequency": 1,
+    "ids": "^⿸尸示$(G)"
+  },
+  {
+    "character": "稟",
+    "codepoint": "U+7A1F",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-7A1F",
+    "frequency": 1,
+    "ids": "^⿱㐭禾$(GHTJKPV)"
+  },
+  {
+    "character": "夅",
+    "codepoint": "U+5905",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-5905",
+    "frequency": 1,
+    "ids": "^⿱夂㐄$(GHTJ)"
+  },
+  {
+    "character": "昍",
+    "codepoint": "U+660D",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-660D",
+    "frequency": 1,
+    "ids": "^⿰日日$(GHTJKP)"
+  },
+  {
+    "character": "巸",
+    "codepoint": "U+5DF8",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-5DF8",
+    "frequency": 1,
+    "ids": "^⿰𦣞巳$(GT)"
+  },
+  {
+    "character": "爯",
+    "codepoint": "U+722F",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-722F",
+    "frequency": 1,
+    "ids": "^⿱爫冉$(GTP)"
+  },
+  {
+    "character": "𡱝",
+    "codepoint": "U+21C5D",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-21C5D",
+    "frequency": 1,
+    "ids": "^⿸尸羊$(GT)"
+  },
+  {
+    "character": "槀",
+    "codepoint": "U+69C0",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-69C0",
+    "frequency": 1,
+    "ids": "^⿱高木$(GHTJKP)"
+  },
+  {
+    "character": "羕",
+    "codepoint": "U+7F95",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-7F95",
+    "frequency": 1,
+    "ids": "^⿱𦍌永$(GHTP)"
+  },
+  {
+    "character": "弁",
+    "codepoint": "U+5F01",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-5F01",
+    "frequency": 1,
+    "ids": "^⿱厶廾$(GHTJKP)"
+  },
+  {
+    "character": "樊",
+    "codepoint": "U+6A0A",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-6A0A",
+    "frequency": 1,
+    "ids": "^⿱棥大$(GHTJKPV)"
+  },
+  {
+    "character": "𪟊",
+    "codepoint": "U+2A7CA",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2A7CA",
+    "frequency": 1,
+    "ids": "^⿳丆且分$(T)"
+  },
+  {
+    "character": "𢆍",
+    "codepoint": "U+2218D",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2218D",
+    "frequency": 1,
+    "ids": "^⿻千日$(GTV)"
+  },
+  {
+    "character": "𰃦",
+    "codepoint": "U+300E6",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-300E6",
+    "frequency": 1,
+    "ids": "^⿱㇒冂$(S)"
+  },
+  {
+    "character": "𣢟",
+    "codepoint": "U+2389F",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2389F",
+    "frequency": 1,
+    "ids": "^⿰甘欠$(GTPV)"
+  },
+  {
+    "character": "𭃂",
+    "codepoint": "U+2D0C2",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2D0C2",
+    "frequency": 1,
+    "ids": "^⿻刀二$(G)"
+  },
+  {
+    "character": "氿",
+    "codepoint": "U+6C3F",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-6C3F",
+    "frequency": 1,
+    "ids": "^⿰氵九$(GHTJKP)"
+  },
+  {
+    "character": "𨈑",
+    "codepoint": "U+28211",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-28211",
+    "frequency": 1,
+    "ids": "^𨈑$(GT)"
+  },
+  {
+    "character": "戻",
+    "codepoint": "U+623B",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-623B",
+    "frequency": 1,
+    "ids": "^⿸户大$(GP)"
+  },
+  {
+    "character": "罔",
+    "codepoint": "U+7F54",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-7F54",
+    "frequency": 1,
+    "ids": "^⿵冂𠅇$(GHTJKPV)"
+  },
+  {
+    "character": "札",
+    "codepoint": "U+672D",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-672D",
+    "frequency": 1,
+    "ids": "^⿰木乚$(GHTJKPV)"
+  },
+  {
+    "character": "洰",
+    "codepoint": "U+6D30",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-6D30",
+    "frequency": 1,
+    "ids": "^⿰氵巨$(GHTKP)"
+  },
+  {
+    "character": "禸",
+    "codepoint": "U+79B8",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-79B8",
+    "frequency": 1,
+    "ids": "^⿻冂厶$(GHTJKP)"
+  },
+  {
+    "character": "觜",
+    "codepoint": "U+89DC",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-89DC",
+    "frequency": 1,
+    "ids": "^⿱此角$(GHTJKP)"
+  },
+  {
+    "character": "垚",
+    "codepoint": "U+579A",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-579A",
+    "frequency": 1,
+    "ids": "^⿱土𪢴$(GHTJK)"
+  },
+  {
+    "character": "亟",
+    "codepoint": "U+4E9F",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-4E9F",
+    "frequency": 1,
+    "ids": "^⿱⿻了叹一$(GPV[B])"
+  },
+  {
+    "character": "剌",
+    "codepoint": "U+524C",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-524C",
+    "frequency": 1,
+    "ids": "^⿰束刂$(GHTJKP)"
+  },
+  {
+    "character": "𧈧",
+    "codepoint": "U+27227",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-27227",
+    "frequency": 1,
+    "ids": "^⿱厶虫$(GTV)"
+  },
+  {
+    "character": "𮅕",
+    "codepoint": "U+2E155",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2E155",
+    "frequency": 1,
+    "ids": "^⿱𥫗𰥍$(J)"
+  },
+  {
+    "character": "猒",
+    "codepoint": "U+7312",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-7312",
+    "frequency": 1,
+    "ids": "^⿰⿱日⺝犬$(GJKP)"
+  },
+  {
+    "character": "刈",
+    "codepoint": "U+5208",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-5208",
+    "frequency": 1,
+    "ids": "^⿰㐅刂$(GHTJKP)"
+  },
+  {
+    "character": "𡯄",
+    "codepoint": "U+21BC4",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-21BC4",
+    "frequency": 1,
+    "ids": "^⿺尢力$(GT)"
+  },
+  {
+    "character": "𱬹",
+    "codepoint": "U+31B39",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-31B39",
+    "frequency": 1,
+    "ids": "^⿱爫旧$(V)"
+  },
+  {
+    "character": "睿",
+    "codepoint": "U+777F",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-777F",
+    "frequency": 1,
+    "ids": "^⿳{37}一⿱八𥃦$(GHTJKP)"
+  },
+  {
+    "character": "惢",
+    "codepoint": "U+60E2",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-60E2",
+    "frequency": 1,
+    "ids": "^⿱心𢗰$(GHTJK)"
+  },
+  {
+    "character": "嘼",
+    "codepoint": "U+563C",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-563C",
+    "frequency": 1,
+    "ids": "^⿱㽞𠮛$(GTJP)"
+  },
+  {
+    "character": "𰆘",
+    "codepoint": "U+30198",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-30198",
+    "frequency": 1,
+    "ids": "^⿸厂生$(S)"
+  },
+  {
+    "character": "亐",
+    "codepoint": "U+4E90",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-4E90",
+    "frequency": 1,
+    "ids": "^⿱一𠀁$(GK)"
+  },
+  {
+    "character": "戛",
+    "codepoint": "U+621B",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-621B",
+    "frequency": 1,
+    "ids": "^⿱𦣻戈$(GHTJKPV)"
+  },
+  {
+    "character": "㣎",
+    "codepoint": "U+38CE",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-38CE",
+    "frequency": 1,
+    "ids": "^⿳白𡭔彡$(GT)"
+  },
+  {
+    "character": "𥞤",
+    "codepoint": "U+257A4",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-257A4",
+    "frequency": 1,
+    "ids": "^⿱⿳士冖一禾$(GV)"
+  },
+  {
+    "character": "吋",
+    "codepoint": "U+540B",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-540B",
+    "frequency": 1,
+    "ids": "^⿰口寸$(GHTJK)"
+  },
+  {
+    "character": "𣎾",
+    "codepoint": "U+233BE",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-233BE",
+    "frequency": 1,
+    "ids": "^⿱冖木$(GP)"
+  },
+  {
+    "character": "泙",
+    "codepoint": "U+6CD9",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-6CD9",
+    "frequency": 1,
+    "ids": "^⿰氵平$(GHTJKPV)"
+  },
+  {
+    "character": "牚",
+    "codepoint": "U+725A",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-725A",
+    "frequency": 1,
+    "ids": "^⿱𫩠牙$(GHTJKP)"
+  },
+  {
+    "character": "瞿",
+    "codepoint": "U+77BF",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-77BF",
+    "frequency": 1,
+    "ids": "^⿱䀠隹$(GHTJKPV)"
+  },
+  {
+    "character": "隽",
+    "codepoint": "U+96BD",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-96BD",
+    "frequency": 1,
+    "ids": "^⿱隹乃$(GHTJ)"
+  },
+  {
+    "character": "𠂔",
+    "codepoint": "U+20094",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-20094",
+    "frequency": 1,
+    "ids": "^⿹⿻⿱㇒㇉丨㇒$(GHTVU)"
+  },
+  {
+    "character": "縕",
+    "codepoint": "U+7E15",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-7E15",
+    "frequency": 1,
+    "ids": "^⿰糹𥁕$(GHT)"
+  },
+  {
+    "character": "𬀷",
+    "codepoint": "U+2C037",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2C037",
+    "frequency": 1,
+    "ids": "^⿱𠂉昜$(VU)"
+  },
+  {
+    "character": "㝴",
+    "codepoint": "U+3774",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-3774",
+    "frequency": 1,
+    "ids": "^⿺元寸$(GT)"
+  },
+  {
+    "character": "㢆",
+    "codepoint": "U+3886",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-3886",
+    "frequency": 1,
+    "ids": "^⿸广里$(GTK)"
+  },
+  {
+    "character": "隡",
+    "codepoint": "U+96A1",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-96A1",
+    "frequency": 1,
+    "ids": "^⿰阝産$(G)"
+  },
+  {
+    "character": "寍",
+    "codepoint": "U+5BCD",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-5BCD",
+    "frequency": 1,
+    "ids": "^⿱𫲽皿$(GHTJKP)"
+  },
+  {
+    "character": "𦍒",
+    "codepoint": "U+26352",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-26352",
+    "frequency": 1,
+    "ids": "^⿱土羊$(GT)"
+  },
+  {
+    "character": "彗",
+    "codepoint": "U+5F57",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-5F57",
+    "frequency": 1,
+    "ids": "^⿱⿰丰丰𫜹$(G)"
+  },
+  {
+    "character": "𠤕",
+    "codepoint": "U+20915",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-20915",
+    "frequency": 1,
+    "ids": "^⿱匕矢$(GTV)"
+  },
+  {
+    "character": "𥤧",
+    "codepoint": "U+25927",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-25927",
+    "frequency": 1,
+    "ids": "^⿱穴土$(G)"
+  },
+  {
+    "character": "犾",
+    "codepoint": "U+72BE",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-72BE",
+    "frequency": 1,
+    "ids": "^⿰犭犬$(GMTJK)"
+  },
+  {
+    "character": "𠁳",
+    "codepoint": "U+20073",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-20073",
+    "frequency": 1,
+    "ids": "^⿻山⿰丰丰$(G)"
+  },
+  {
+    "character": "坒",
+    "codepoint": "U+5752",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-5752",
+    "frequency": 1,
+    "ids": "^⿱比土$(GHTJK)"
+  },
+  {
+    "character": "蓺",
+    "codepoint": "U+84FA",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-84FA",
+    "frequency": 1,
+    "ids": "^⿱艹埶$(GHTKP)"
+  },
+  {
+    "character": "𭁨",
+    "codepoint": "U+2D068",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2D068",
+    "frequency": 1,
+    "ids": "^⿵冂米$(J)"
+  },
+  {
+    "character": "啬",
+    "codepoint": "U+556C",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-556C",
+    "frequency": 1,
+    "ids": "^⿱⿻土丷回$(G)"
+  },
+  {
+    "character": "𦙌",
+    "codepoint": "U+2664C",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2664C",
+    "frequency": 1,
+    "ids": "^⿰⿱幺⺝乚$(G)"
+  },
+  {
+    "character": "冏",
+    "codepoint": "U+518F",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-518F",
+    "frequency": 1,
+    "ids": "^⿵冂㕣$(G)"
+  },
+  {
+    "character": "奻",
+    "codepoint": "U+597B",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-597B",
+    "frequency": 1,
+    "ids": "^⿰女女$(GHTJK)"
+  },
+  {
+    "character": "眇",
+    "codepoint": "U+7707",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-7707",
+    "frequency": 1,
+    "ids": "^⿰目少$(GHTJKPV)"
+  },
+  {
+    "character": "垔",
+    "codepoint": "U+5794",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-5794",
+    "frequency": 1,
+    "ids": "^⿱覀土$(G)"
+  },
+  {
+    "character": "𰙜",
+    "codepoint": "U+3065C",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-3065C",
+    "frequency": 1,
+    "ids": "^⿱刃止$(B)"
+  },
+  {
+    "character": "𢽠",
+    "codepoint": "U+22F60",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-22F60",
+    "frequency": 1,
+    "ids": "^⿰𱖔攵$(GV)"
+  },
+  {
+    "character": "闰",
+    "codepoint": "U+95F0",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-95F0",
+    "frequency": 1,
+    "ids": "^⿵门王$(G)"
+  },
+  {
+    "character": "阜",
+    "codepoint": "U+961C",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-961C",
+    "frequency": 1,
+    "ids": "^⿱𠂤十$(GHTJKP)"
+  },
+  {
+    "character": "庶",
+    "codepoint": "U+5EB6",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-5EB6",
+    "frequency": 1,
+    "ids": "^⿸广⿱廿灬$(GHTJKPV)"
+  },
+  {
+    "character": "䡛",
+    "codepoint": "U+485B",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-485B",
+    "frequency": 1,
+    "ids": "^⿰車車$(GT)"
+  },
+  {
+    "character": "叩",
+    "codepoint": "U+53E9",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-53E9",
+    "frequency": 1,
+    "ids": "^⿰口卩$(GHTJKPV)"
+  },
+  {
+    "character": "鬯",
+    "codepoint": "U+9B2F",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-9B2F",
+    "frequency": 1,
+    "ids": "^⿱𠚍匕$(GHTJKP)"
+  },
+  {
+    "character": "厸",
+    "codepoint": "U+53B8",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-53B8",
+    "frequency": 1,
+    "ids": "^⿰厶厶$(GTJKP)"
+  },
+  {
+    "character": "𣄼",
+    "codepoint": "U+2313C",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2313C",
+    "frequency": 1,
+    "ids": "^⿱一日$(GTP)"
+  },
+  {
+    "character": "肋",
+    "codepoint": "U+808B",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-808B",
+    "frequency": 1,
+    "ids": "^⿰月力$(GJKP)"
+  },
+  {
+    "character": "𠮥",
+    "codepoint": "U+20BA5",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-20BA5",
+    "frequency": 1,
+    "ids": "^⿱⺈口$(T)"
+  },
+  {
+    "character": "𭇁",
+    "codepoint": "U+2D1C1",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2D1C1",
+    "frequency": 1,
+    "ids": "^⿱𫝀口$(J)"
+  },
+  {
+    "character": "㐄",
+    "codepoint": "U+3404",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-3404",
+    "frequency": 1,
+    "ids": "^⿻⿱一𠃋丨$(GT)"
+  },
+  {
+    "character": "禀",
+    "codepoint": "U+7980",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-7980",
+    "frequency": 1,
+    "ids": "^⿱㐭示$(GHTJKPV)"
+  },
+  {
+    "character": "𢧜",
+    "codepoint": "U+229DC",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-229DC",
+    "frequency": 1,
+    "ids": "^⿹𢦏呈$(GTV)"
+  },
+  {
+    "character": "茾",
+    "codepoint": "U+833E",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-833E",
+    "frequency": 1,
+    "ids": "^⿱艹开$(GT)"
+  },
+  {
+    "character": "𣦼",
+    "codepoint": "U+239BC",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-239BC",
+    "frequency": 1,
+    "ids": "^⿰歺又$(GT)"
+  },
+  {
+    "character": "戍",
+    "codepoint": "U+620D",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-620D",
+    "frequency": 1,
+    "ids": "^⿵戊丶$(GHTJKPV)"
+  },
+  {
+    "character": "𱐩",
+    "codepoint": "U+31429",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-31429",
+    "frequency": 1,
+    "ids": "^⿱𠂉力$(V)"
+  },
+  {
+    "character": "𥃲",
+    "codepoint": "U+250F2",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-250F2",
+    "frequency": 1,
+    "ids": "^⿱目廾$(GT)"
+  },
+  {
+    "character": "昗",
+    "codepoint": "U+6617",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-6617",
+    "frequency": 1,
+    "ids": "^⿱日六$(GT)"
+  },
+  {
+    "character": "侌",
+    "codepoint": "U+4F8C",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-4F8C",
+    "frequency": 1,
+    "ids": "^⿱今云$(GTJK)"
+  },
+  {
+    "character": "龥",
+    "codepoint": "U+9FA5",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-9FA5",
+    "frequency": 1,
+    "ids": "^⿰龠頁$(GHTJKP)"
+  },
+  {
+    "character": "匽",
+    "codepoint": "U+533D",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-533D",
+    "frequency": 1,
+    "ids": "^⿷匚妟$(GJKP)"
+  },
+  {
+    "character": "𫡑",
+    "codepoint": "U+2B851",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2B851",
+    "frequency": 1,
+    "ids": "^⿱㇒⿻丨从$(U)"
+  },
+  {
+    "character": "𩾏",
+    "codepoint": "U+29F8F",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-29F8F",
+    "frequency": 1,
+    "ids": "^⿱一鳥$(GTV)"
+  },
+  {
+    "character": "𠃧",
+    "codepoint": "U+200E7",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-200E7",
+    "frequency": 1,
+    "ids": "^⿱飞飞$(GTV)"
+  },
+  {
+    "character": "𤱪",
+    "codepoint": "U+24C6A",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-24C6A",
+    "frequency": 1,
+    "ids": "^⿱{82}田$(GT)"
+  },
+  {
+    "character": "𠂌",
+    "codepoint": "U+2008C",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2008C",
+    "frequency": 1,
+    "ids": "^⿱㇒⿻一亅$(T)"
+  },
+  {
+    "character": "沓",
+    "codepoint": "U+6C93",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-6C93",
+    "frequency": 1,
+    "ids": "^⿱水日$(GTJKPV)"
+  },
+  {
+    "character": "龠",
+    "codepoint": "U+9FA0",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-9FA0",
+    "frequency": 1,
+    "ids": "^⿳{88}𠱠𠕁$(GHTJKP)"
+  },
+  {
+    "character": "匝",
+    "codepoint": "U+531D",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-531D",
+    "frequency": 1,
+    "ids": "^⿷匚巾$(GHTJKPV)"
+  },
+  {
+    "character": "𠩺",
+    "codepoint": "U+20A7A",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-20A7A",
+    "frequency": 1,
+    "ids": "^⿱⿰未攵厂$(GTV)"
+  },
+  {
+    "character": "㇯",
+    "codepoint": "U+31EF",
+    "unicode_name": "?",
+    "frequency": 1,
+    "ids": "?"
+  },
+  {
+    "character": "𤋱",
+    "codepoint": "U+242F1",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-242F1",
+    "frequency": 1,
+    "ids": "^⿱重灬$(GTP)"
+  },
+  {
+    "character": "𬌪",
+    "codepoint": "U+2C32A",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2C32A",
+    "frequency": 1,
+    "ids": "^⿱犬廾$(G)"
+  },
+  {
+    "character": "凷",
+    "codepoint": "U+51F7",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-51F7",
+    "frequency": 1,
+    "ids": "^⿶凵土$(GTJP)"
+  },
+  {
+    "character": "𠮠",
+    "codepoint": "U+20BA0",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-20BA0",
+    "frequency": 1,
+    "ids": "^⿱口⿰丿𠃌$(GT)"
+  },
+  {
+    "character": "厈",
+    "codepoint": "U+5388",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-5388",
+    "frequency": 1,
+    "ids": "^⿸厂干$(GTJ)"
+  },
+  {
+    "character": "𡰪",
+    "codepoint": "U+21C2A",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-21C2A",
+    "frequency": 1,
+    "ids": "^⿸尸口$(GHT)"
+  },
+  {
+    "character": "烝",
+    "codepoint": "U+70DD",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-70DD",
+    "frequency": 1,
+    "ids": "^⿱丞灬$(GHTJKPV)"
+  },
+  {
+    "character": "䚯",
+    "codepoint": "U+46AF",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-46AF",
+    "frequency": 1,
+    "ids": "^⿰訁刂$(GTJ)"
+  },
+  {
+    "character": "虒",
+    "codepoint": "U+8652",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-8652",
+    "frequency": 1,
+    "ids": "^⿸𠂆虎$(GHTJKP)"
+  },
+  {
+    "character": "㝉",
+    "codepoint": "U+3749",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-3749",
+    "frequency": 1,
+    "ids": "^⿱宀一$(G)"
+  },
+  {
+    "character": "冉",
+    "codepoint": "U+5189",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-5189",
+    "frequency": 1,
+    "ids": "^⿻冂土$(GHTJKPV)"
+  },
+  {
+    "character": "囬",
+    "codepoint": "U+56EC",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-56EC",
+    "frequency": 1,
+    "ids": "^⿴囗{67}$(GTP)"
+  },
+  {
+    "character": "𰋷",
+    "codepoint": "U+302F7",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-302F7",
+    "frequency": 1,
+    "ids": "^⿱𭕄女$(U)"
+  },
+  {
+    "character": "龵",
+    "codepoint": "U+9FB5",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-9FB5",
+    "frequency": 1,
+    "ids": "^⿱㇒⿻二丿$(GU)"
+  },
+  {
+    "character": "𦔻",
+    "codepoint": "U+2653B",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2653B",
+    "frequency": 1,
+    "ids": "^⿰耳口$(GV)"
+  },
+  {
+    "character": "𡳾",
+    "codepoint": "U+21CFE",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-21CFE",
+    "frequency": 1,
+    "ids": "^⿻凵乚$(GT)"
+  },
+  {
+    "character": "𰢵",
+    "codepoint": "U+308B5",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-308B5",
+    "frequency": 1,
+    "ids": "^⿶凵田$(T)"
+  },
+  {
+    "character": "𫩏",
+    "codepoint": "U+2BA4F",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2BA4F",
+    "frequency": 1,
+    "ids": "^⿴囗丨$(GU)"
+  },
+  {
+    "character": "冢",
+    "codepoint": "U+51A2",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-51A2",
+    "frequency": 1,
+    "ids": "^⿱冖豖$(GHTJKP)"
+  },
+  {
+    "character": "苋",
+    "codepoint": "U+82CB",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-82CB",
+    "frequency": 1,
+    "ids": "^⿱艹见$(G)"
+  },
+  {
+    "character": "霝",
+    "codepoint": "U+971D",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-971D",
+    "frequency": 1,
+    "ids": "^⿱雨𠱠$(GHTJKP)"
+  },
+  {
+    "character": "洼",
+    "codepoint": "U+6D3C",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-6D3C",
+    "frequency": 1,
+    "ids": "^⿰氵圭$(GHTJKP)"
+  },
+  {
+    "character": "棥",
+    "codepoint": "U+68E5",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-68E5",
+    "frequency": 1,
+    "ids": "^⿲木爻木$(GTJK)"
+  },
+  {
+    "character": "柰",
+    "codepoint": "U+67F0",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-67F0",
+    "frequency": 1,
+    "ids": "^⿱木示$(GHTJKP)"
+  },
+  {
+    "character": "駦",
+    "codepoint": "U+99E6",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-99E6",
+    "frequency": 1,
+    "ids": "^⿱龹馬$(GHT)"
+  },
+  {
+    "character": "牟",
+    "codepoint": "U+725F",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-725F",
+    "frequency": 1,
+    "ids": "^⿱厶牛$(GHTJKPV)"
+  },
+  {
+    "character": "夃",
+    "codepoint": "U+5903",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-5903",
+    "frequency": 1,
+    "ids": "^⿵乃又$(GHTK)"
+  },
+  {
+    "character": "龱",
+    "codepoint": "U+9FB1",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-9FB1",
+    "frequency": 1,
+    "ids": "^⿴囗㐅$(HV)"
+  },
+  {
+    "character": "𪧷",
+    "codepoint": "U+2A9F7",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2A9F7",
+    "frequency": 1,
+    "ids": "^⿱夕寸$(T)"
+  },
+  {
+    "character": "𥝢",
+    "codepoint": "U+25762",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-25762",
+    "frequency": 1,
+    "ids": "^⿰禾{34}$(GTV)"
+  },
+  {
+    "character": "𠮦",
+    "codepoint": "U+20BA6",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-20BA6",
+    "frequency": 1,
+    "ids": "^⿱丷口$(GT)"
+  },
+  {
+    "character": "𠄐",
+    "codepoint": "U+20110",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-20110",
+    "frequency": 1,
+    "ids": "^⿱乛亅$(K)"
+  },
+  {
+    "character": "𭥍",
+    "codepoint": "U+2D94D",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2D94D",
+    "frequency": 1,
+    "ids": "^⿱𠂉日$(J)"
+  },
+  {
+    "character": "戉",
+    "codepoint": "U+6209",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-6209",
+    "frequency": 1,
+    "ids": "^⿰𠄌戈$(GHTJKP)"
+  },
+  {
+    "character": "㇇",
+    "codepoint": "U+31C7",
+    "unicode_name": "CJK STROKE HP",
+    "frequency": 1,
+    "ids": "?"
+  },
+  {
+    "character": "𰛅",
+    "codepoint": "U+306C5",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-306C5",
+    "frequency": 1,
+    "ids": "^⿰亅{24}$(B)"
+  },
+  {
+    "character": "𭷆",
+    "codepoint": "U+2DDC6",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2DDC6",
+    "frequency": 1,
+    "ids": "^⿰爿𠬶$(K)"
+  },
+  {
+    "character": "冡",
+    "codepoint": "U+51A1",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-51A1",
+    "frequency": 1,
+    "ids": "^⿳冖一豕$(GTJKPV)"
+  },
+  {
+    "character": "𦍎",
+    "codepoint": "U+2634E",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2634E",
+    "frequency": 1,
+    "ids": "^⿱䒑未$(GTV)"
+  },
+  {
+    "character": "兪",
+    "codepoint": "U+516A",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-516A",
+    "frequency": 1,
+    "ids": "^⿱⿵入一⿰⺝巜$(GKP)"
+  },
+  {
+    "character": "賏",
+    "codepoint": "U+8CCF",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-8CCF",
+    "frequency": 1,
+    "ids": "^⿰貝貝$(GHTJKP)"
+  },
+  {
+    "character": "雐",
+    "codepoint": "U+96D0",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-96D0",
+    "frequency": 1,
+    "ids": "^⿸虍隹$(GT)"
+  },
+  {
+    "character": "𭚧",
+    "codepoint": "U+2D6A7",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2D6A7",
+    "frequency": 1,
+    "ids": "^⿰弓殳$(KS)"
+  },
+  {
+    "character": "夲",
+    "codepoint": "U+5932",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-5932",
+    "frequency": 1,
+    "ids": "^⿱大十$(GHTJP)"
+  },
+  {
+    "character": "𱕻",
+    "codepoint": "U+3157B",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-3157B",
+    "frequency": 1,
+    "ids": "^⿴囗𠂭$(S)"
+  },
+  {
+    "character": "萈",
+    "codepoint": "U+8408",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-8408",
+    "frequency": 1,
+    "ids": "^⿱艹⿷見丶$(G)"
+  },
+  {
+    "character": "烕",
+    "codepoint": "U+70D5",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-70D5",
+    "frequency": 1,
+    "ids": "^⿵戌火$(GHTJKP)"
+  },
+  {
+    "character": "疌",
+    "codepoint": "U+758C",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-758C",
+    "frequency": 1,
+    "ids": "^⿻⿱一{43}龰$(GHTJKP)"
+  },
+  {
+    "character": "佰",
+    "codepoint": "U+4F70",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-4F70",
+    "frequency": 1,
+    "ids": "^⿰亻百$(GHTJKP)"
+  },
+  {
+    "character": "𨊠",
+    "codepoint": "U+282A0",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-282A0",
+    "frequency": 1,
+    "ids": "^⿰車㔾$(GTPV)"
+  },
+  {
+    "character": "氾",
+    "codepoint": "U+6C3E",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-6C3E",
+    "frequency": 1,
+    "ids": "^⿰氵㔾$(GHTJKP)"
+  },
+  {
+    "character": "萑",
+    "codepoint": "U+8411",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-8411",
+    "frequency": 1,
+    "ids": "^⿱艹隹$(GHTJKP)"
+  },
+  {
+    "character": "毋",
+    "codepoint": "U+6BCB",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-6BCB",
+    "frequency": 1,
+    "ids": "^毋$(GHTJKPV)"
+  },
+  {
+    "character": "臱",
+    "codepoint": "U+81F1",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-81F1",
+    "frequency": 1,
+    "ids": "^⿳自穴方$(G)"
+  },
+  {
+    "character": "汒",
+    "codepoint": "U+6C52",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-6C52",
+    "frequency": 1,
+    "ids": "^⿰氵亡$(GHTJKP)"
+  },
+  {
+    "character": "𤕰",
+    "codepoint": "U+24570",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-24570",
+    "frequency": 1,
+    "ids": "^⿰爿片$(GT)"
+  },
+  {
+    "character": "囷",
+    "codepoint": "U+56F7",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-56F7",
+    "frequency": 1,
+    "ids": "^⿴囗禾$(GHTJKPV)"
+  },
+  {
+    "character": "祘",
+    "codepoint": "U+7958",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-7958",
+    "frequency": 1,
+    "ids": "^⿰示示$(GHJK)"
+  },
+  {
+    "character": "杲",
+    "codepoint": "U+6772",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-6772",
+    "frequency": 1,
+    "ids": "^⿱日木$(GHTJKPV)"
+  },
+  {
+    "character": "𱅑",
+    "codepoint": "U+31151",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-31151",
+    "frequency": 1,
+    "ids": "^⿱龹马$(U)"
+  },
+  {
+    "character": "𡈼",
+    "codepoint": "U+2123C",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2123C",
+    "frequency": 1,
+    "ids": "^⿱㇒土$(GHT)"
+  },
+  {
+    "character": "尨",
+    "codepoint": "U+5C28",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-5C28",
+    "frequency": 1,
+    "ids": "^⿻龙𰀪$(G)"
+  },
+  {
+    "character": "斦",
+    "codepoint": "U+65A6",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-65A6",
+    "frequency": 1,
+    "ids": "^⿰斤斤$(GTJKP)"
+  },
+  {
+    "character": "𭻾",
+    "codepoint": "U+2DEFE",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2DEFE",
+    "frequency": 1,
+    "ids": "^⿱𠂉疋$(S)"
+  },
+  {
+    "character": "䏍",
+    "codepoint": "U+43CD",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-43CD",
+    "frequency": 1,
+    "ids": "^⿱厶⺝$(GKP)"
+  },
+  {
+    "character": "𫧇",
+    "codepoint": "U+2B9C7",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2B9C7",
+    "frequency": 1,
+    "ids": "^⿱匕匕$(V)"
+  },
+  {
+    "character": "𩰋",
+    "codepoint": "U+29C0B",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-29C0B",
+    "frequency": 1,
+    "ids": "^⿰丨王$(GT)"
+  },
+  {
+    "character": "𩰊",
+    "codepoint": "U+29C0A",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-29C0A",
+    "frequency": 1,
+    "ids": "^⿰王丨$(GT)"
+  },
+  {
+    "character": "毚",
+    "codepoint": "U+6BDA",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-6BDA",
+    "frequency": 1,
+    "ids": "^⿱㲋兔$(GHTJP)"
+  },
+  {
+    "character": "妾",
+    "codepoint": "U+59BE",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-59BE",
+    "frequency": 1,
+    "ids": "^⿱立女$(GHTJKPV)"
+  },
+  {
+    "character": "𢆶",
+    "codepoint": "U+221B6",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-221B6",
+    "frequency": 1,
+    "ids": "^⿰幺幺$(GTV)"
+  },
+  {
+    "character": "𱼭",
+    "codepoint": "U+31F2D",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-31F2D",
+    "frequency": 1,
+    "ids": "^⿱臼土$(B)"
+  },
+  {
+    "character": "𬎾",
+    "codepoint": "U+2C3BE",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2C3BE",
+    "frequency": 1,
+    "ids": "^⿻肀月$(T)"
+  },
+  {
+    "character": "𠩵",
+    "codepoint": "U+20A75",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-20A75",
+    "frequency": 1,
+    "ids": "^⿸厂林$(GV)"
+  },
+  {
+    "character": "丕",
+    "codepoint": "U+4E15",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-4E15",
+    "frequency": 1,
+    "ids": "^⿱不一$(GHTJKPV)"
+  },
+  {
+    "character": "𦚏",
+    "codepoint": "U+2668F",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2668F",
+    "frequency": 1,
+    "ids": "^⿱立⺝$(GV)"
+  },
+  {
+    "character": "臿",
+    "codepoint": "U+81FF",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-81FF",
+    "frequency": 1,
+    "ids": "^⿶臼千$(GKP)"
+  },
+  {
+    "character": "怱",
+    "codepoint": "U+6031",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-6031",
+    "frequency": 1,
+    "ids": "^⿱匆心$(GHTJKP)"
+  },
+  {
+    "character": "禹",
+    "codepoint": "U+79B9",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-79B9",
+    "frequency": 1,
+    "ids": "^⿻䖝冂$(GHTJKPV)"
+  },
+  {
+    "character": "𭴘",
+    "codepoint": "U+2DD18",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2DD18",
+    "frequency": 1,
+    "ids": "^⿱⺻灬$(S)"
+  },
+  {
+    "character": "𠅃",
+    "codepoint": "U+20143",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-20143",
+    "frequency": 1,
+    "ids": "^⿱亠从$(GT)"
+  },
+  {
+    "character": "𤰇",
+    "codepoint": "U+24C07",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-24C07",
+    "frequency": 1,
+    "ids": "^⿱𠀗用$(G[H]TV)"
+  },
+  {
+    "character": "乕",
+    "codepoint": "U+4E55",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-4E55",
+    "frequency": 1,
+    "ids": "^⿸𠂆⿻二巾$(GJ)"
+  },
+  {
+    "character": "狄",
+    "codepoint": "U+72C4",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-72C4",
+    "frequency": 1,
+    "ids": "^⿰犭火$(GHTJKPV)"
+  },
+  {
+    "character": "㫗",
+    "codepoint": "U+3AD7",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-3AD7",
+    "frequency": 1,
+    "ids": "^⿱日子$(GTJ)"
+  },
+  {
+    "character": "𦓐",
+    "codepoint": "U+264D0",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-264D0",
+    "frequency": 1,
+    "ids": "^⿱㇒𦉫$(GT)"
+  },
+  {
+    "character": "𡕩",
+    "codepoint": "U+21569",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-21569",
+    "frequency": 1,
+    "ids": "^⿳囟八夊$(G)"
+  },
+  {
+    "character": "曳",
+    "codepoint": "U+66F3",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-66F3",
+    "frequency": 1,
+    "ids": "^⿻日⿻㇂㇒$(GHTJKPV)"
+  },
+  {
+    "character": "毳",
+    "codepoint": "U+6BF3",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-6BF3",
+    "frequency": 1,
+    "ids": "^⿱毛㲎$(GHTJKP)"
+  },
+  {
+    "character": "鬳",
+    "codepoint": "U+9B33",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-9B33",
+    "frequency": 1,
+    "ids": "^⿸虍鬲$(GHTJKP)"
+  },
+  {
+    "character": "𡭴",
+    "codepoint": "U+21B74",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-21B74",
+    "frequency": 1,
+    "ids": "^⿱𡭔⿱日小$(GTPV)"
+  },
+  {
+    "character": "㇉",
+    "codepoint": "U+31C9",
+    "unicode_name": "CJK STROKE SZWG",
+    "frequency": 1,
+    "ids": "?"
+  },
+  {
+    "character": "㚅",
+    "codepoint": "U+3685",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-3685",
+    "frequency": 1,
+    "ids": "^⿱夂𤯔$(GT)"
+  },
+  {
+    "character": "䖝",
+    "codepoint": "U+459D",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-459D",
+    "frequency": 1,
+    "ids": "^⿱㇒虫$(GTJ)"
+  },
+  {
+    "character": "閏",
+    "codepoint": "U+958F",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-958F",
+    "frequency": 1,
+    "ids": "^⿵門王$(GHTJKPV)"
+  },
+  {
+    "character": "夐",
+    "codepoint": "U+5910",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-5910",
+    "frequency": 1,
+    "ids": "^⿱{3}𡕥$(GTJK)"
+  },
+  {
+    "character": "㓞",
+    "codepoint": "U+34DE",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-34DE",
+    "frequency": 1,
+    "ids": "^⿰丰刀$(GT)"
+  },
+  {
+    "character": "仒",
+    "codepoint": "U+4ED2",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-4ED2",
+    "frequency": 1,
+    "ids": "^⿱𠆢⺀$(GK)"
+  },
+  {
+    "character": "㠯",
+    "codepoint": "U+382F",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-382F",
+    "frequency": 1,
+    "ids": "^⿰丨⿱{50}{50}$(G[H][M]JKP[V][B])"
+  },
+  {
+    "character": "䖒",
+    "codepoint": "U+4592",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-4592",
+    "frequency": 1,
+    "ids": "^⿸虍豆$(GTK)"
+  },
+  {
+    "character": "㚒",
+    "codepoint": "U+3692",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-3692",
+    "frequency": 1,
+    "ids": "^⿻大𠓜$(GT)"
+  },
+  {
+    "character": "𠦂",
+    "codepoint": "U+20982",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-20982",
+    "frequency": 1,
+    "ids": "^⿻{11}十$(GTV)"
+  },
+  {
+    "character": "廌",
+    "codepoint": "U+5ECC",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-5ECC",
+    "frequency": 1,
+    "ids": "^⿸{55}{1}$(GHTJKP)"
+  },
+  {
+    "character": "厥",
+    "codepoint": "U+53A5",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-53A5",
+    "frequency": 1,
+    "ids": "^⿸厂欮$(GHTJKP)"
+  },
+  {
+    "character": "韯",
+    "codepoint": "U+97EF",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-97EF",
+    "frequency": 1,
+    "ids": "^⿹𢦏韭$(GTJK)"
+  },
+  {
+    "character": "𠧗",
+    "codepoint": "U+209D7",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-209D7",
+    "frequency": 1,
+    "ids": "^⿱上下$(GTV)"
+  },
+  {
+    "character": "巂",
+    "codepoint": "U+5DC2",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-5DC2",
+    "frequency": 1,
+    "ids": "^⿱山𮥼$(GHT)"
+  },
+  {
+    "character": "𣈅",
+    "codepoint": "U+23205",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-23205",
+    "frequency": 1,
+    "ids": "^⿱林日$(G)"
+  },
+  {
+    "character": "攸",
+    "codepoint": "U+6538",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-6538",
+    "frequency": 1,
+    "ids": "^⿲亻丨攵$(GHTJKP)"
+  },
+  {
+    "character": "𠔾",
+    "codepoint": "U+2053E",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2053E",
+    "frequency": 1,
+    "ids": "^⿱㇒⿻⺆一$(GT)"
+  },
+  {
+    "character": "妟",
+    "codepoint": "U+599F",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-599F",
+    "frequency": 1,
+    "ids": "^⿱日女$(GHTJK)"
+  },
+  {
+    "character": "𬙙",
+    "codepoint": "U+2C659",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2C659",
+    "frequency": 1,
+    "ids": "^⿱罒方$(G)"
+  },
+  {
+    "character": "𰗣",
+    "codepoint": "U+305E3",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-305E3",
+    "frequency": 1,
+    "ids": "^⿱𠅃木$(U)"
+  },
+  {
+    "character": "𭷔",
+    "codepoint": "U+2DDD4",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2DDD4",
+    "frequency": 1,
+    "ids": "^⿱刀牛$(S)"
+  },
+  {
+    "character": "𦣝",
+    "codepoint": "U+268DD",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-268DD",
+    "frequency": 1,
+    "ids": "^⿷匚⿰丨⿳𠃑一丨$(GTJU)"
+  },
+  {
+    "character": "𦣞",
+    "codepoint": "U+268DE",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-268DE",
+    "frequency": 1,
+    "ids": "^⿷匚⿳丨口丨$(GTV)"
+  },
+  {
+    "character": "歰",
+    "codepoint": "U+6B70",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-6B70",
+    "frequency": 1,
+    "ids": "^⿱𱐔𣥖$(GTK)"
+  },
+  {
+    "character": "𡩧",
+    "codepoint": "U+21A67",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-21A67",
+    "frequency": 1,
+    "ids": "^⿱宀珤$(GT)"
+  },
+  {
+    "character": "旉",
+    "codepoint": "U+65C9",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-65C9",
+    "frequency": 1,
+    "ids": "^⿱甫方$(GTJP)"
+  },
+  {
+    "character": "㳟",
+    "codepoint": "U+3CDF",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-3CDF",
+    "frequency": 1,
+    "ids": "^⿱共水$(T)"
+  },
+  {
+    "character": "𥁕",
+    "codepoint": "U+25055",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-25055",
+    "frequency": 1,
+    "ids": "^⿱囚皿$(GTJPV)"
+  },
+  {
+    "character": "𫠥",
+    "codepoint": "U+2B825",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2B825",
+    "frequency": 1,
+    "ids": "^⿺𠃊丙$(U)"
+  },
+  {
+    "character": "𢼸",
+    "codepoint": "U+22F38",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-22F38",
+    "frequency": 1,
+    "ids": "^⿰𡵂攵$(GV)"
+  },
+  {
+    "character": "𠓜",
+    "codepoint": "U+204DC",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-204DC",
+    "frequency": 1,
+    "ids": "^⿰入入$(GT)"
+  },
+  {
+    "character": "𠀇",
+    "codepoint": "U+20007",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-20007",
+    "frequency": 1,
+    "ids": "^⿴𠀃一$(GT)"
+  },
+  {
+    "character": "𤿺",
+    "codepoint": "U+24FFA",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-24FFA",
+    "frequency": 1,
+    "ids": "^⿰其皮$(TV)"
+  },
+  {
+    "character": "羲",
+    "codepoint": "U+7FB2",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-7FB2",
+    "frequency": 1,
+    "ids": "^⿱𦍌⿹⿻禾{97}丂$(GHTJKP)"
+  },
+  {
+    "character": "亙",
+    "codepoint": "U+4E99",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-4E99",
+    "frequency": 1,
+    "ids": "^⿱一⿴{122}丶$(GHTJKPV)"
+  },
+  {
+    "character": "旲",
+    "codepoint": "U+65F2",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-65F2",
+    "frequency": 1,
+    "ids": "^⿱日大$(GHTJKP)"
+  },
+  {
+    "character": "嗇",
+    "codepoint": "U+55C7",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-55C7",
+    "frequency": 1,
+    "ids": "^⿱⿻土从回$(GHTJKPV)"
+  },
+  {
+    "character": "𲂻",
+    "codepoint": "U+320BB",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-320BB",
+    "frequency": 1,
+    "ids": "^⿰贝贝$(G)"
+  },
+  {
+    "character": "𫝀",
+    "codepoint": "U+2B740",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2B740",
+    "frequency": 1,
+    "ids": "^㇯五一$(J)"
+  },
+  {
+    "character": "粲",
+    "codepoint": "U+7CB2",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-7CB2",
+    "frequency": 1,
+    "ids": "^⿱𣦼米$(GHTJKP)"
+  },
+  {
+    "character": "雩",
+    "codepoint": "U+96E9",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-96E9",
+    "frequency": 1,
+    "ids": "^⿱雨亏$(GHTJK)"
+  },
+  {
+    "character": "匍",
+    "codepoint": "U+530D",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-530D",
+    "frequency": 1,
+    "ids": "^⿹勹甫$(GHTJKPV)"
+  },
+  {
+    "character": "𠠵",
+    "codepoint": "U+20835",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-20835",
+    "frequency": 1,
+    "ids": "^⿺九力$(G)"
+  },
+  {
+    "character": "𥃦",
+    "codepoint": "U+250E6",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-250E6",
+    "frequency": 1,
+    "ids": "^⿱𠆢目$(GT)"
+  },
+  {
+    "character": "屚",
+    "codepoint": "U+5C5A",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-5C5A",
+    "frequency": 1,
+    "ids": "^⿸尸雨$(GTJP)"
+  },
+  {
+    "character": "癸",
+    "codepoint": "U+7678",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-7678",
+    "frequency": 1,
+    "ids": "^⿱癶天$(GHTJKPV)"
+  },
+  {
+    "character": "忝",
+    "codepoint": "U+5FDD",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-5FDD",
+    "frequency": 1,
+    "ids": "^⿱天⺗$(GTV)"
+  },
+  {
+    "character": "賛",
+    "codepoint": "U+8CDB",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-8CDB",
+    "frequency": 1,
+    "ids": "^⿱㚘貝$(GHTJKP)"
+  },
+  {
+    "character": "殹",
+    "codepoint": "U+6BB9",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-6BB9",
+    "frequency": 1,
+    "ids": "^⿰医殳$(GTJP)"
+  },
+  {
+    "character": "𦆕",
+    "codepoint": "U+26195",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-26195",
+    "frequency": 1,
+    "ids": "^⿲糹車糸$(G)"
+  },
+  {
+    "character": "𫥎",
+    "codepoint": "U+2B94E",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2B94E",
+    "frequency": 1,
+    "ids": "^⿱免⺀$(U)"
+  },
+  {
+    "character": "屮",
+    "codepoint": "U+5C6E",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-5C6E",
+    "frequency": 1,
+    "ids": "^⿻凵丨$(GHTK)"
+  },
+  {
+    "character": "誊",
+    "codepoint": "U+8A8A",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-8A8A",
+    "frequency": 1,
+    "ids": "^⿱龹言$(G)"
+  },
+  {
+    "character": "袞",
+    "codepoint": "U+889E",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-889E",
+    "frequency": 1,
+    "ids": "^⿳亠㕣𧘇$(GHTJKPV)"
+  },
+  {
+    "character": "巟",
+    "codepoint": "U+5DDF",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-5DDF",
+    "frequency": 1,
+    "ids": "^⿱亡𫶧$(GHTK)"
+  },
+  {
+    "character": "𰀃",
+    "codepoint": "U+30003",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-30003",
+    "frequency": 1,
+    "ids": "^⿱一冂$(G)"
+  },
+  {
+    "character": "皃",
+    "codepoint": "U+7683",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-7683",
+    "frequency": 1,
+    "ids": "^⿱白儿$(GTJKP)"
+  },
+  {
+    "character": "畄",
+    "codepoint": "U+7544",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-7544",
+    "frequency": 1,
+    "ids": "^⿱𭕄田$(GTJP)"
+  },
+  {
+    "character": "矞",
+    "codepoint": "U+77DE",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-77DE",
+    "frequency": 1,
+    "ids": "^⿱矛冏$(GHTJKP)"
+  },
+  {
+    "character": "㗊",
+    "codepoint": "U+35CA",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-35CA",
+    "frequency": 1,
+    "ids": "^⿱吅吅$(GHT)"
+  },
+  {
+    "character": "雍",
+    "codepoint": "U+96CD",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-96CD",
+    "frequency": 1,
+    "ids": "^⿱亠𱁈$(GHTJKPV)"
+  },
+  {
+    "character": "廛",
+    "codepoint": "U+5EDB",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-5EDB",
+    "frequency": 1,
+    "ids": "^⿸广𱗐$(GV)"
+  },
+  {
+    "character": "𦉰",
+    "codepoint": "U+26270",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-26270",
+    "frequency": 1,
+    "ids": "^⿵冂䒑$(J)"
+  },
+  {
+    "character": "𣏂",
+    "codepoint": "U+233C2",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-233C2",
+    "frequency": 1,
+    "ids": "^⿱㐅术$(GTP)"
+  },
+  {
+    "character": "𫥞",
+    "codepoint": "U+2B95E",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2B95E",
+    "frequency": 1,
+    "ids": "^⿵𠘨帀$(T)"
+  },
+  {
+    "character": "戾",
+    "codepoint": "U+623E",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-623E",
+    "frequency": 1,
+    "ids": "^⿸户犬$(GHPV)"
+  },
+  {
+    "character": "𦐇",
+    "codepoint": "U+26407",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-26407",
+    "frequency": 1,
+    "ids": "^⿱日羽$(GPV[B])"
+  },
+  {
+    "character": "𠳋",
+    "codepoint": "U+20CCB",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-20CCB",
+    "frequency": 1,
+    "ids": "^⿱𠀐㠯$(G)"
+  },
+  {
+    "character": "乜",
+    "codepoint": "U+4E5C",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-4E5C",
+    "frequency": 1,
+    "ids": "^乜$(GHTJKP)"
+  },
+  {
+    "character": "㸒",
+    "codepoint": "U+3E12",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-3E12",
+    "frequency": 1,
+    "ids": "^⿱爫壬$(GTKP)"
+  },
+  {
+    "character": "圡",
+    "codepoint": "U+5721",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-5721",
+    "frequency": 1,
+    "ids": "^⿷土丶$(GTJ)"
+  },
+  {
+    "character": "𱐍",
+    "codepoint": "U+3140D",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-3140D",
+    "frequency": 1,
+    "ids": "^⿶凵米$(V)"
+  },
+  {
+    "character": "𰤷",
+    "codepoint": "U+30937",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-30937",
+    "frequency": 1,
+    "ids": "^⿱田皿$(GT)"
+  },
+  {
+    "character": "𠙻",
+    "codepoint": "U+2067B",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2067B",
+    "frequency": 1,
+    "ids": "^⿱干凵$(GT)"
+  },
+  {
+    "character": "幵",
+    "codepoint": "U+5E75",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-5E75",
+    "frequency": 1,
+    "ids": "^⿰干干$(GHTJP)"
+  },
+  {
+    "character": "𫶧",
+    "codepoint": "U+2BDA7",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2BDA7",
+    "frequency": 1,
+    "ids": "^⿲丿丨乚$(J)"
+  },
+  {
+    "character": "㐆",
+    "codepoint": "U+3406",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-3406",
+    "frequency": 1,
+    "ids": "^⿸⿸𠂆𫜹𠃌$(GTJ)"
+  },
+  {
+    "character": "𡰯",
+    "codepoint": "U+21C2F",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-21C2F",
+    "frequency": 1,
+    "ids": "^⿸尸巾$(GTV)"
+  },
+  {
+    "character": "舜",
+    "codepoint": "U+821C",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-821C",
+    "frequency": 1,
+    "ids": "^⿳爫冖舛$(GHTJKPV)"
+  },
+  {
+    "character": "肴",
+    "codepoint": "U+80B4",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-80B4",
+    "frequency": 1,
+    "ids": "^⿱㐅有$(GHJKP)"
+  },
+  {
+    "character": "雉",
+    "codepoint": "U+96C9",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-96C9",
+    "frequency": 1,
+    "ids": "^⿰矢隹$(GHTJKPV)"
+  },
+  {
+    "character": "𣫞",
+    "codepoint": "U+23ADE",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-23ADE",
+    "frequency": 1,
+    "ids": "^⿰⿶臼丵殳$(GTPV)"
+  },
+  {
+    "character": "缊",
+    "codepoint": "U+7F0A",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-7F0A",
+    "frequency": 1,
+    "ids": "^⿰纟昷$(G)"
+  },
+  {
+    "character": "匱",
+    "codepoint": "U+5331",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-5331",
+    "frequency": 1,
+    "ids": "^⿷匚貴$(GHTJKPV)"
+  },
+  {
+    "character": "胥",
+    "codepoint": "U+80E5",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-80E5",
+    "frequency": 1,
+    "ids": "^⿱疋⺝$(GHJKP)"
+  },
+  {
+    "character": "圤",
+    "codepoint": "U+5724",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-5724",
+    "frequency": 1,
+    "ids": "^⿰土卜$(GTJKP)"
+  },
+  {
+    "character": "鴈",
+    "codepoint": "U+9D08",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-9D08",
+    "frequency": 1,
+    "ids": "^⿸厂𠌵$(GHTJKPV)"
+  },
+  {
+    "character": "嵒",
+    "codepoint": "U+5D52",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-5D52",
+    "frequency": 1,
+    "ids": "^⿱品山$(GHTJKP)"
+  },
+  {
+    "character": "劵",
+    "codepoint": "U+52B5",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-52B5",
+    "frequency": 1,
+    "ids": "^⿱龹力$(GHT)"
+  },
+  {
+    "character": "𠀁",
+    "codepoint": "U+20001",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-20001",
+    "frequency": 1,
+    "ids": "^⿻一㇉$(G)"
+  },
+  {
+    "character": "𠂑",
+    "codepoint": "U+20091",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-20091",
+    "frequency": 1,
+    "ids": "^⿴𠂎丶$(G)"
+  },
+  {
+    "character": "卪",
+    "codepoint": "U+536A",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-536A",
+    "frequency": 1,
+    "ids": "^⿻卩丶$(GTK)"
+  },
+  {
+    "character": "𠁣",
+    "codepoint": "U+20063",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-20063",
+    "frequency": 1,
+    "ids": "^⿰丨𫜹$(G)"
+  },
+  {
+    "character": "𠃛",
+    "codepoint": "U+200DB",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-200DB",
+    "frequency": 1,
+    "ids": "^⿰𰀄亅$(G)"
+  },
+  {
+    "character": "珀",
+    "codepoint": "U+73C0",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-73C0",
+    "frequency": 1,
+    "ids": "^⿰𤣩白$(GHTJKPV)"
+  },
+  {
+    "character": "莧",
+    "codepoint": "U+83A7",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-83A7",
+    "frequency": 1,
+    "ids": "^⿱艹見$(GHTJKP)"
+  },
+  {
+    "character": "舂",
+    "codepoint": "U+8202",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-8202",
+    "frequency": 1,
+    "ids": "^⿱𡗗臼$(GHTJKPV)"
+  },
+  {
+    "character": "衮",
+    "codepoint": "U+886E",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-886E",
+    "frequency": 1,
+    "ids": "^⿳亠公𧘇$(GHTKP)"
+  },
+  {
+    "character": "𠈌",
+    "codepoint": "U+2020C",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2020C",
+    "frequency": 1,
+    "ids": "^⿱从从$(GHT)"
+  },
+  {
+    "character": "桀",
+    "codepoint": "U+6840",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-6840",
+    "frequency": 1,
+    "ids": "^⿱舛木$(GHTJKPV)"
+  },
+  {
+    "character": "𫢉",
+    "codepoint": "U+2B889",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2B889",
+    "frequency": 1,
+    "ids": "^⿱𠆢干$(G)"
+  },
+  {
+    "character": "𱒃",
+    "codepoint": "U+31483",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-31483",
+    "frequency": 1,
+    "ids": "^⿱口小$(B)"
+  },
+  {
+    "character": "𠂋",
+    "codepoint": "U+2008B",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2008B",
+    "frequency": 1,
+    "ids": "^⿸𠂆一$(G)"
+  },
+  {
+    "character": "丗",
+    "codepoint": "U+4E17",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-4E17",
+    "frequency": 1,
+    "ids": "^⿻廿丨$(GJ[K][U])"
+  },
+  {
+    "character": "𬛸",
+    "codepoint": "U+2C6F8",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2C6F8",
+    "frequency": 1,
+    "ids": "^⿱臼工$(U)"
+  },
+  {
+    "character": "韭",
+    "codepoint": "U+97ED",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-97ED",
+    "frequency": 1,
+    "ids": "^⿱非一$(G)"
+  },
+  {
+    "character": "豙",
+    "codepoint": "U+8C59",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-8C59",
+    "frequency": 1,
+    "ids": "^⿱立𧰨$(GTJK)"
+  },
+  {
+    "character": "𠚕",
+    "codepoint": "U+20695",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-20695",
+    "frequency": 1,
+    "ids": "^⿶凵⿱丛从$(G)"
+  },
+  {
+    "character": "絜",
+    "codepoint": "U+7D5C",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-7D5C",
+    "frequency": 1,
+    "ids": "^⿱㓞糸$(GJKP)"
+  },
+  {
+    "character": "𠂊",
+    "codepoint": "U+2008A",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2008A",
+    "frequency": 1,
+    "ids": "^⿰丿㇇$(HKV)"
+  },
+  {
+    "character": "𠀔",
+    "codepoint": "U+20014",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-20014",
+    "frequency": 1,
+    "ids": "^⿳一𠂈人$(GT)"
+  },
+  {
+    "character": "䙲",
+    "codepoint": "U+4672",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-4672",
+    "frequency": 1,
+    "ids": "^⿱覀大$(GTJ)"
+  },
+  {
+    "character": "冃",
+    "codepoint": "U+5183",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-5183",
+    "frequency": 1,
+    "ids": "^⿵冂𠄠$(GTJ)"
+  },
+  {
+    "character": "𮍏",
+    "codepoint": "U+2E34F",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-2E34F",
+    "frequency": 1,
+    "ids": "^⿵戊臣$(S)"
+  },
+  {
+    "character": "𦈢",
+    "codepoint": "U+26222",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-26222",
+    "frequency": 1,
+    "ids": "^⿱⿸午一𠃊$(GTPV)"
+  },
+  {
+    "character": "滕",
+    "codepoint": "U+6ED5",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-6ED5",
+    "frequency": 1,
+    "ids": "^⿰月𣳾$(GHTJKPV)"
+  },
+  {
+    "character": "吏",
+    "codepoint": "U+540F",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-540F",
+    "frequency": 1,
+    "ids": "^⿻一史$(GHTJKPV)"
+  },
+  {
+    "character": "㇂",
+    "codepoint": "U+31C2",
+    "unicode_name": "CJK STROKE XG",
+    "frequency": 1,
+    "ids": "?"
+  },
+  {
+    "character": "穵",
+    "codepoint": "U+7A75",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-7A75",
+    "frequency": 1,
+    "ids": "^⿱穴乙$(G)"
+  },
+  {
+    "character": "𰯲",
+    "codepoint": "U+30BF2",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-30BF2",
+    "frequency": 1,
+    "ids": "^⿰臣⿳𠂉丶罒$(B)"
+  },
+  {
+    "character": "𩵋",
+    "codepoint": "U+29D4B",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-29D4B",
+    "frequency": 1,
+    "ids": "^⿳⺈田大$(GTV)"
+  },
+  {
+    "character": "昷",
+    "codepoint": "U+6637",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-6637",
+    "frequency": 1,
+    "ids": "^⿱日皿$(GTJKP)"
+  },
+  {
+    "character": "𡿪",
+    "codepoint": "U+21FEA",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-21FEA",
+    "frequency": 1,
+    "ids": "^⿱巛夕$(GTV)"
+  },
+  {
+    "character": "㇄",
+    "codepoint": "U+31C4",
+    "unicode_name": "CJK STROKE SW",
+    "frequency": 1,
+    "ids": "?"
+  },
+  {
+    "character": "𡱒",
+    "codepoint": "U+21C52",
+    "unicode_name": "CJK UNIFIED IDEOGRAPH-21C52",
+    "frequency": 1,
+    "ids": "^⿸尸共$(GTV)"
+  }
+]
