@@ -1,6 +1,8 @@
-# Heisig Anki Decks & Mnemonic Generator
+# Heisig Anki Decks & Character Decomposition
 
-Tools for learning Chinese and Japanese characters using James W. Heisig's method: an **Anki add-on** that breaks down characters and generates mnemonic stories with AI, plus **pre-built decks** if you just want the flashcards.
+> **Work in progress** — This project is under active development. Simplified Chinese characters currently have the best decomposition quality; Traditional Chinese and Japanese may have less meaningful breakdowns.
+
+Tools for learning Chinese and Japanese characters using James W. Heisig's method: an **Anki add-on** that breaks down characters into components with spatial layout info, plus **pre-built decks** if you just want the flashcards.
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ebriggsjohnson/heisig_anki_plugin/blob/main/demo.ipynb)
 
@@ -8,15 +10,21 @@ Tools for learning Chinese and Japanese characters using James W. Heisig's metho
 
 ## Anki Add-on
 
-The add-on decomposes any character into its components and optionally generates a mnemonic story using an LLM. It works with any deck — you don't need to be studying Heisig specifically.
+The add-on decomposes any character into its meaningful components. It works with any deck — you don't need to be studying Heisig specifically.
 
 ### Features
 
-- **One-click decomposition**: click the 漢 button in the editor to break down the current character into components, layout, reading, and Heisig book numbers
-- **AI mnemonic stories**: generate vivid, memorable stories that connect component meanings to the character's keyword, using Anthropic, OpenAI, or Gemini (free tier)
-- **Respects your keywords**: if you've already defined a keyword for a component character in your deck, the plugin uses yours instead of the Heisig default — useful if you're not following Heisig or prefer different mnemonics
+- **One-click decomposition**: click the <span style="color:#2196F3">**字**</span> button in the editor to break down the current character
+- **Human-readable layout**: shows spatial arrangement (e.g. "left → right", "top → bottom", "upper-left wraps")
+- **Respects your keywords**: if you've already defined a keyword for a component character in your deck, the plugin uses yours instead of the Heisig default
 - **Auto-fill mode**: optionally triggers decomposition automatically when you tab out of the Character field
-- **Configurable**: Tools → Heisig Settings to set your LLM provider, API key, model, and field names
+- **Configurable**: Tools → Heisig Settings to set field names
+
+### Screenshots
+
+| 左 (left) | 藏 (hide) |
+|-----------|-----------|
+| ![demo-left](docs/screenshots/demo-left.png) | ![demo-hide](docs/screenshots/demo-hide.png) |
 
 ### Install
 
@@ -35,21 +43,17 @@ Restart Anki after installing.
 
 1. Your note type needs a **Character** field and a **Heisig Explanation** field (field names are configurable in Tools → Heisig Settings)
 2. Type a character in the Character field
-3. Click the **漢** button in the editor toolbar
-4. The Heisig Explanation field fills with the decomposition:
-   - Keyword and book numbers
-   - Reading (pinyin)
-   - Components with their meanings
-   - Spatial layout (IDS)
-5. To add an AI-generated story, enter your API key in Tools → Heisig Settings
-
-<!-- TODO: add screenshots -->
+3. Click the **字** button in the editor toolbar
+4. The Heisig Explanation field fills with:
+   - Keyword
+   - Components with their meanings (one per line)
+   - Spatial layout description
 
 ---
 
 ## Pre-built Decks
 
-If you don't want to install an add-on, you can just download and import the pre-built `.apkg` decks. These include all the decomposition data baked into each card — you just won't have the LLM story generation feature.
+If you don't want to install an add-on, you can just download and import the pre-built `.apkg` decks. These include all the decomposition data baked into each card.
 
 | File | Contents | Cards |
 |------|----------|-------|
@@ -60,7 +64,7 @@ If you don't want to install an add-on, you can just download and import the pre
 
 Each card includes: character, keyword, separate RSH/RTH/RTK book numbers, pinyin readings (CC-CEDICT), recursive component decomposition, spatial layout (IDS), and tags by chapter.
 
-**Note:** The component decompositions are algorithmically generated and may not match Heisig's books exactly. They follow the same general principle — breaking characters into meaningful primitives — but individual breakdowns may differ.
+**Note:** The component decompositions are algorithmically generated and may not match Heisig's books exactly. They follow the same general principle — breaking characters into meaningful primitives — but individual breakdowns may differ. Simplified Chinese (RSH) has the best decomposition quality.
 
 To import: open Anki → File → Import → select the `.apkg` file.
 
@@ -74,7 +78,14 @@ To import: open Anki → File → Import → select the `.apkg` file.
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ebriggsjohnson/heisig_anki_plugin/blob/main/demo.ipynb)
 
-Click the badge to open an interactive demo in Google Colab — no install required. Type any character, see its decomposition, and generate mnemonic stories with a free [Gemini API key](https://aistudio.google.com/apikey).
+Click the badge to open an interactive demo in Google Colab — no install required. Type any character and see its decomposition instantly.
+
+---
+
+## Future Features
+
+- **AI-generated mnemonic stories**: Use an LLM to generate vivid stories connecting component meanings to keywords
+- **Improved Traditional/Japanese decomposition**: Better primitive mappings for RTH and RTK
 
 ---
 
@@ -116,5 +127,3 @@ python scripts/build_apkg.py        # build .apkg with embedded media
 ## License
 
 Scripts in this repo are provided as-is. The Heisig XML data (`data/heisig-repo/`) is MIT-licensed by Peter Ross. _Remebering Traditional Hanzi_, _Remembering Simplified Hanzi_, and _Remembering the Kanji _ are the intellectual property of James W. Heisig.
-
-
