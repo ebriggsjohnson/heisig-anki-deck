@@ -152,6 +152,13 @@ CARD_CSS = """\
   color: #888;
   margin: 4px 0;
 }
+.explanation {
+  font-size: 15px;
+  color: #444;
+  margin-top: 12px;
+  text-align: left;
+  line-height: 1.5;
+}
 .approx-note {
   font-size: 11px;
   color: #c0392b;
@@ -173,6 +180,7 @@ BACK_TEMPLATE = """\
 {{#RTH_Number}}<div class="numbers">RTH #{{RTH_Number}}</div>{{/RTH_Number}}
 {{#RSH_Number}}<div class="numbers">RSH #{{RSH_Number}}</div>{{/RSH_Number}}
 {{#RTK_Number}}<div class="numbers">RTK #{{RTK_Number}}</div>{{/RTK_Number}}
+{{#Heisig Explanation}}<div class="explanation">{{Heisig Explanation}}</div>{{/Heisig Explanation}}
 """
 
 heisig_model = genanki.Model(
@@ -188,6 +196,7 @@ heisig_model = genanki.Model(
         {"name": "RTH_Number"},
         {"name": "RSH_Number"},
         {"name": "RTK_Number"},
+        {"name": "Heisig Explanation"},
         {"name": "SortField"},
     ],
     templates=[
@@ -198,7 +207,7 @@ heisig_model = genanki.Model(
         },
     ],
     css=CARD_CSS,
-    sort_field_index=9,  # SortField = Keyword (with primitive suffix)
+    sort_field_index=10,  # SortField = Keyword (with primitive suffix)
 )
 
 
@@ -250,6 +259,7 @@ def build_note(card, sort_map):
             card.get("RTH_number", ""),
             card.get("RSH_number", ""),
             card.get("RTK_number", ""),
+            "",  # Heisig Explanation — filled by the add-on
             sort_val,
         ],
         tags=tags_str.split() if tags_str else [],
