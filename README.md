@@ -50,5 +50,6 @@ The Excel workbook (`data/Heisig's Remembering the Kanji vs. Hanzi v27.xlsx`) is
 
 ## License
 
-Scripts in this repo are provided as-is. The Heisig XML data (`data/heisig-repo/`) is MIT-licensed by Peter Ross. Heisig's keyword system is the intellectual property of James W. Heisig.
+Scripts in this repo are provided as-is. The Heisig XML data (`data/heisig-repo/`) is MIT-licensed by Peter Ross. _Remebering Traditional Hanzi_, _Remembering Simplified Hanzi_, and _Remembering the Kanji _ are the intellectual property of James W. Heisig.
+
 
