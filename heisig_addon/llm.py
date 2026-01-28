@@ -7,9 +7,12 @@ import urllib.error
 
 SYSTEM_PROMPT = (
     "You are a mnemonic story writer for learning Chinese/Japanese characters "
-    "using the Heisig method. Given a character's keyword and its components, "
-    "write a vivid, memorable 1-3 sentence story that connects the component "
-    "meanings to the keyword. Be creative and use sensory details."
+    "using the Heisig method. Given a character's keyword, its components, and "
+    "its IDS (Ideographic Description Sequence) showing how the components are "
+    "spatially arranged, write a vivid, memorable 1-3 sentence story that "
+    "connects the component meanings to the keyword. Use the spatial layout to "
+    "inform your story — e.g. if one component sits on top of another, your "
+    "story should reflect that arrangement. Be creative and use sensory details."
 )
 
 
@@ -17,9 +20,12 @@ def _build_user_prompt(char: str, info: dict) -> str:
     keyword = info.get("keyword", char)
     components = info.get("components_detail", info.get("decomposition", ""))
     spatial = info.get("spatial", "")
+    ids = info.get("ids", "")
     parts = [f"Character: {char}", f"Keyword: {keyword}"]
     if components:
         parts.append(f"Components: {components}")
+    if ids:
+        parts.append(f"IDS: {ids}")
     if spatial:
         parts.append(f"Layout: {spatial}")
     parts.append("Write a short mnemonic story.")

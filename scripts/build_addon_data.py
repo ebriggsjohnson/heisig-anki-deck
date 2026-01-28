@@ -25,6 +25,7 @@ def build():
                 "reading": row.get("reading", "").strip(),
                 "decomposition": row.get("decomposition", "").strip(),
                 "spatial": row.get("spatial", "").strip(),
+                "ids": row.get("ids", "").strip(),
                 "components_detail": row.get("components_detail", "").strip(),
                 "RTH_number": row.get("RTH_number", "").strip(),
                 "RSH_number": row.get("RSH_number", "").strip(),
