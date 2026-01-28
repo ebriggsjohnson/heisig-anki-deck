@@ -51,7 +51,10 @@ Your note type needs at least a `Character` field and a `Heisig Explanation` fie
 
 ## Demo
 
-- **Notebook**: [`demo.ipynb`](demo.ipynb) — renders styled cards with LLM-generated stories, viewable directly on GitHub
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ebriggsjohnson/heisig_anki_plugin/blob/main/demo.ipynb)
+
+**Try it live** — click the badge above to open the interactive demo in Google Colab (no install required). Type any character, hit Decompose, and optionally generate mnemonic stories with a free Gemini API key.
+
 - **Web demo**: [`docs/index.html`](docs/index.html) — standalone HTML page, works on GitHub Pages
 
 ## Scripts
