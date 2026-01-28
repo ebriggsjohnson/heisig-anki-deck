@@ -11,7 +11,7 @@ Anki flashcard decks for James W. Heisig's *Remembering the Hanzi* and *Remember
 | `RTK_deck.csv` | Remembering the Kanji | ~3,300 |
 | `Ultimate_deck.csv` | All 3 merged (deduplicated) | ~5,400 |
 
-Each card includes: character, keyword, book numbers, pinyin readings (CC-CEDICT), recursive component decomposition, spatial layout (IDS), and tags.
+Each card includes: character, keyword, book numbers, pinyin readings (CC-CEDICT), recursive component decomposition, spatial layout via Ideographic Description Sequences (IDS), and tags by chapter.
 
 ## Non-Unicode Primitives
 
@@ -51,3 +51,4 @@ The Excel workbook (`data/Heisig's Remembering the Kanji vs. Hanzi v27.xlsx`) is
 ## License
 
 Scripts in this repo are provided as-is. The Heisig XML data (`data/heisig-repo/`) is MIT-licensed by Peter Ross. Heisig's keyword system is the intellectual property of James W. Heisig.
+
