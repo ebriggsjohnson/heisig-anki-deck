@@ -4,12 +4,11 @@ from aqt import mw, gui_hooks
 from aqt.editor import Editor
 from aqt.qt import (
     QDialog, QVBoxLayout, QHBoxLayout, QLabel, QLineEdit,
-    QComboBox, QCheckBox, QPushButton, QAction,
+    QPushButton, QAction,
 )
-from aqt.utils import showInfo, tooltip
+from aqt.utils import tooltip
 
 from .decompose import lookup, format_explanation
-from .llm import generate_story
 
 
 def get_config():
@@ -53,17 +52,8 @@ def _on_heisig_button(editor: Editor):
     html = format_explanation(char, info, col=mw.col,
                               char_field=char_field,
                               keyword_field=keyword_field)
-
-    # Optionally generate LLM story
-    api_key = cfg.get("api_key", "")
-    if api_key:
-        provider = cfg.get("llm_provider", "anthropic")
-        model = cfg.get("model", "claude-sonnet-4-20250514")
-        story = generate_story(char, info, provider, api_key, model)
-        if story:
-            html += f"<br><br><i>{story}</i>"
-
     note[expl_field] = html
+
     editor.loadNoteKeepingFocus()
     tooltip("Heisig explanation generated")
 
@@ -73,8 +63,8 @@ def add_editor_button(buttons: list, editor: Editor):
         icon=None,
         cmd="heisig",
         func=_on_heisig_button,
-        tip="Generate Heisig explanation (漢)",
-        label="漢",
+        tip="Generate Heisig explanation",
+        label="<span style='color:#2196F3;font-weight:bold;'>字</span>",
     )
     buttons.append(btn)
 
@@ -82,10 +72,8 @@ def add_editor_button(buttons: list, editor: Editor):
 # --- Focus lost hook ---
 
 def on_focus_lost(changed: bool, note, field_idx: int) -> bool:
+    """Auto-generate explanation when Character field loses focus."""
     cfg = get_config()
-    if not cfg.get("auto_generate_story", False):
-        return changed
-
     char_field = cfg.get("character_field", "Character")
     keyword_field = cfg.get("keyword_field", "Keyword")
     expl_field = cfg.get("explanation_field", "Heisig Explanation")
@@ -109,14 +97,6 @@ def on_focus_lost(changed: bool, note, field_idx: int) -> bool:
                               char_field=char_field,
                               keyword_field=keyword_field)
 
-    api_key = cfg.get("api_key", "")
-    if api_key and cfg.get("auto_generate_story", False):
-        provider = cfg.get("llm_provider", "anthropic")
-        model = cfg.get("model", "claude-sonnet-4-20250514")
-        story = generate_story(char, info, provider, api_key, model)
-        if story:
-            html += f"<br><br><i>{story}</i>"
-
     if note[expl_field] != html:
         note[expl_field] = html
         return True
@@ -133,37 +113,6 @@ class HeisigSettingsDialog(QDialog):
 
         cfg = get_config()
         layout = QVBoxLayout(self)
-
-        # Provider
-        row = QHBoxLayout()
-        row.addWidget(QLabel("LLM Provider:"))
-        self.provider_combo = QComboBox()
-        self.provider_combo.addItems(["anthropic", "openai", "gemini"])
-        self.provider_combo.setCurrentText(cfg.get("llm_provider", "anthropic"))
-        row.addWidget(self.provider_combo)
-        layout.addLayout(row)
-
-        # API Key
-        row = QHBoxLayout()
-        row.addWidget(QLabel("API Key:"))
-        self.api_key_edit = QLineEdit()
-        self.api_key_edit.setEchoMode(QLineEdit.EchoMode.Password)
-        self.api_key_edit.setText(cfg.get("api_key", ""))
-        row.addWidget(self.api_key_edit)
-        layout.addLayout(row)
-
-        # Model
-        row = QHBoxLayout()
-        row.addWidget(QLabel("Model:"))
-        self.model_edit = QLineEdit()
-        self.model_edit.setText(cfg.get("model", "claude-sonnet-4-20250514"))
-        row.addWidget(self.model_edit)
-        layout.addLayout(row)
-
-        # Auto generate
-        self.auto_check = QCheckBox("Auto-generate story on field change")
-        self.auto_check.setChecked(cfg.get("auto_generate_story", False))
-        layout.addWidget(self.auto_check)
 
         # Character field
         row = QHBoxLayout()
@@ -201,10 +150,6 @@ class HeisigSettingsDialog(QDialog):
 
     def on_save(self):
         cfg = {
-            "llm_provider": self.provider_combo.currentText(),
-            "api_key": self.api_key_edit.text(),
-            "model": self.model_edit.text(),
-            "auto_generate_story": self.auto_check.isChecked(),
             "character_field": self.char_field_edit.text(),
             "keyword_field": self.keyword_field_edit.text(),
             "explanation_field": self.expl_field_edit.text(),

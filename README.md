@@ -60,6 +60,8 @@ If you don't want to install an add-on, you can just download and import the pre
 
 Each card includes: character, keyword, separate RSH/RTH/RTK book numbers, pinyin readings (CC-CEDICT), recursive component decomposition, spatial layout (IDS), and tags by chapter.
 
+**Note:** The component decompositions are algorithmically generated and may not match Heisig's books exactly. They follow the same general principle — breaking characters into meaningful primitives — but individual breakdowns may differ.
+
 To import: open Anki → File → Import → select the `.apkg` file.
 
 ### Non-Unicode Primitives

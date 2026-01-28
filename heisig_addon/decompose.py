@@ -6,6 +6,22 @@ import os
 _DATA = None
 _DATA_PATH = os.path.join(os.path.dirname(__file__), "data", "heisig_data.json")
 
+# IDS operator descriptions
+IDS_DESCRIPTIONS = {
+    "⿰": "left → right",
+    "⿱": "top → bottom",
+    "⿲": "left → middle → right",
+    "⿳": "top → middle → bottom",
+    "⿴": "surrounded",
+    "⿵": "open at bottom",
+    "⿶": "open at top",
+    "⿷": "open at right",
+    "⿸": "upper-left wraps",
+    "⿹": "upper-right wraps",
+    "⿺": "lower-left wraps",
+    "⿻": "overlapping",
+}
+
 
 def _load():
     global _DATA
@@ -46,29 +62,48 @@ def resolve_keyword(char: str, col, char_field: str, keyword_field: str) -> str:
 
 
 def _resolve_components_detail(components_detail: str, col, char_field: str,
-                                keyword_field: str) -> str:
+                                keyword_field: str) -> list:
     """Re-resolve component keywords using the user's collection.
 
     components_detail looks like: "木 = tree, 木 = tree"
     For each component character, check the user's deck first.
+    Deduplicates entries with the same character and resolved keyword.
+    Returns a list of (char, keyword) tuples.
     """
     if not components_detail:
-        return components_detail
+        return []
 
+    seen = set()
     parts = []
     for part in components_detail.split(", "):
         if " = " in part:
-            comp_char, _old_kw = part.split(" = ", 1)
+            comp_char, old_kw = part.split(" = ", 1)
             comp_char = comp_char.strip()
             # Only resolve single actual characters, skip 囧-encoded primitives
             if len(comp_char) == 1 and "囧" not in comp_char:
                 resolved = resolve_keyword(comp_char, col, char_field, keyword_field)
-                parts.append(f"{comp_char} = {resolved}")
             else:
-                parts.append(part)
-        else:
-            parts.append(part)
-    return ", ".join(parts)
+                resolved = old_kw.strip()
+            key = (comp_char, resolved)
+            if key not in seen:
+                seen.add(key)
+                parts.append(key)
+    return parts
+
+
+def _parse_ids_layout(ids: str) -> str:
+    """Extract a human-readable layout description from IDS string.
+
+    Returns the first IDS operator found translated to readable text,
+    or empty string if none found.
+    """
+    if not ids:
+        return ""
+
+    for char in ids:
+        if char in IDS_DESCRIPTIONS:
+            return IDS_DESCRIPTIONS[char]
+    return ""
 
 
 def format_explanation(char: str, info: dict, col=None,
@@ -76,32 +111,27 @@ def format_explanation(char: str, info: dict, col=None,
                        keyword_field: str = "Keyword") -> str:
     """Format decomposition info as HTML for the explanation field.
 
+    Output: keyword, components on separate lines, and spatial layout.
     If col is provided, component keywords are resolved from the user's
     collection first, falling back to bundled data.
     """
     keyword = resolve_keyword(char, col, char_field, keyword_field)
-    lines = [f"<b>{keyword}</b> ({char})"]
-
-    # Book numbers
-    nums = []
-    for key, label in [("RSH_number", "RSH"), ("RTH_number", "RTH"), ("RTK_number", "RTK")]:
-        v = info.get(key, "")
-        if v:
-            nums.append(f"{label} #{v}")
-    if nums:
-        lines[0] += " " + ", ".join(nums)
-
-    if info.get("reading"):
-        lines.append(f"Reading: {info['reading']}")
+    lines = [f"<b>{keyword}</b>"]
 
     components = info.get("components_detail", "")
     if components:
-        components = _resolve_components_detail(
+        parts = _resolve_components_detail(
             components, col, char_field, keyword_field
         )
-        lines.append(f"Components: {components}")
+        for comp_char, comp_kw in parts:
+            lines.append(f"{comp_char} {comp_kw}")
 
-    if info.get("spatial"):
-        lines.append(f"Layout: {info['spatial']}")
+        # Add spatial layout from IDS
+        ids = info.get("ids", "")
+        layout = _parse_ids_layout(ids)
+        if layout:
+            lines.append(f"<i>({layout})</i>")
+    else:
+        lines.append("<i>(no breakdown)</i>")
 
     return "<br>".join(lines)
