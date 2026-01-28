@@ -25,6 +25,35 @@ python scripts/crop_primitives.py   # generate primitive images
 python scripts/build_apkg.py        # build .apkg with embedded media
 ```
 
+## Anki Add-on
+
+An Anki plugin that auto-generates character breakdowns and optional LLM-powered mnemonic stories.
+
+### Features
+
+- **Editor button** (漢): decompose the current character into components, layout, and reading
+- **Auto-fill**: optionally triggers when you tab out of the Character field
+- **LLM stories**: generate mnemonic stories using Anthropic, OpenAI, or Gemini (free tier)
+- **User keywords**: if you've defined your own keyword for a component in your deck, the plugin uses yours instead of the Heisig default
+- **Settings dialog**: Tools → Heisig Settings to configure provider, API key, model, and field names
+
+### Install
+
+```bash
+# Symlink into Anki's addons directory
+ln -s /path/to/heisig_addon ~/Library/Application\ Support/Anki2/addons21/heisig_addon
+
+# Or package as .ankiaddon
+cd heisig_addon && zip -r ../heisig_addon.ankiaddon *
+```
+
+Your note type needs at least a `Character` field and a `Heisig Explanation` field. Field names are configurable in settings.
+
+## Demo
+
+- **Notebook**: [`demo.ipynb`](demo.ipynb) — renders styled cards with LLM-generated stories, viewable directly on GitHub
+- **Web demo**: [`docs/index.html`](docs/index.html) — standalone HTML page, works on GitHub Pages
+
 ## Scripts
 
 - `scripts/parse_rsh.py` — Parse `rsh.xml` → `rsh_parsed.json`
@@ -32,6 +61,7 @@ python scripts/build_apkg.py        # build .apkg with embedded media
 - `scripts/build_decks.py` — Generate CSV decks
 - `scripts/crop_primitives.py` — Generate primitive approximation images
 - `scripts/build_apkg.py` — Package CSVs + images into `.apkg` files
+- `scripts/build_addon_data.py` — Build `heisig_data.json` from CSV for the add-on and web demo
 
 ## Data Sources
 
