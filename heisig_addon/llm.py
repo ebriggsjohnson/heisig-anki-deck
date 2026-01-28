@@ -1,8 +1,25 @@
 """LLM API client for generating mnemonic stories."""
 
 import json
+import time
 import urllib.request
 import urllib.error
+
+
+def _request_with_retry(req, max_retries=5, initial_delay=5):
+    """Make an HTTP request with exponential backoff on 429 errors."""
+    delay = initial_delay
+    for attempt in range(max_retries + 1):
+        try:
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                return json.loads(resp.read())
+        except urllib.error.HTTPError as e:
+            if e.code == 429 and attempt < max_retries:
+                time.sleep(delay)
+                delay *= 2
+                continue
+            raise
+    return None
 
 
 SYSTEM_PROMPT = (
@@ -61,9 +78,8 @@ def _call_anthropic(api_key: str, model: str, user_prompt: str) -> str:
         "anthropic-version": "2023-06-01",
     })
     try:
-        with urllib.request.urlopen(req, timeout=30) as resp:
-            data = json.loads(resp.read())
-            return data["content"][0]["text"]
+        data = _request_with_retry(req)
+        return data["content"][0]["text"]
     except (urllib.error.URLError, KeyError, IndexError) as e:
         return f"(LLM error: {e})"
 
@@ -79,9 +95,8 @@ def _call_gemini(api_key: str, model: str, user_prompt: str) -> str:
         "Content-Type": "application/json",
     })
     try:
-        with urllib.request.urlopen(req, timeout=30) as resp:
-            data = json.loads(resp.read())
-            return data["candidates"][0]["content"]["parts"][0]["text"]
+        data = _request_with_retry(req)
+        return data["candidates"][0]["content"]["parts"][0]["text"]
     except (urllib.error.URLError, KeyError, IndexError) as e:
         return f"(LLM error: {e})"
 
@@ -101,8 +116,7 @@ def _call_openai(api_key: str, model: str, user_prompt: str) -> str:
         "Authorization": f"Bearer {api_key}",
     })
     try:
-        with urllib.request.urlopen(req, timeout=30) as resp:
-            data = json.loads(resp.read())
-            return data["choices"][0]["message"]["content"]
+        data = _request_with_retry(req)
+        return data["choices"][0]["message"]["content"]
     except (urllib.error.URLError, KeyError, IndexError) as e:
         return f"(LLM error: {e})"
