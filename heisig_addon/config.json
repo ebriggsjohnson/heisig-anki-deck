@@ -1,0 +1,9 @@
+{
+  "llm_provider": "anthropic",
+  "api_key": "",
+  "model": "claude-sonnet-4-20250514",
+  "auto_generate_story": false,
+  "character_field": "Character",
+  "keyword_field": "Keyword",
+  "explanation_field": "Heisig Explanation"
+}

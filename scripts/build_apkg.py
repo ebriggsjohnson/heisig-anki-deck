@@ -147,11 +147,6 @@ CARD_CSS = """\
   color: #999;
   margin: 4px 0;
 }
-.tags {
-  font-size: 12px;
-  color: #aaa;
-  margin-top: 16px;
-}
 .numbers {
   font-size: 13px;
   color: #888;
@@ -165,7 +160,6 @@ CARD_CSS = """\
 
 FRONT_TEMPLATE = """\
 <div class="character">{{Character}}</div>
-{{#Tags}}<div class="tags">{{Tags}}</div>{{/Tags}}
 """
 
 BACK_TEMPLATE = """\
@@ -176,7 +170,9 @@ BACK_TEMPLATE = """\
 {{#Decomposition}}<div class="decomposition">{{Decomposition}}</div>{{/Decomposition}}
 {{#ComponentsDetail}}<div class="components">{{ComponentsDetail}}</div>{{/ComponentsDetail}}
 {{#Spatial}}<div class="spatial">{{Spatial}}</div>{{/Spatial}}
-{{#Numbers}}<div class="numbers">{{Numbers}}</div>{{/Numbers}}
+{{#RTH_Number}}<div class="numbers">RTH #{{RTH_Number}}</div>{{/RTH_Number}}
+{{#RSH_Number}}<div class="numbers">RSH #{{RSH_Number}}</div>{{/RSH_Number}}
+{{#RTK_Number}}<div class="numbers">RTK #{{RTK_Number}}</div>{{/RTK_Number}}
 """
 
 heisig_model = genanki.Model(
@@ -189,8 +185,9 @@ heisig_model = genanki.Model(
         {"name": "Decomposition"},
         {"name": "ComponentsDetail"},
         {"name": "Spatial"},
-        {"name": "Numbers"},
-        {"name": "Tags"},
+        {"name": "RTH_Number"},
+        {"name": "RSH_Number"},
+        {"name": "RTK_Number"},
         {"name": "SortField"},
     ],
     templates=[
@@ -201,35 +198,43 @@ heisig_model = genanki.Model(
         },
     ],
     css=CARD_CSS,
-    sort_field_index=8,  # SortField
+    sort_field_index=9,  # SortField = Keyword (with primitive suffix)
 )
 
 
-def build_note(card):
+def build_sort_field_map(cards):
+    """Build a map of character -> sort field value (keyword, with '(primitive)' suffix for conflicts)."""
+    from collections import defaultdict
+
+    keyword_groups = defaultdict(list)
+    for card in cards:
+        kw = card.get("keyword", "").strip()
+        if not kw:
+            continue
+        is_prim = "primitive" in card.get("tags", "")
+        keyword_groups[kw].append((card.get("character", ""), is_prim))
+
+    sort_map = {}
+    for kw, entries in keyword_groups.items():
+        has_prim = any(p for _, p in entries)
+        has_char = any(not p for _, p in entries)
+        for char, is_prim in entries:
+            if is_prim and has_char:
+                sort_map[char] = f"{kw} (primitive)"
+            else:
+                sort_map[char] = kw
+    return sort_map
+
+
+def build_note(card, sort_map):
     """Build a genanki Note from a card dict."""
     char = card.get("character", "")
     character_html = char_display(char)
 
-    # Build numbers string
-    nums = []
-    for book in ["RTH", "RSH", "RTK"]:
-        n = card.get(f"{book}_number", "")
-        if n:
-            nums.append(f"{book} #{n}")
-    numbers_str = " · ".join(nums)
-
     # Enrich components_detail with img tags
     components = enrich_components_detail(card.get("components_detail", ""))
 
-    # Sort field: prefer RSH number, then RTH, then RTK, then keyword
-    sort_val = ""
-    for book in ["RSH", "RTH", "RTK"]:
-        n = card.get(f"{book}_number", "")
-        if n:
-            sort_val = f"{book}_{int(n):05d}"
-            break
-    if not sort_val:
-        sort_val = f"ZZZ_{card.get('keyword', char)}"
+    sort_val = sort_map.get(char, card.get("keyword", char))
 
     tags_str = card.get("tags", "")
 
@@ -242,8 +247,9 @@ def build_note(card):
             card.get("decomposition", ""),
             components,
             card.get("spatial", ""),
-            numbers_str,
-            tags_str,
+            card.get("RTH_number", ""),
+            card.get("RSH_number", ""),
+            card.get("RTK_number", ""),
             sort_val,
         ],
         tags=tags_str.split() if tags_str else [],
@@ -278,8 +284,11 @@ def build_deck(name, csv_path, output_path):
     deck = genanki.Deck(deck_id, f"Heisig::{name}")
 
     cards = load_csv_cards(csv_path)
+    # Drop entries with no keyword
+    cards = [c for c in cards if c.get("keyword", "").strip()]
+    sort_map = build_sort_field_map(cards)
     for card in cards:
-        note = build_note(card)
+        note = build_note(card, sort_map)
         deck.add_note(note)
 
     media = collect_media_files()
