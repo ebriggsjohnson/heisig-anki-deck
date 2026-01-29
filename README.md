@@ -58,9 +58,9 @@ If you don't want to install an add-on, you can just download and import the pre
 | File | Contents | Cards |
 |------|----------|-------|
 | `RSH_deck.apkg` | Simplified Chinese (Heisig + 通用规范汉字表) | ~7,800 |
-| `RTH_deck.apkg` | Traditional Chinese (Heisig + Taiwan standard lists) | ~7,900 |
+| `RTH_deck.apkg` | Traditional Chinese (Heisig + Taiwan standard lists) | ~6,600 |
 | `RTK_deck.apkg` | Japanese Kanji (Heisig only) | ~3,300 |
-| `Ultimate_deck.apkg` | All combined (deduplicated) | ~13,500 |
+| `Ultimate_deck.apkg` | All combined (deduplicated) | ~12,100 |
 
 ### One Deck to Rule Them All
 
@@ -77,7 +77,7 @@ Characters are tagged by difficulty level so you can focus on what matters:
 
 Each card includes: character, keyword, book numbers (where applicable), pinyin readings, recursive component decomposition, spatial layout (IDS), and tags.
 
-**Note:** The component decompositions are algorithmically generated and may not match Heisig's books exactly. Keywords for non-Heisig characters are sourced from CC-CEDICT and Unihan databases.
+**Note:** The component decompositions are algorithmically generated and may not match Heisig's books exactly. Keywords for non-Heisig characters are auto-generated from CC-CEDICT and Unihan databases — these have not been manually verified for accuracy or usefulness as mnemonics.
 
 To import: open Anki → File → Import → select the `.apkg` file.
 
@@ -99,6 +99,7 @@ Click the badge to open an interactive demo in Google Colab — no install requi
 
 - **AI-generated mnemonic stories**: Use an LLM to generate vivid stories connecting component meanings to keywords
 - **Improved Traditional/Japanese decomposition**: Better primitive mappings for RTH and RTK
+- **Verify auto-generated keywords**: Review ML/TW character keywords for accuracy and mnemonic usefulness
 
 ---
 
