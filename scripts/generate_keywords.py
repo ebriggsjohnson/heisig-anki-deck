@@ -230,7 +230,7 @@ def get_component_detail(char, ids, heisig_data):
 
 
 def regenerate_all():
-    """Regenerate all mainland and taiwan character data with improved keywords."""
+    """Regenerate all simplified and traditional character data with improved keywords."""
     import csv
     import openpyxl
 
@@ -266,13 +266,13 @@ def regenerate_all():
     unihan = parse_unihan()
     print(f"Loaded CC-CEDICT: {len(cedict)} entries, Unihan: {len(unihan)} entries")
 
-    # Load mainland characters by level
-    mainland_path = ROOT / "data" / "additional_characters" / "mainland_characters.csv"
-    mainland_chars = []
-    with open(mainland_path, "r", encoding="utf-8") as f:
+    # Load simplified characters by level (source file has old name)
+    simplified_path = ROOT / "data" / "additional_characters" / "mainland_characters.csv"
+    simplified_chars = []
+    with open(simplified_path, "r", encoding="utf-8") as f:
         reader = csv.reader(f)
         next(reader)  # skip header
-        level = "ML::L1"
+        level = "SC::L1"
         count = 0
         for row in reader:
             if not row:
@@ -282,23 +282,23 @@ def regenerate_all():
                 continue
             # Determine level based on count (approximate)
             if count < 3500:
-                level = "ML::L1"
+                level = "SC::L1"
             elif count < 6500:
-                level = "ML::L2"
+                level = "SC::L2"
             else:
-                level = "ML::L3"
+                level = "SC::L3"
             count += 1
-            mainland_chars.append({
+            simplified_chars.append({
                 "char": char,
                 "ids": ids_data.get(char, ""),
                 "tags": level
             })
 
-    # Load Taiwan characters from A and B sheets only (skip rare C sheet)
-    taiwan_path = ROOT / "data" / "additional_characters" / "taiwan_char list.xlsx"
-    taiwan_chars = []
-    if taiwan_path.exists():
-        wb = openpyxl.load_workbook(taiwan_path, read_only=True)
+    # Load Traditional characters from A and B sheets only (skip rare C sheet)
+    traditional_path = ROOT / "data" / "additional_characters" / "taiwan_char list.xlsx"
+    traditional_chars = []
+    if traditional_path.exists():
+        wb = openpyxl.load_workbook(traditional_path, read_only=True)
         # Read A sheet (common 4808)
         if "A常用字4808" in wb.sheetnames:
             ws = wb["A常用字4808"]
@@ -307,10 +307,10 @@ def regenerate_all():
                 if char and isinstance(char, str):
                     char = char.strip()
                     if char and char not in heisig_chars:
-                        taiwan_chars.append({
+                        traditional_chars.append({
                             "char": char,
                             "ids": ids_data.get(char, ""),
-                            "tags": "TW::A"
+                            "tags": "TC::A"
                         })
         # Read B sheet (secondary 6329)
         if "B次常用字6329" in wb.sheetnames:
@@ -320,22 +320,22 @@ def regenerate_all():
                 if char and isinstance(char, str):
                     char = char.strip()
                     if char and char not in heisig_chars:
-                        taiwan_chars.append({
+                        traditional_chars.append({
                             "char": char,
                             "ids": ids_data.get(char, ""),
-                            "tags": "TW::B"
+                            "tags": "TC::B"
                         })
         wb.close()
 
-    print(f"Mainland chars to process: {len(mainland_chars)}")
-    print(f"Taiwan chars to process: {len(taiwan_chars)}")
+    print(f"Simplified chars to process: {len(simplified_chars)}")
+    print(f"Traditional chars to process: {len(traditional_chars)}")
 
-    # Generate keywords for mainland
+    # Generate keywords for simplified
     used_keywords = set(existing_keywords)
-    mainland_results = []
-    mainland_failed = []
+    simplified_results = []
+    simplified_failed = []
 
-    for entry in mainland_chars:
+    for entry in simplified_chars:
         char = entry["char"]
         keyword = None
         reading = ""
@@ -386,18 +386,18 @@ def regenerate_all():
             entry["reading"] = reading
             entry["source"] = source
             entry["components_detail"] = get_component_detail(char, entry["ids"], heisig_data)
-            mainland_results.append(entry)
+            simplified_results.append(entry)
         else:
-            mainland_failed.append(char)
+            simplified_failed.append(char)
 
-    # Generate keywords for Taiwan (that aren't already in mainland)
-    mainland_char_set = {e["char"] for e in mainland_results}
-    taiwan_results = []
-    taiwan_failed = []
+    # Generate keywords for Traditional (that aren't already in simplified)
+    simplified_char_set = {e["char"] for e in simplified_results}
+    traditional_results = []
+    traditional_failed = []
 
-    for entry in taiwan_chars:
+    for entry in traditional_chars:
         char = entry["char"]
-        if char in mainland_char_set:
+        if char in simplified_char_set:
             continue
 
         keyword = None
@@ -446,30 +446,30 @@ def regenerate_all():
             entry["reading"] = reading
             entry["source"] = source
             entry["components_detail"] = get_component_detail(char, entry["ids"], heisig_data)
-            taiwan_results.append(entry)
+            traditional_results.append(entry)
         else:
-            taiwan_failed.append(char)
+            traditional_failed.append(char)
 
     # Count numbered keywords
-    numbered_count = sum(1 for e in mainland_results + taiwan_results if e.get("source") == "numbered")
+    numbered_count = sum(1 for e in simplified_results + traditional_results if e.get("source") == "numbered")
 
     print(f"\nResults:")
-    print(f"  Mainland: {len(mainland_results)} success, {len(mainland_failed)} failed")
-    print(f"  Taiwan: {len(taiwan_results)} success, {len(taiwan_failed)} failed")
+    print(f"  Simplified: {len(simplified_results)} success, {len(simplified_failed)} failed")
+    print(f"  Traditional: {len(traditional_results)} success, {len(traditional_failed)} failed")
     print(f"  Keywords with numbers: {numbered_count}")
 
     # Save results
-    with open(ROOT / "data" / "generated_mainland.json", "w", encoding="utf-8") as f:
-        json.dump(mainland_results, f, ensure_ascii=False, indent=2)
+    with open(ROOT / "data" / "generated_simplified.json", "w", encoding="utf-8") as f:
+        json.dump(simplified_results, f, ensure_ascii=False, indent=2)
 
-    with open(ROOT / "data" / "generated_taiwan.json", "w", encoding="utf-8") as f:
-        json.dump(taiwan_results, f, ensure_ascii=False, indent=2)
+    with open(ROOT / "data" / "generated_traditional.json", "w", encoding="utf-8") as f:
+        json.dump(traditional_results, f, ensure_ascii=False, indent=2)
 
-    print(f"\nSaved to data/generated_mainland.json and data/generated_taiwan.json")
+    print(f"\nSaved to data/generated_simplified.json and data/generated_traditional.json")
 
     # Show some examples of numbered keywords
     print(f"\nExamples of numbered keywords:")
-    numbered = [e for e in mainland_results + taiwan_results if e.get("source") == "numbered"][:10]
+    numbered = [e for e in simplified_results + traditional_results if e.get("source") == "numbered"][:10]
     for e in numbered:
         print(f"  {e['char']}: {e['keyword']}")
 

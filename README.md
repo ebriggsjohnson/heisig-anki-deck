@@ -57,23 +57,24 @@ If you don't want to install an add-on, you can just download and import the pre
 
 | File | Contents | Cards |
 |------|----------|-------|
-| `RSH_deck.apkg` | Simplified Chinese (Heisig + 通用规范汉字表) | ~7,800 |
-| `RTH_deck.apkg` | Traditional Chinese (Heisig + Taiwan standard lists) | ~6,600 |
-| `RTK_deck.apkg` | Japanese Kanji (Heisig only) | ~3,300 |
-| `Ultimate_deck.apkg` | All combined (deduplicated) | ~12,100 |
+| `RSH_deck.apkg` | Simplified Chinese (Heisig + SC::L1/L2) | 8,116 |
+| `RTH_deck.apkg` | Traditional Chinese (Heisig + TC::A/B) | 6,745 |
+| `RTK_deck.apkg` | Japanese Kanji (Heisig only) | 3,299 |
+| `Ultimate_deck.apkg` | All combined | 12,628 |
 
-### One Deck to Rule Them All
+### Extended Character Sets
 
-Beyond the original Heisig characters, the decks now include:
-- **Mainland China (通用规范汉字表)**: 8,105 characters across 3 levels (ML::L1, ML::L2, ML::L3)
-- **Taiwan (常用國字標準字體表)**: 11,000+ characters across levels (TW::A, TW::B)
+Beyond the original Heisig characters, the decks include additional standard characters:
 
-Characters are tagged by difficulty level so you can focus on what matters:
-- `ML::L1` — Mainland frequently used (3,500 chars)
-- `ML::L2` — Mainland commonly used (3,000 chars)
-- `ML::L3` — Mainland names/terminology (1,600 chars)
-- `TW::A` — Taiwan common (4,800 chars)
-- `TW::B` — Taiwan secondary (6,300 chars)
+**Simplified (in RSH + Ultimate):**
+- `SC::L1` — Frequently used (~3,500)
+- `SC::L2` — Commonly used (~1,300)
+
+**Traditional (in RTH + Ultimate):**
+- `TC::A` — Common traditional (~4,800)
+- `TC::B` — Secondary traditional (~6,300)
+
+Additional rare simplified characters (SC::L3 — names/terminology) are saved separately in `data/simplified_additions.csv`.
 
 Each card includes: character, keyword, book numbers (where applicable), pinyin readings, recursive component decomposition, spatial layout (IDS), and tags.
 
@@ -99,7 +100,7 @@ Click the badge to open an interactive demo in Google Colab — no install requi
 
 - **AI-generated mnemonic stories**: Use an LLM to generate vivid stories connecting component meanings to keywords
 - **Improved Traditional/Japanese decomposition**: Better primitive mappings for RTH and RTK
-- **Verify auto-generated keywords**: Review ML/TW character keywords for accuracy and mnemonic usefulness
+- **Verify auto-generated keywords**: Review SC/TC character keywords for accuracy and mnemonic usefulness
 
 ---
 
