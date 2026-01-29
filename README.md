@@ -57,14 +57,27 @@ If you don't want to install an add-on, you can just download and import the pre
 
 | File | Contents | Cards |
 |------|----------|-------|
-| `RSH_deck.apkg` | Remembering Simplified Hanzi | ~3,300 |
-| `RTH_deck.apkg` | Remembering Traditional Hanzi | ~3,300 |
-| `RTK_deck.apkg` | Remembering the Kanji | ~3,300 |
-| `Ultimate_deck.apkg` | All 3 merged (deduplicated) | ~5,200 |
+| `RSH_deck.apkg` | Simplified Chinese (Heisig + 通用规范汉字表) | ~7,800 |
+| `RTH_deck.apkg` | Traditional Chinese (Heisig + Taiwan standard lists) | ~7,900 |
+| `RTK_deck.apkg` | Japanese Kanji (Heisig only) | ~3,300 |
+| `Ultimate_deck.apkg` | All combined (deduplicated) | ~13,500 |
 
-Each card includes: character, keyword, separate RSH/RTH/RTK book numbers, pinyin readings (CC-CEDICT), recursive component decomposition, spatial layout (IDS), and tags by chapter.
+### One Deck to Rule Them All
 
-**Note:** The component decompositions are algorithmically generated and may not match Heisig's books exactly. They follow the same general principle — breaking characters into meaningful primitives — but individual breakdowns may differ. Simplified Chinese (RSH) has the best decomposition quality.
+Beyond the original Heisig characters, the decks now include:
+- **Mainland China (通用规范汉字表)**: 8,105 characters across 3 levels (ML::L1, ML::L2, ML::L3)
+- **Taiwan (常用國字標準字體表)**: 11,000+ characters across levels (TW::A, TW::B)
+
+Characters are tagged by difficulty level so you can focus on what matters:
+- `ML::L1` — Mainland frequently used (3,500 chars)
+- `ML::L2` — Mainland commonly used (3,000 chars)
+- `ML::L3` — Mainland names/terminology (1,600 chars)
+- `TW::A` — Taiwan common (4,800 chars)
+- `TW::B` — Taiwan secondary (6,300 chars)
+
+Each card includes: character, keyword, book numbers (where applicable), pinyin readings, recursive component decomposition, spatial layout (IDS), and tags.
+
+**Note:** The component decompositions are algorithmically generated and may not match Heisig's books exactly. Keywords for non-Heisig characters are sourced from CC-CEDICT and Unihan databases.
 
 To import: open Anki → File → Import → select the `.apkg` file.
 
@@ -122,7 +135,10 @@ python scripts/build_apkg.py        # build .apkg with embedded media
 
 - **Heisig XML database**: [rouseabout/heisig](https://github.com/rouseabout/heisig) by Peter Ross (MIT license) — included as a submodule in `data/heisig-repo/`
 - **IDS decomposition data**: `data/IDS.TXT` from the [CHISE project](https://www.chise.org/)
-- **CC-CEDICT readings**: via the Excel workbook (not included in repo due to size)
+- **CC-CEDICT**: Chinese-English dictionary for keywords and readings
+- **Unihan database**: Unicode Han character definitions for rare characters
+- **通用规范汉字表**: PRC standard character list (8,105 characters)
+- **常用國字標準字體表**: Taiwan standard character lists
 
 ## License
 
