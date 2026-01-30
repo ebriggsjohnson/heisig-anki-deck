@@ -46,9 +46,11 @@ with open(RSH_JSON, "r", encoding="utf-8") as f:
 
 heisig_by_char = {}
 heisig_by_keyword = {}
+# Two passes: keywords first, then aliases (aliases override keywords)
 for e in rsh["characters"] + rsh["primitives"]:
     heisig_by_char[e["character"]] = e
     heisig_by_keyword[e["keyword"]] = e["character"]
+for e in rsh["characters"] + rsh["primitives"]:
     for a in e["primitive_aliases"]:
         heisig_by_keyword[a] = e["character"]
 
@@ -463,13 +465,29 @@ for char, card in cards.items():
 
     if tree.get("source") == "heisig" or (tree.get("children") and len(leaves) > 0):
         card["decomposition"] = " + ".join(leaves)
-        # components_detail: each component char = name
+        # components_detail: each component char = keyword (alias: X if used differently)
         detail_parts = []
         seen_detail = set()
-        for ch, name in leaf_details:
-            if name and ch != "?" and (ch, name) not in seen_detail:
-                seen_detail.add((ch, name))
-                detail_parts.append(f"{ch} = {name}")
+        for ch, decomp_name in leaf_details:
+            if decomp_name and ch != "?" and ch not in seen_detail:
+                seen_detail.add(ch)
+                # Get the character's actual keyword
+                if ch in heisig_by_char:
+                    keyword = heisig_by_char[ch].get("keyword", decomp_name)
+                    aliases = heisig_by_char[ch].get("primitive_aliases", [])
+                else:
+                    keyword = decomp_name
+                    aliases = []
+                part = f"{ch} = {keyword}"
+                # If decomposition used a different name (an alias), note it
+                if decomp_name.lower() != keyword.lower() and decomp_name.lower() in [a.lower() for a in aliases]:
+                    part += f" (alias: {decomp_name})"
+                elif aliases and any(a.lower() != keyword.lower() for a in aliases):
+                    # Show other aliases even if not used in this decomposition
+                    other_aliases = [a for a in aliases if a.lower() != keyword.lower()]
+                    if other_aliases:
+                        part += f" (alias: {', '.join(other_aliases)})"
+                detail_parts.append(part)
         card["components_detail"] = ", ".join(detail_parts)
     elif tree.get("source") == "heisig_atomic":
         card["decomposition"] = ""  # atomic, no sub-components
@@ -524,10 +542,23 @@ for entry in rsh["primitives"]:
     if tree.get("children"):
         detail_parts = []
         seen_detail = set()
-        for ch, name in leaf_details:
-            if name and ch != "?" and (ch, name) not in seen_detail:
-                seen_detail.add((ch, name))
-                detail_parts.append(f"{ch} = {name}")
+        for ch, decomp_name in leaf_details:
+            if decomp_name and ch != "?" and ch not in seen_detail:
+                seen_detail.add(ch)
+                if ch in heisig_by_char:
+                    keyword = heisig_by_char[ch].get("keyword", decomp_name)
+                    aliases = heisig_by_char[ch].get("primitive_aliases", [])
+                else:
+                    keyword = decomp_name
+                    aliases = []
+                part = f"{ch} = {keyword}"
+                if decomp_name.lower() != keyword.lower() and decomp_name.lower() in [a.lower() for a in aliases]:
+                    part += f" (alias: {decomp_name})"
+                elif aliases and any(a.lower() != keyword.lower() for a in aliases):
+                    other_aliases = [a for a in aliases if a.lower() != keyword.lower()]
+                    if other_aliases:
+                        part += f" (alias: {', '.join(other_aliases)})"
+                detail_parts.append(part)
         card["components_detail"] = ", ".join(detail_parts)
 
     cards[char] = card
@@ -560,10 +591,23 @@ for entry in rsh["characters"]:
     if tree.get("children"):
         detail_parts = []
         seen_detail = set()
-        for ch, name in leaf_details:
-            if name and ch != "?" and (ch, name) not in seen_detail:
-                seen_detail.add((ch, name))
-                detail_parts.append(f"{ch} = {name}")
+        for ch, decomp_name in leaf_details:
+            if decomp_name and ch != "?" and ch not in seen_detail:
+                seen_detail.add(ch)
+                if ch in heisig_by_char:
+                    keyword = heisig_by_char[ch].get("keyword", decomp_name)
+                    aliases = heisig_by_char[ch].get("primitive_aliases", [])
+                else:
+                    keyword = decomp_name
+                    aliases = []
+                part = f"{ch} = {keyword}"
+                if decomp_name.lower() != keyword.lower() and decomp_name.lower() in [a.lower() for a in aliases]:
+                    part += f" (alias: {decomp_name})"
+                elif aliases and any(a.lower() != keyword.lower() for a in aliases):
+                    other_aliases = [a for a in aliases if a.lower() != keyword.lower()]
+                    if other_aliases:
+                        part += f" (alias: {', '.join(other_aliases)})"
+                detail_parts.append(part)
         card["components_detail"] = ", ".join(detail_parts)
 
     cards[char] = card
