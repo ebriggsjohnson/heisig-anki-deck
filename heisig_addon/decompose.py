@@ -124,7 +124,8 @@ def format_explanation(char: str, info: dict, col=None,
             components, col, char_field, keyword_field
         )
         for comp_char, comp_kw in parts:
-            lines.append(f"{comp_char} {comp_kw}")
+            lines.append(f'<span style="color:#1a5276">{comp_char}</span> '
+                         f'<span style="color:#666">{comp_kw}</span>')
 
         # Add spatial layout from IDS
         ids = info.get("ids", "")

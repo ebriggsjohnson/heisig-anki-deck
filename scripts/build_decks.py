@@ -323,6 +323,21 @@ def get_top_operator(char):
     return ""
 
 
+def format_component_html(ch, keyword, aliases, decomp_name):
+    """Format a component as styled HTML: blue char, gray keyword."""
+    # Build alias suffix if needed
+    alias_suffix = ""
+    if decomp_name.lower() != keyword.lower() and decomp_name.lower() in [a.lower() for a in aliases]:
+        alias_suffix = f' <span style="color:#999">(alias: {decomp_name})</span>'
+    elif aliases and any(a.lower() != keyword.lower() for a in aliases):
+        other_aliases = [a for a in aliases if a.lower() != keyword.lower()]
+        if other_aliases:
+            alias_suffix = f' <span style="color:#999">(alias: {", ".join(other_aliases)})</span>'
+
+    return (f'<span style="color:#1a5276">{ch}</span> '
+            f'<span style="color:#666">{keyword}</span>{alias_suffix}')
+
+
 def format_reading(char):
     """Format CC-CEDICT readings for a character.
 
@@ -465,30 +480,19 @@ for char, card in cards.items():
 
     if tree.get("source") == "heisig" or (tree.get("children") and len(leaves) > 0):
         card["decomposition"] = " + ".join(leaves)
-        # components_detail: each component char = keyword (alias: X if used differently)
         detail_parts = []
         seen_detail = set()
         for ch, decomp_name in leaf_details:
             if decomp_name and ch != "?" and ch not in seen_detail:
                 seen_detail.add(ch)
-                # Get the character's actual keyword
                 if ch in heisig_by_char:
                     keyword = heisig_by_char[ch].get("keyword", decomp_name)
                     aliases = heisig_by_char[ch].get("primitive_aliases", [])
                 else:
                     keyword = decomp_name
                     aliases = []
-                part = f"{ch} = {keyword}"
-                # If decomposition used a different name (an alias), note it
-                if decomp_name.lower() != keyword.lower() and decomp_name.lower() in [a.lower() for a in aliases]:
-                    part += f" (alias: {decomp_name})"
-                elif aliases and any(a.lower() != keyword.lower() for a in aliases):
-                    # Show other aliases even if not used in this decomposition
-                    other_aliases = [a for a in aliases if a.lower() != keyword.lower()]
-                    if other_aliases:
-                        part += f" (alias: {', '.join(other_aliases)})"
-                detail_parts.append(part)
-        card["components_detail"] = ", ".join(detail_parts)
+                detail_parts.append(format_component_html(ch, keyword, aliases, decomp_name))
+        card["components_detail"] = "<br>".join(detail_parts)
     elif tree.get("source") == "heisig_atomic":
         card["decomposition"] = ""  # atomic, no sub-components
         card["components_detail"] = ""
@@ -551,15 +555,8 @@ for entry in rsh["primitives"]:
                 else:
                     keyword = decomp_name
                     aliases = []
-                part = f"{ch} = {keyword}"
-                if decomp_name.lower() != keyword.lower() and decomp_name.lower() in [a.lower() for a in aliases]:
-                    part += f" (alias: {decomp_name})"
-                elif aliases and any(a.lower() != keyword.lower() for a in aliases):
-                    other_aliases = [a for a in aliases if a.lower() != keyword.lower()]
-                    if other_aliases:
-                        part += f" (alias: {', '.join(other_aliases)})"
-                detail_parts.append(part)
-        card["components_detail"] = ", ".join(detail_parts)
+                detail_parts.append(format_component_html(ch, keyword, aliases, decomp_name))
+        card["components_detail"] = "<br>".join(detail_parts)
 
     cards[char] = card
     primitives_added += 1
@@ -600,15 +597,8 @@ for entry in rsh["characters"]:
                 else:
                     keyword = decomp_name
                     aliases = []
-                part = f"{ch} = {keyword}"
-                if decomp_name.lower() != keyword.lower() and decomp_name.lower() in [a.lower() for a in aliases]:
-                    part += f" (alias: {decomp_name})"
-                elif aliases and any(a.lower() != keyword.lower() for a in aliases):
-                    other_aliases = [a for a in aliases if a.lower() != keyword.lower()]
-                    if other_aliases:
-                        part += f" (alias: {', '.join(other_aliases)})"
-                detail_parts.append(part)
-        card["components_detail"] = ", ".join(detail_parts)
+                detail_parts.append(format_component_html(ch, keyword, aliases, decomp_name))
+        card["components_detail"] = "<br>".join(detail_parts)
 
     cards[char] = card
     primitives_added += 1
