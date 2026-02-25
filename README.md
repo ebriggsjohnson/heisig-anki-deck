@@ -57,26 +57,12 @@ If you don't want to install an add-on, you can just download and import the pre
 
 | File | Contents | Cards |
 |------|----------|-------|
-| `RSH_deck.apkg` | Simplified Chinese (Heisig + SC::L1/L2) | 8,116 |
-| `RTH_deck.apkg` | Traditional Chinese (Heisig + TC::A/B) | 6,745 |
-| `RTK_deck.apkg` | Japanese Kanji (Heisig only) | 3,299 |
-| `Ultimate_deck.apkg` | All combined | 12,628 |
+| `RSH_deck.apkg` | Simplified Chinese (Heisig) | ~3,240 |
+| `RTH_deck.apkg` | Traditional Chinese (Heisig) | ~3,042 |
+| `RTK_deck.apkg` | Japanese Kanji (Heisig) | ~3,032 |
+| `Ultimate_deck.apkg` | All combined | ~3,860 |
 
-### Extended Character Sets
-
-Beyond the original Heisig characters, the decks include additional standard characters:
-
-**Simplified (in RSH + Ultimate):**
-- `SC::L1` — Frequently used (~3,500)
-- `SC::L2` — Commonly used (~1,300)
-
-**Traditional (in RTH + Ultimate):**
-- `TC::A` — Common traditional (~4,800)
-- `TC::B` — Secondary traditional (~6,300)
-
-Additional rare simplified characters (SC::L3 — names/terminology) are saved separately in `data/simplified_additions.csv`.
-
-Each card includes: character, keyword, book numbers (where applicable), pinyin readings, recursive component decomposition, spatial layout (IDS), and tags.
+Each card includes: character, keyword, book numbers (where applicable), pinyin readings, recursive component decomposition, spatial layout (IDS), and tags. Cards are tagged by chapter (e.g. `RSH1::L03`) so you can unsuspend them as you progress through the books.
 
 **Note:** The component decompositions are algorithmically generated and may not match Heisig's books exactly. Keywords for non-Heisig characters are auto-generated from CC-CEDICT and Unihan databases — these have not been manually verified for accuracy or usefulness as mnemonics.
 
@@ -84,7 +70,7 @@ To import: open Anki → File → Import → select the `.apkg` file.
 
 ### Non-Unicode Primitives
 
-57 Heisig primitives have no standard Unicode representation (marked with `囧` in the source XML). These are rendered as approximate images using visually similar characters. See `data/primitive_images/manifest.json` for the full mapping.
+56 Heisig primitives have no standard Unicode representation (marked with `囧` in the source XML). These are rendered as approximate images using visually similar characters. See `data/primitive_images/manifest.json` for the full mapping.
 
 ---
 
@@ -98,9 +84,9 @@ Click the badge to open an interactive demo in Google Colab — no install requi
 
 ## Future Features
 
+- **Extended character sets**: Add standard character lists beyond Heisig (HSK, 通用规范汉字表, Taiwan standard lists) with auto-generated keywords from CC-CEDICT/Unihan
 - **AI-generated mnemonic stories**: Use an LLM to generate vivid stories connecting component meanings to keywords
 - **Improved Traditional/Japanese decomposition**: Better primitive mappings for RTH and RTK
-- **Verify auto-generated keywords**: Review SC/TC character keywords for accuracy and mnemonic usefulness
 
 ---
 

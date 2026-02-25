@@ -9,38 +9,46 @@ root = tree.getroot()
 characters = []  # frames with type="character"
 primitives = []  # frames with type="primitive"
 
-for frame in root.iter("frame"):
-    frame_type = frame.get("{http://www.w3.org/2001/XMLSchema-instance}type")
-    char = frame.get("character")
-    keyword = frame.get("keyword")
-    number = frame.get("number")  # only characters have numbers
+XSI = "{http://www.w3.org/2001/XMLSchema-instance}"
 
-    # Get primitive aliases (pself tags inside <primitive> block)
-    prim_block = frame.find("primitive")
-    aliases = []
-    if prim_block is not None:
-        aliases = [ps.text for ps in prim_block.iter("pself") if ps.text]
+for book in root.findall("book"):
+    book_num = int(book.get("number"))
+    for lesson in book.findall("lesson"):
+        lesson_num = int(lesson.get("number"))
+        for frame in lesson.findall(".//frame"):
+            frame_type = frame.get(XSI + "type")
+            char = frame.get("character")
+            keyword = frame.get("keyword")
+            number = frame.get("number")  # only characters have numbers
 
-    # Get components (cite tags = what this frame is made of)
-    components = []
-    for p in frame.findall("p"):
-        for cite in p.iter("cite"):
-            if cite.text:
-                components.append(cite.text)
+            # Get primitive aliases (pself tags inside <primitive> block)
+            prim_block = frame.find("primitive")
+            aliases = []
+            if prim_block is not None:
+                aliases = [ps.text for ps in prim_block.iter("pself") if ps.text]
 
-    entry = {
-        "character": char,
-        "keyword": keyword,
-        "type": frame_type,
-        "number": int(number) if number else None,
-        "primitive_aliases": aliases,
-        "components": components,
-    }
+            # Get components (cite tags = what this frame is made of)
+            components = []
+            for p in frame.findall("p"):
+                for cite in p.iter("cite"):
+                    if cite.text:
+                        components.append(cite.text)
 
-    if frame_type == "character":
-        characters.append(entry)
-    elif frame_type == "primitive":
-        primitives.append(entry)
+            entry = {
+                "character": char,
+                "keyword": keyword,
+                "type": frame_type,
+                "number": int(number) if number else None,
+                "primitive_aliases": aliases,
+                "components": components,
+                "book": book_num,
+                "lesson": lesson_num,
+            }
+
+            if frame_type == "character":
+                characters.append(entry)
+            elif frame_type == "primitive":
+                primitives.append(entry)
 
 # Save to JSON
 output = {

@@ -69,6 +69,7 @@ with open(HUMAN_REVIEW, "r", encoding="utf-8") as f:
             human_names[comp] = name
 
 # ── Radical mappings (same as recursive_decompose_v2) ──────────────────
+# Maps variant forms to their "parent" for keyword lookup
 radical_map = {
     '訁': '言', '糹': '糸', '釒': '金', '𥫗': '竹', '刂': '刀',
     '彳': '行', '𤣩': '玉', '𧾷': '足', '罒': '网', '乚': '乙',
@@ -82,6 +83,15 @@ radical_map = {
     '⺼': '月', '⺶': '羊', '⺀': '八', '⺄': '乙', '⺆': '冂',
     '⺈': '刀',
 }
+
+# Traditional → Simplified mappings (for when simplified is the Heisig entry)
+# This handles cases like 門→门 where Heisig uses simplified
+trad_to_simp_map = {
+    '門': '门', '貝': '贝', '車': '车', '見': '见', '魚': '鱼',
+    '馬': '马', '鳥': '鸟', '頁': '页', '風': '风', '言': '讠',
+    '金': '钅', '食': '饣', '糸': '纟',
+}
+
 for variant, parent in radical_map.items():
     if variant not in heisig_by_char and parent in heisig_by_char:
         heisig_by_char[variant] = {
@@ -91,6 +101,18 @@ for variant, parent in radical_map.items():
             "primitive_aliases": heisig_by_char[parent]["primitive_aliases"],
             "components": [],
             "variant_of": parent,
+        }
+
+# Also add reverse mappings: traditional → simplified when simplified has the keyword
+for trad, simp in trad_to_simp_map.items():
+    if trad not in heisig_by_char and simp in heisig_by_char:
+        heisig_by_char[trad] = {
+            "character": trad,
+            "keyword": heisig_by_char[simp]["keyword"],
+            "type": "trad_variant",
+            "primitive_aliases": heisig_by_char[simp]["primitive_aliases"],
+            "components": [],
+            "variant_of": simp,
         }
 
 # ── Excel workbook ─────────────────────────────────────────────────────
@@ -213,7 +235,7 @@ def parse_ids(ids_str):
     return parse_next()
 
 
-def recursive_decompose(char, depth=0, max_depth=10, seen=None):
+def recursive_decompose(char, depth=0, max_depth=10, seen=None, is_root=True):
     """Decompose a character into named Heisig components."""
     if seen is None:
         seen = set()
@@ -232,8 +254,12 @@ def recursive_decompose(char, depth=0, max_depth=10, seen=None):
             children.append({"char": comp_char or "?", "name": comp_name})
         return {"char": char, "name": name, "source": "heisig", "children": children}
 
-    # For variants without their own components, prefer IDS over
-    # the simplified decomposition (which may be structurally wrong)
+    # If this is a sub-component (not root) and it has a name
+    # (from Heisig, human review, or unified mapping), treat as atomic
+    if not is_root and name:
+        return {"char": char, "name": name, "source": "named_atomic"}
+
+    # For the root character or unnamed characters, try IDS decomposition
     if char in ids_map:
         tree = parse_ids(ids_map[char][0])
         return _decompose_ids_tree(tree, depth, max_depth, seen)
@@ -261,7 +287,7 @@ def _decompose_ids_tree(tree, depth, max_depth, seen):
         return {"char": "?", "name": None, "source": "parse_error"}
     kind = tree[0]
     if kind == 'char':
-        return recursive_decompose(tree[1], depth + 1, max_depth, seen)
+        return recursive_decompose(tree[1], depth + 1, max_depth, seen, is_root=False)
     elif kind == 'numbered':
         num = tree[1]
         comp = numbered_components.get(num, {})
@@ -339,46 +365,39 @@ def format_component_html(ch, keyword, aliases, decomp_name):
 
 
 def format_reading(char):
-    """Format CC-CEDICT readings for a character.
+    """Return CC-CEDICT pinyin readings for a character, no definitions.
 
-    Groups definitions by pinyin reading, limits to 3-4 meanings per reading,
-    filters obscure readings.
+    Multiple readings separated by ' / '. Surname-only readings are filtered
+    out when other readings exist. Max 4 readings returned.
     """
     entries = cedict_by_char.get(char, [])
     if not entries:
         return ""
 
-    # Group by pinyin base (ignoring tone differences that are the same syllable)
     by_pinyin = defaultdict(list)
     for pinyin, defn in entries:
-        by_pinyin[pinyin].append(defn)
+        by_pinyin[pinyin].append(defn or "")
 
-    # Filter: skip surname-only or very obscure entries
-    # Keep max 4 readings, each with max 4 meanings
-    parts = []
+    filtered = []
     for pinyin, defns in by_pinyin.items():
-        # Merge all definitions for this reading
-        all_meanings = []
-        for d in defns:
-            # Split on "/" which CC-CEDICT uses as separator
-            for m in d.split("/"):
-                m = m.strip()
-                if m and m not in all_meanings:
-                    all_meanings.append(m)
-
-        # Filter out surname-only entries if there are other readings
-        if len(by_pinyin) > 1 and len(all_meanings) <= 2:
-            if all(("surname" in m.lower() or "name" in m.lower()) for m in all_meanings):
+        # Skip surname-only readings when other readings exist
+        if len(by_pinyin) > 1:
+            all_meanings = []
+            for d in defns:
+                for m in d.split("/"):
+                    m = m.strip()
+                    if m:
+                        all_meanings.append(m)
+            if all_meanings and all(
+                "surname" in m.lower() or "name" in m.lower()
+                for m in all_meanings
+            ):
                 continue
-
-        # Limit meanings
-        shown = all_meanings[:4]
-        parts.append(f"{pinyin}: {', '.join(shown)}")
-
-        if len(parts) >= 4:
+        filtered.append(pinyin)
+        if len(filtered) >= 4:
             break
 
-    return " | ".join(parts)
+    return " / ".join(filtered)
 
 
 # ══════════════════════════════════════════════════════════════════════
@@ -389,6 +408,14 @@ def format_reading(char):
 excel_rows = []
 for row in ws.iter_rows(min_row=2, values_only=True):
     excel_rows.append(row)
+
+# Known Excel data errors: patch before any processing
+# 愣 (dumbfounded) has no traditional form; TH=傻 in its row is incorrect
+excel_rows = [
+    tuple(None if (i == 3 and row[3] == '傻' and row[4] == '愣') else v
+          for i, v in enumerate(row))
+    for row in excel_rows
+]
 
 # Build card dicts keyed by character
 cards = {}  # char -> card dict
@@ -461,6 +488,48 @@ for row in excel_rows:
             card["tags"].append(lesson.replace("-", "::"))
 
 
+# ── Build variant mappings ────────────────────────────────────────────
+# Map each character to its variants in other systems
+char_variants = {}  # char -> {"th": ..., "sh": ..., "k": ...}
+for row in excel_rows:
+    th, sh, k = row[3], row[4], row[5]
+    for char in [th, sh, k]:
+        if char and char not in char_variants:
+            char_variants[char] = {"th": th, "sh": sh, "k": k}
+
+
+def format_variants(char, for_book):
+    """Format variant string for a character, relative to a book.
+
+    for_book: 'RTH', 'RSH', or 'RTK' - determines which variants to show.
+    """
+    if char not in char_variants:
+        return ""
+    v = char_variants[char]
+    th, sh, k = v["th"], v["sh"], v["k"]
+
+    parts = []
+    if for_book == "RTH":  # Traditional - show Simplified and Japanese
+        if sh and sh != char:
+            parts.append(f"SH: {sh}")
+        if k and k != char:
+            parts.append(f"JP: {k}")
+    elif for_book == "RSH":  # Simplified - show Traditional and Japanese
+        if th and th != char:
+            parts.append(f"TH: {th}")
+        if k and k != char:
+            parts.append(f"JP: {k}")
+    elif for_book == "RTK":  # Japanese - show Traditional and Simplified
+        if th and th != char:
+            parts.append(f"TH: {th}")
+        if sh and sh != char:
+            parts.append(f"SH: {sh}")
+
+    if not parts:
+        return ""
+    return " | ".join(parts)
+
+
 # ══════════════════════════════════════════════════════════════════════
 # 4. Enrich cards: decomposition, spatial, readings, primitives
 # ══════════════════════════════════════════════════════════════════════
@@ -512,6 +581,22 @@ for char, card in cards.items():
     card["tags"] = " ".join(sorted(set(card["tags"])))
 
 
+# Patch primitive cards that came from Excel with no lesson tag:
+# use lesson from rsh["primitives"] if available.
+prim_lesson_by_char = {
+    e["character"]: f"RSH{e['book']}::L{e['lesson']:02d}"
+    for e in rsh["primitives"]
+    if e.get("book") and e.get("lesson")
+}
+for char, card in cards.items():
+    tags = card.get("tags", "")
+    if "primitive" not in tags:
+        continue
+    has_lesson = any(t.startswith("RSH") for t in tags.split())
+    if not has_lesson and char in prim_lesson_by_char:
+        card["tags"] = " ".join(sorted(set(tags.split() + [prim_lesson_by_char[char]])))
+
+
 # ══════════════════════════════════════════════════════════════════════
 # 5. Add standalone primitive cards
 # ══════════════════════════════════════════════════════════════════════
@@ -530,6 +615,12 @@ for entry in rsh["primitives"]:
     kw = entry["keyword"]
     alias_str = f" (also: {', '.join(aliases)})" if aliases else ""
 
+    lesson_tag = ""
+    if entry.get("book") and entry.get("lesson"):
+        lesson_tag = f"RSH{entry['book']}::L{entry['lesson']:02d}"
+
+    tags = " ".join(filter(None, [lesson_tag, "primitive"]))
+
     card = {
         "character": char,
         "keyword": f"{kw}{alias_str}",
@@ -541,7 +632,8 @@ for entry in rsh["primitives"]:
         "spatial": get_top_operator(char),
         "ids": get_raw_ids(char),
         "components_detail": "",
-        "tags": "primitive",
+        "deck": "RSH",
+        "tags": tags,
     }
     if tree.get("children"):
         detail_parts = []
@@ -572,6 +664,10 @@ for entry in rsh["characters"]:
     leaves = collect_leaves(tree)
     leaf_details = collect_leaf_details(tree)
 
+    lesson_tag = ""
+    if entry.get("book") and entry.get("lesson"):
+        lesson_tag = f"RSH{entry['book']}::L{entry['lesson']:02d}"
+
     card = {
         "character": char,
         "keyword": entry["keyword"],
@@ -583,7 +679,8 @@ for entry in rsh["characters"]:
         "spatial": get_top_operator(char),
         "ids": get_raw_ids(char),
         "components_detail": "",
-        "tags": "primitive",
+        "deck": "RSH",
+        "tags": " ".join(filter(None, [lesson_tag, "primitive"])),
     }
     if tree.get("children"):
         detail_parts = []
@@ -610,15 +707,43 @@ print(f"Standalone primitives added: {primitives_added}")
 # ══════════════════════════════════════════════════════════════════════
 
 COLUMNS = ["character", "keyword", "RTH_number", "RSH_number", "RTK_number",
-           "reading", "decomposition", "spatial", "ids", "components_detail", "deck", "tags"]
+           "reading", "decomposition", "spatial", "ids", "components_detail", "variants", "deck", "tags"]
 
 
-def write_deck(filename, filter_fn):
-    """Write a CSV deck, filtering cards by filter_fn."""
+def write_deck(filename, filter_fn, tag_prefix=None, for_book=None):
+    """Write a CSV deck, filtering cards by filter_fn.
+
+    If tag_prefix is provided, only include tags starting with that prefix
+    (plus 'primitive' tag). This ensures single-book decks don't include
+    tags from other books.
+
+    If for_book is provided (RTH/RSH/RTK), populate variants field and
+    clear irrelevant book numbers.
+    """
     rows = []
     for char, card in sorted(cards.items(), key=lambda x: x[0]):
         if filter_fn(card):
-            rows.append([card.get(col, "") for col in COLUMNS])
+            row_data = []
+            for col in COLUMNS:
+                val = card.get(col, "")
+                # Filter tags for single-book decks
+                if col == "tags" and tag_prefix and val:
+                    tags = val.split()
+                    filtered = [t for t in tags if t.startswith(tag_prefix) or t == "primitive"]
+                    val = " ".join(filtered)
+                # Add variants for single-book decks
+                if col == "variants" and for_book:
+                    val = format_variants(char, for_book)
+                # Clear irrelevant book numbers for single-book decks
+                if for_book:
+                    if col == "RTH_number" and for_book != "RTH":
+                        val = ""
+                    elif col == "RSH_number" and for_book != "RSH":
+                        val = ""
+                    elif col == "RTK_number" and for_book != "RTK":
+                        val = ""
+                row_data.append(val)
+            rows.append(row_data)
 
     with open(filename, "w", encoding="utf-8", newline="") as f:
         writer = csv.writer(f)
@@ -641,10 +766,194 @@ for row in excel_rows:
         rtk_chars.add(row[5])
 
 is_primitive = lambda c: "primitive" in c.get("tags", "")
-n_rth = write_deck("RTH_deck.csv", lambda c: c["character"] in rth_chars or is_primitive(c))
-n_rsh = write_deck("RSH_deck.csv", lambda c: c["character"] in rsh_chars or is_primitive(c))
-n_rtk = write_deck("RTK_deck.csv", lambda c: c["character"] in rtk_chars or is_primitive(c))
-n_ult = write_deck("Ultimate_deck.csv", lambda c: True)
+# Primitives should only be included if they belong to the target book
+is_rth_primitive = lambda c: is_primitive(c) and "RTH" in c.get("deck", "")
+is_rsh_primitive = lambda c: is_primitive(c) and "RSH" in c.get("deck", "")
+is_rtk_primitive = lambda c: is_primitive(c) and "RTK" in c.get("deck", "")
+
+n_rth = write_deck("RTH_deck.csv", lambda c: c["character"] in rth_chars or is_rth_primitive(c), tag_prefix="RTH", for_book="RTH")
+n_rsh = write_deck("RSH_deck.csv", lambda c: c["character"] in rsh_chars or is_rsh_primitive(c), tag_prefix="RSH", for_book="RSH")
+n_rtk = write_deck("RTK_deck.csv", lambda c: c["character"] in rtk_chars or is_rtk_primitive(c), tag_prefix="RTK", for_book="RTK")
+
+
+# ══════════════════════════════════════════════════════════════════════
+# 6b. Build family-based Ultimate deck
+# ══════════════════════════════════════════════════════════════════════
+
+ULTIMATE_COLUMNS = [
+    "character", "keyword", "RTH_number", "RSH_number", "RTK_number",
+    "reading", "decomposition", "spatial", "ids", "components_detail",
+    "simplified", "simplified_reading", "simplified_decomposition", "simplified_components",
+    "japanese", "japanese_decomposition", "japanese_components",
+    "deck", "tags"
+]
+
+
+def get_card_decomposition(char):
+    """Get decomposition data for a character."""
+    if char in cards:
+        return {
+            "decomposition": cards[char].get("decomposition", ""),
+            "components_detail": cards[char].get("components_detail", ""),
+            "reading": cards[char].get("reading", ""),
+        }
+    # Compute on the fly if not in cards dict
+    tree = recursive_decompose(char)
+    leaves = collect_leaves(tree)
+    leaf_details = collect_leaf_details(tree)
+
+    decomp = " + ".join(leaves) if tree.get("children") else ""
+    detail_parts = []
+    seen = set()
+    for ch, decomp_name in leaf_details:
+        if decomp_name and ch != "?" and ch not in seen:
+            seen.add(ch)
+            if ch in heisig_by_char:
+                keyword = heisig_by_char[ch].get("keyword", decomp_name)
+                aliases = heisig_by_char[ch].get("primitive_aliases", [])
+            else:
+                keyword = decomp_name
+                aliases = []
+            detail_parts.append(format_component_html(ch, keyword, aliases, decomp_name))
+
+    return {
+        "decomposition": decomp,
+        "components_detail": "<br>".join(detail_parts),
+        "reading": format_reading(char),
+    }
+
+
+def write_ultimate_deck(filename):
+    """Write family-based Ultimate deck with variant fields."""
+    families = []
+    seen_canonical = {}  # canonical char -> index in families list
+
+    # Build families from Excel rows
+    for row in excel_rows:
+        rth_num, rsh_num, rtk_num = row[0], row[1], row[2]
+        th, sh, k = row[3], row[4], row[5]
+        rth_kw, rsh_kw, rtk_kw = row[7], row[8], row[9]
+
+        # Skip empty rows
+        if not any([th, sh, k]):
+            continue
+
+        # Pick canonical: prefer TH, then SH, then K
+        canonical = th or sh or k
+        canonical_card = cards.get(canonical, {})
+
+        # Get canonical data
+        family = {
+            "character": canonical,
+            "keyword": canonical_card.get("keyword", rth_kw or rsh_kw or rtk_kw or ""),
+            "RTH_number": canonical_card.get("RTH_number", ""),
+            "RSH_number": canonical_card.get("RSH_number", ""),
+            "RTK_number": canonical_card.get("RTK_number", ""),
+            "reading": canonical_card.get("reading", ""),
+            "decomposition": canonical_card.get("decomposition", ""),
+            "spatial": canonical_card.get("spatial", ""),
+            "ids": canonical_card.get("ids", ""),
+            "components_detail": canonical_card.get("components_detail", ""),
+            "simplified": "",
+            "simplified_reading": "",
+            "simplified_decomposition": "",
+            "simplified_components": "",
+            "japanese": "",
+            "japanese_decomposition": "",
+            "japanese_components": "",
+            "deck": canonical_card.get("deck", ""),
+            "tags": canonical_card.get("tags", ""),
+        }
+
+        # Add simplified variant if different from canonical
+        if sh and sh != canonical:
+            simp_data = get_card_decomposition(sh)
+            family["simplified"] = sh
+            family["simplified_reading"] = simp_data["reading"]
+            family["simplified_decomposition"] = simp_data["decomposition"]
+            family["simplified_components"] = simp_data["components_detail"]
+
+        # Add Japanese variant if different from canonical and different from simplified
+        if k and k != canonical and k != family["simplified"]:
+            jp_data = get_card_decomposition(k)
+            family["japanese"] = k
+            family["japanese_decomposition"] = jp_data["decomposition"]
+            family["japanese_components"] = jp_data["components_detail"]
+
+        # Merge into existing family if this canonical was already seen
+        if canonical in seen_canonical:
+            existing = families[seen_canonical[canonical]]
+            # Merge simplified: take whichever row has it
+            if not existing["simplified"] and family["simplified"]:
+                existing["simplified"] = family["simplified"]
+                existing["simplified_reading"] = family["simplified_reading"]
+                existing["simplified_decomposition"] = family["simplified_decomposition"]
+                existing["simplified_components"] = family["simplified_components"]
+            # Merge japanese: prefer a value that differs from simplified
+            new_jp = family["japanese"]
+            existing_jp = existing["japanese"]
+            existing_simp = existing["simplified"]
+            if new_jp and new_jp != existing_simp:
+                if not existing_jp or existing_jp == existing_simp:
+                    existing["japanese"] = new_jp
+                    existing["japanese_decomposition"] = family["japanese_decomposition"]
+                    existing["japanese_components"] = family["japanese_components"]
+        else:
+            seen_canonical[canonical] = len(families)
+            families.append(family)
+
+    # Also add standalone primitives
+    for char, card in cards.items():
+        if "primitive" not in card.get("tags", ""):
+            continue
+        # Check if already covered by a family
+        already_covered = any(
+            f["character"] == char or f["simplified"] == char or f["japanese"] == char
+            for f in families
+        )
+        if already_covered:
+            continue
+
+        families.append({
+            "character": char,
+            "keyword": card.get("keyword", ""),
+            "RTH_number": card.get("RTH_number", ""),
+            "RSH_number": card.get("RSH_number", ""),
+            "RTK_number": card.get("RTK_number", ""),
+            "reading": card.get("reading", ""),
+            "decomposition": card.get("decomposition", ""),
+            "spatial": card.get("spatial", ""),
+            "ids": card.get("ids", ""),
+            "components_detail": card.get("components_detail", ""),
+            "simplified": "",
+            "simplified_reading": "",
+            "simplified_decomposition": "",
+            "simplified_components": "",
+            "japanese": "",
+            "japanese_decomposition": "",
+            "japanese_components": "",
+            "deck": card.get("deck", ""),
+            "tags": card.get("tags", ""),
+        })
+
+    # Write CSV
+    with open(filename, "w", encoding="utf-8", newline="") as f:
+        writer = csv.writer(f)
+        writer.writerow(ULTIMATE_COLUMNS)
+        for fam in families:
+            if not fam.get("keyword", "").strip():
+                continue
+            writer.writerow([fam.get(col, "") for col in ULTIMATE_COLUMNS])
+
+    # Count stats
+    n_total = len([f for f in families if f.get("keyword", "").strip()])
+    n_simp = len([f for f in families if f.get("simplified")])
+    n_jp = len([f for f in families if f.get("japanese")])
+
+    return n_total, n_simp, n_jp
+
+
+n_ult, n_simp_cards, n_jp_cards = write_ultimate_deck("Ultimate_deck.csv")
 
 # ══════════════════════════════════════════════════════════════════════
 # 7. Summary
@@ -654,7 +963,9 @@ print(f"\n{'='*60}")
 print(f"  RTH_deck.csv:      {n_rth} cards")
 print(f"  RSH_deck.csv:      {n_rsh} cards")
 print(f"  RTK_deck.csv:      {n_rtk} cards")
-print(f"  Ultimate_deck.csv: {n_ult} cards")
+print(f"  Ultimate_deck.csv: {n_ult} families")
+print(f"    → Simplified variant cards: {n_simp_cards}")
+print(f"    → Japanese variant cards:   {n_jp_cards}")
 print(f"{'='*60}")
 
 # Spot checks

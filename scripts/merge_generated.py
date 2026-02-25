@@ -60,6 +60,23 @@ def parse_decomposition(components_detail):
     return " + ".join(keywords)
 
 
+def format_components_html(components_detail):
+    """Convert 'char = keyword, ...' to styled HTML."""
+    if not components_detail:
+        return ""
+
+    parts = []
+    for part in components_detail.split(", "):
+        if " = " in part:
+            char, keyword = part.split(" = ", 1)
+            parts.append(
+                f'<span style="color:#1a5276">{char}</span> '
+                f'<span style="color:#666">{keyword}</span>'
+            )
+
+    return "<br>".join(parts)
+
+
 def load_existing_csv(path):
     """Load CSV as list of dicts, keyed by character."""
     chars = {}
@@ -100,7 +117,7 @@ def main():
             "decomposition": parse_decomposition(components),
             "spatial": parse_spatial(ids_raw),
             "ids": ids_clean,
-            "components_detail": components,
+            "components_detail": format_components_html(components),
             "deck": deck,
             "tags": e.get("tags", ""),
         }

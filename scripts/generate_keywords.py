@@ -390,14 +390,20 @@ def regenerate_all():
         else:
             simplified_failed.append(char)
 
-    # Generate keywords for Traditional (that aren't already in simplified)
-    simplified_char_set = {e["char"] for e in simplified_results}
+    # Generate keywords for Traditional
+    # Note: characters may exist in both simplified and traditional lists - that's OK
+    # They should appear in both RSH and RTH decks
+    simplified_char_set = {e["char"]: e for e in simplified_results}
     traditional_results = []
     traditional_failed = []
 
     for entry in traditional_chars:
         char = entry["char"]
+        # If already processed in simplified, reuse that data with traditional tag
         if char in simplified_char_set:
+            reused = dict(simplified_char_set[char])
+            reused["tags"] = entry["tags"]  # Use TC::A or TC::B tag
+            traditional_results.append(reused)
             continue
 
         keyword = None
