@@ -1,0 +1,1 @@
+{"config": {"llm_provider": "gemini", "api_key": "AIzaSyBXZEuq254M1BBpTia4MHd-k9Z83O7Kj00", "model": "gemini-2.0-flash", "auto_generate_story": false, "character_field": "Character", "keyword_field": "Keyword", "explanation_field": "Heisig Explanation", "story_field": "Heisig Story"}}

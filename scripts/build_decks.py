@@ -249,9 +249,19 @@ def recursive_decompose(char, depth=0, max_depth=10, seen=None, is_root=True):
     if char in heisig_by_char and heisig_by_char[char].get("components"):
         e = heisig_by_char[char]
         children = []
+        char_to_idx = {}  # comp_char -> index in children, for dedup
         for comp_name in e["components"]:
             comp_char = heisig_by_keyword.get(comp_name)
-            children.append({"char": comp_char or "?", "name": comp_name})
+            if comp_char and comp_char in char_to_idx:
+                # Same character cited twice (e.g. "early" and "sunflower" both = 早)
+                # Merge alt name onto existing child
+                idx = char_to_idx[comp_char]
+                children[idx].setdefault("alt_names", []).append(comp_name)
+            else:
+                child = {"char": comp_char or "?", "name": comp_name}
+                if comp_char:
+                    char_to_idx[comp_char] = len(children)
+                children.append(child)
         return {"char": char, "name": name, "source": "heisig", "children": children}
 
     # If this is a sub-component (not root) and it has a name
@@ -270,9 +280,16 @@ def recursive_decompose(char, depth=0, max_depth=10, seen=None, is_root=True):
         if variant_of and variant_of in heisig_by_char and heisig_by_char[variant_of].get("components"):
             e = heisig_by_char[variant_of]
             children = []
+            char_to_idx = {}
             for comp_name in e["components"]:
                 comp_char = heisig_by_keyword.get(comp_name)
-                children.append({"char": comp_char or "?", "name": comp_name})
+                if comp_char and comp_char in char_to_idx:
+                    children[char_to_idx[comp_char]].setdefault("alt_names", []).append(comp_name)
+                else:
+                    child = {"char": comp_char or "?", "name": comp_name}
+                    if comp_char:
+                        char_to_idx[comp_char] = len(children)
+                    children.append(child)
             return {"char": char, "name": name, "source": "heisig_variant", "children": children}
 
     # Heisig atomic or mapped — stop
@@ -309,6 +326,9 @@ def collect_leaves(node, is_root=True):
     Stops at any named node (doesn't recurse into its sub-components)."""
     # Named non-root node: stop here
     if not is_root and node.get("name"):
+        alt_names = node.get("alt_names", [])
+        if alt_names:
+            return [node["name"] + " / " + " / ".join(alt_names)]
         return [node["name"]]
     if "children" not in node:
         name = node.get("name")
@@ -425,6 +445,7 @@ def ensure_card(char):
         cards[char] = {
             "character": char,
             "keyword": "",
+            "primitive_meanings": "",
             "RTH_number": "",
             "RSH_number": "",
             "RTK_number": "",
@@ -476,12 +497,10 @@ for row in excel_rows:
             card["books"].add(book)
             card[f"{book}_number"] = str(num)
 
+        if kw:
+            card[f"{book}_keyword"] = kw
         if kw and not card["keyword"]:
             card["keyword"] = kw
-        elif kw and card["keyword"] and kw != card["keyword"]:
-            # Append alternate keyword if different
-            if kw not in card["keyword"]:
-                card["keyword"] += f" / {kw}"
 
         if lesson:
             # Convert "RSH1-L01" -> "RSH1::L01" for Anki nested tags
@@ -572,6 +591,16 @@ for char, card in cards.items():
     # Raw IDS string
     card["ids"] = get_raw_ids(char)
 
+    # Primitive aliases (shown on card as dimmed line below keyword)
+    if char in heisig_by_char:
+        entry = heisig_by_char[char]
+        aliases = entry.get("primitive_aliases", [])
+        kw_lower = card["keyword"].lower()
+        distinct = [a for a in aliases if a.lower() != kw_lower]
+        card["primitive_meanings"] = " · ".join(distinct) if distinct else ""
+    else:
+        card["primitive_meanings"] = ""
+
     # Tags: add primitive tag if applicable
     if char in heisig_by_char:
         entry = heisig_by_char[char]
@@ -597,6 +626,44 @@ for char, card in cards.items():
         card["tags"] = " ".join(sorted(set(tags.split() + [prim_lesson_by_char[char]])))
 
 
+def parse_lesson_tag(tag):
+    """Parse 'RTH1::L03' -> (1, 3) for sorting."""
+    m = re.match(r'[A-Z]+(\d+)::L(\d+)', tag)
+    return (int(m.group(1)), int(m.group(2))) if m else (99, 99)
+
+
+# Build per-primitive first-appearance lesson for RTH and RTK:
+# scan all Heisig-decomposed characters and find the earliest lesson
+# in which each primitive appears as a component.
+prim_first_lesson = {}  # prim_char -> {"RTH": tag, "RTK": tag}
+
+for char, card in cards.items():
+    if char not in heisig_by_char:
+        continue
+    components = heisig_by_char[char].get("components", [])
+    if not components:
+        continue
+    tags = card.get("tags", "").split()
+    book_tags = {
+        "RTH": next((t for t in tags if t.startswith("RTH") and "::" in t), None),
+        "RTK": next((t for t in tags if t.startswith("RTK") and "::" in t), None),
+    }
+    for comp_name in components:
+        prim_char = heisig_by_keyword.get(comp_name)
+        if not prim_char or prim_char not in heisig_by_char:
+            continue
+        prim_entry = heisig_by_char[prim_char]
+        if prim_entry.get("type") != "primitive" and not prim_entry.get("primitive_aliases"):
+            continue
+        if prim_char not in prim_first_lesson:
+            prim_first_lesson[prim_char] = {}
+        for book, tag in book_tags.items():
+            if tag:
+                existing = prim_first_lesson[prim_char].get(book)
+                if not existing or parse_lesson_tag(tag) < parse_lesson_tag(existing):
+                    prim_first_lesson[prim_char][book] = tag
+
+
 # ══════════════════════════════════════════════════════════════════════
 # 5. Add standalone primitive cards
 # ══════════════════════════════════════════════════════════════════════
@@ -605,7 +672,26 @@ primitives_added = 0
 for entry in rsh["primitives"]:
     char = entry["character"]
     if char in cards:
-        continue  # already covered
+        # Card exists (e.g. from Excel as RTK-only). Patch in RSH primitive identity
+        # so it appears in the RSH deck with the correct keyword and lesson tag.
+        existing = cards[char]
+        lesson_tag = ""
+        if entry.get("book") and entry.get("lesson"):
+            lesson_tag = f"RSH{entry['book']}::L{entry['lesson']:02d}"
+        books_to_add = ["RSH"] + [b for b in ("RTH", "RTK") if b in prim_first_lesson.get(char, {})]
+        for book in books_to_add:
+            if book not in existing.get("deck", ""):
+                existing["deck"] = (existing.get("deck", "") + " " + book).strip()
+        if not existing.get("RSH_keyword"):
+            existing["RSH_keyword"] = entry["keyword"]
+        tags = set(existing.get("tags", "").split())
+        tags.add("primitive")
+        if lesson_tag:
+            tags.add(lesson_tag)
+        for book, book_tag in prim_first_lesson.get(char, {}).items():
+            tags.add(book_tag)
+        existing["tags"] = " ".join(sorted(tags))
+        continue
     # Standalone primitive not in any book's character list
     tree = recursive_decompose(char)
     leaves = collect_leaves(tree)
@@ -613,17 +699,19 @@ for entry in rsh["primitives"]:
 
     aliases = entry["primitive_aliases"]
     kw = entry["keyword"]
-    alias_str = f" (also: {', '.join(aliases)})" if aliases else ""
 
     lesson_tag = ""
     if entry.get("book") and entry.get("lesson"):
         lesson_tag = f"RSH{entry['book']}::L{entry['lesson']:02d}"
 
-    tags = " ".join(filter(None, [lesson_tag, "primitive"]))
+    extra_tags = [t for t in prim_first_lesson.get(char, {}).values()]
+    tags = " ".join(sorted(filter(None, [lesson_tag] + extra_tags + ["primitive"])))
 
+    distinct_aliases = [a for a in aliases if a.lower() != kw.lower()]
     card = {
         "character": char,
-        "keyword": f"{kw}{alias_str}",
+        "keyword": kw,
+        "primitive_meanings": " · ".join(distinct_aliases),
         "RTH_number": "",
         "RSH_number": "",
         "RTK_number": "",
@@ -632,7 +720,7 @@ for entry in rsh["primitives"]:
         "spatial": get_top_operator(char),
         "ids": get_raw_ids(char),
         "components_detail": "",
-        "deck": "RSH",
+        "deck": " ".join(["RSH"] + [b for b in ("RTH", "RTK") if b in prim_first_lesson.get(char, {})]),
         "tags": tags,
     }
     if tree.get("children"):
@@ -668,9 +756,13 @@ for entry in rsh["characters"]:
     if entry.get("book") and entry.get("lesson"):
         lesson_tag = f"RSH{entry['book']}::L{entry['lesson']:02d}"
 
+    kw = entry["keyword"]
+    aliases = entry["primitive_aliases"]
+    distinct_aliases = [a for a in aliases if a.lower() != kw.lower()]
     card = {
         "character": char,
-        "keyword": entry["keyword"],
+        "keyword": kw,
+        "primitive_meanings": " · ".join(distinct_aliases),
         "RTH_number": "",
         "RSH_number": str(entry["number"]) if entry.get("number") else "",
         "RTK_number": "",
@@ -679,8 +771,8 @@ for entry in rsh["characters"]:
         "spatial": get_top_operator(char),
         "ids": get_raw_ids(char),
         "components_detail": "",
-        "deck": "RSH",
-        "tags": " ".join(filter(None, [lesson_tag, "primitive"])),
+        "deck": " ".join(["RSH"] + [b for b in ("RTH", "RTK") if b in prim_first_lesson.get(char, {})]),
+        "tags": " ".join(sorted(filter(None, [lesson_tag] + list(prim_first_lesson.get(char, {}).values()) + ["primitive"]))),
     }
     if tree.get("children"):
         detail_parts = []
@@ -706,7 +798,7 @@ print(f"Standalone primitives added: {primitives_added}")
 # 6. Output CSVs
 # ══════════════════════════════════════════════════════════════════════
 
-COLUMNS = ["character", "keyword", "RTH_number", "RSH_number", "RTK_number",
+COLUMNS = ["character", "keyword", "primitive_meanings", "RTH_number", "RSH_number", "RTK_number",
            "reading", "decomposition", "spatial", "ids", "components_detail", "variants", "deck", "tags"]
 
 
@@ -734,6 +826,11 @@ def write_deck(filename, filter_fn, tag_prefix=None, for_book=None):
                 # Add variants for single-book decks
                 if col == "variants" and for_book:
                     val = format_variants(char, for_book)
+                # Use book-specific keyword for single-book decks
+                if col == "keyword" and for_book:
+                    book_kw = card.get(f"{for_book}_keyword", "")
+                    if book_kw:
+                        val = book_kw
                 # Clear irrelevant book numbers for single-book decks
                 if for_book:
                     if col == "RTH_number" and for_book != "RTH":

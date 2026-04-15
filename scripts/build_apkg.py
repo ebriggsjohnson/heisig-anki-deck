@@ -66,9 +66,29 @@ def char_display(char):
 
 
 def enrich_components_detail(detail_str):
-    """Replace 囧 characters in components_detail with img tags."""
+    """Replace 囧 characters in components_detail with img tags.
+
+    Handles both old format (char = name, char = name) and
+    new HTML format (<span>char</span> <span>name</span><br>...).
+    """
     if not detail_str:
         return detail_str
+
+    # Check if it's the new HTML format
+    if "<span" in detail_str:
+        # For HTML format, look for 囧 and replace with img tags
+        for jiong_char, kw in jiong_char_to_keyword.items():
+            if jiong_char in detail_str:
+                tag = prim_img_tag(kw)
+                if tag:
+                    # Replace the character in the span
+                    detail_str = detail_str.replace(
+                        f'>{jiong_char}</span>',
+                        f'>{tag}</span>'
+                    )
+        return detail_str
+
+    # Old format: "char = name, char = name"
     parts = detail_str.split(", ")
     enriched = []
     for part in parts:
@@ -123,6 +143,11 @@ CARD_CSS = """\
   margin: 10px 0;
   color: #1a1a2e;
 }
+.primitive-meanings {
+  font-size: 15px;
+  color: #999;
+  margin: 2px 0 8px 0;
+}
 .reading {
   font-size: 20px;
   color: #555;
@@ -163,17 +188,44 @@ CARD_CSS = """\
   font-size: 11px;
   color: #c0392b;
 }
+.card-type {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 10px;
+}
+.reading-answer {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 15px 0;
+  color: #1a5276;
+}
+.variants {
+  font-size: 14px;
+  color: #666;
+  margin: 8px 0;
+  padding: 4px 8px;
+  background: #f0f0f0;
+  border-radius: 4px;
+  display: inline-block;
+}
 """
 
-FRONT_TEMPLATE = """\
-<div class="character">{{Character}}</div>
-"""
-
-BACK_TEMPLATE = """\
-{{FrontSide}}
-<hr>
+# ── Writing card templates (keyword + pinyin → character) ──────────────
+# Always generates — primitives with no reading still get a keyword→character card
+WRITING_FRONT_TEMPLATE = """\
+<div class="card-type">Writing</div>
 <div class="keyword">{{Keyword}}</div>
+{{#PrimitiveMeanings}}<div class="primitive-meanings">as primitive: {{PrimitiveMeanings}}</div>{{/PrimitiveMeanings}}
 {{#Reading}}<div class="reading">{{Reading}}</div>{{/Reading}}
+"""
+
+WRITING_BACK_TEMPLATE = """\
+<div class="card-type">Writing</div>
+<div class="keyword">{{Keyword}}</div>
+{{#PrimitiveMeanings}}<div class="primitive-meanings">as primitive: {{PrimitiveMeanings}}</div>{{/PrimitiveMeanings}}
+{{#Reading}}<div class="reading">{{Reading}}</div>{{/Reading}}
+<hr>
+<div class="character">{{Character}}</div>
 {{#Decomposition}}<div class="decomposition">{{Decomposition}}</div>{{/Decomposition}}
 {{#ComponentsDetail}}<div class="components">{{ComponentsDetail}}</div>{{/ComponentsDetail}}
 {{#Spatial}}<div class="spatial">{{Spatial}}</div>{{/Spatial}}
@@ -183,13 +235,34 @@ BACK_TEMPLATE = """\
 {{#Heisig Explanation}}<div class="explanation">{{Heisig Explanation}}</div>{{/Heisig Explanation}}
 """
 
+# ── Reading card templates (character → pinyin) ────────────────────────
+# Only generates when Reading field is non-empty (RTH/RSH cards)
+READING_FRONT_TEMPLATE = """\
+{{#Reading}}
+<div class="card-type">Reading</div>
+<div class="character">{{Character}}</div>
+{{/Reading}}
+"""
+
+READING_BACK_TEMPLATE = """\
+{{#Reading}}
+<div class="card-type">Reading</div>
+<div class="character">{{Character}}</div>
+<hr>
+<div class="reading-answer">{{Reading}}</div>
+<div class="keyword">{{Keyword}}</div>
+{{/Reading}}
+"""
+
 heisig_model = genanki.Model(
     MODEL_ID,
     "Heisig Primitives + Characters",
     fields=[
         {"name": "Character"},
         {"name": "Keyword"},
+        {"name": "PrimitiveMeanings"},
         {"name": "Reading"},
+        {"name": "Variants"},
         {"name": "Decomposition"},
         {"name": "ComponentsDetail"},
         {"name": "Spatial"},
@@ -197,53 +270,122 @@ heisig_model = genanki.Model(
         {"name": "RSH_Number"},
         {"name": "RTK_Number"},
         {"name": "Heisig Explanation"},
-        {"name": "SortField"},
     ],
     templates=[
         {
-            "name": "Recognition",
-            "qfmt": FRONT_TEMPLATE,
-            "afmt": BACK_TEMPLATE,
+            "name": "Writing",
+            "qfmt": WRITING_FRONT_TEMPLATE,
+            "afmt": WRITING_BACK_TEMPLATE,
+        },
+        {
+            "name": "Reading",
+            "qfmt": READING_FRONT_TEMPLATE,
+            "afmt": READING_BACK_TEMPLATE,
         },
     ],
     css=CARD_CSS,
-    sort_field_index=10,  # SortField = Keyword (with primitive suffix)
+    sort_field_index=1,  # Sort by Keyword
+)
+
+# ── Ultimate deck model (with variant quiz cards) ──────────────────────
+ULTIMATE_MODEL_ID = 1607392324
+
+# Variant quiz templates
+SIMPLIFIED_FRONT = """\
+{{#Simplified}}
+<div class="card-type">Simplified form?</div>
+<div class="character">{{Character}}</div>
+<div class="keyword">{{Keyword}}</div>
+{{/Simplified}}
+"""
+
+SIMPLIFIED_BACK = """\
+{{#Simplified}}
+<div class="card-type">Simplified form</div>
+<div class="character">{{Character}} → {{Simplified}}</div>
+<hr>
+<div class="reading-answer">{{SimplifiedReading}}</div>
+{{#SimplifiedDecomposition}}<div class="decomposition">{{SimplifiedDecomposition}}</div>{{/SimplifiedDecomposition}}
+{{#SimplifiedComponents}}<div class="components">{{SimplifiedComponents}}</div>{{/SimplifiedComponents}}
+{{/Simplified}}
+"""
+
+JAPANESE_FRONT = """\
+{{#Japanese}}
+<div class="card-type">Japanese form?</div>
+<div class="character">{{Character}}</div>
+<div class="keyword">{{Keyword}}</div>
+{{/Japanese}}
+"""
+
+JAPANESE_BACK = """\
+{{#Japanese}}
+<div class="card-type">Japanese form</div>
+<div class="character">{{Character}} → {{Japanese}}</div>
+<hr>
+{{#JapaneseDecomposition}}<div class="decomposition">{{JapaneseDecomposition}}</div>{{/JapaneseDecomposition}}
+{{#JapaneseComponents}}<div class="components">{{JapaneseComponents}}</div>{{/JapaneseComponents}}
+{{/Japanese}}
+"""
+
+ultimate_model = genanki.Model(
+    ULTIMATE_MODEL_ID,
+    "Heisig Ultimate (with variants)",
+    fields=[
+        {"name": "Character"},          # Canonical (Traditional)
+        {"name": "Keyword"},
+        {"name": "PrimitiveMeanings"},
+        {"name": "Reading"},            # Canonical reading
+        {"name": "Decomposition"},      # Canonical decomposition
+        {"name": "ComponentsDetail"},   # Canonical components
+        {"name": "Spatial"},
+        {"name": "RTH_Number"},
+        {"name": "RSH_Number"},
+        {"name": "RTK_Number"},
+        {"name": "Simplified"},         # Only if different from canonical
+        {"name": "SimplifiedReading"},
+        {"name": "SimplifiedDecomposition"},
+        {"name": "SimplifiedComponents"},
+        {"name": "Japanese"},           # Only if different from canonical
+        {"name": "JapaneseDecomposition"},
+        {"name": "JapaneseComponents"},
+        {"name": "Heisig Explanation"},
+        {"name": "ReviewNotes"},        # For user audit/corrections
+    ],
+    templates=[
+        {
+            "name": "Writing",
+            "qfmt": WRITING_FRONT_TEMPLATE,
+            "afmt": WRITING_BACK_TEMPLATE,
+        },
+        {
+            "name": "Reading",
+            "qfmt": READING_FRONT_TEMPLATE,
+            "afmt": READING_BACK_TEMPLATE,
+        },
+        {
+            "name": "Simplified",
+            "qfmt": SIMPLIFIED_FRONT,
+            "afmt": SIMPLIFIED_BACK,
+        },
+        {
+            "name": "Japanese",
+            "qfmt": JAPANESE_FRONT,
+            "afmt": JAPANESE_BACK,
+        },
+    ],
+    css=CARD_CSS,
+    sort_field_index=1,  # Sort by Keyword
 )
 
 
-def build_sort_field_map(cards):
-    """Build a map of character -> sort field value (keyword, with '(primitive)' suffix for conflicts)."""
-    from collections import defaultdict
-
-    keyword_groups = defaultdict(list)
-    for card in cards:
-        kw = card.get("keyword", "").strip()
-        if not kw:
-            continue
-        is_prim = "primitive" in card.get("tags", "")
-        keyword_groups[kw].append((card.get("character", ""), is_prim))
-
-    sort_map = {}
-    for kw, entries in keyword_groups.items():
-        has_prim = any(p for _, p in entries)
-        has_char = any(not p for _, p in entries)
-        for char, is_prim in entries:
-            if is_prim and has_char:
-                sort_map[char] = f"{kw} (primitive)"
-            else:
-                sort_map[char] = kw
-    return sort_map
-
-
-def build_note(card, sort_map):
-    """Build a genanki Note from a card dict."""
+def build_note(card):
+    """Build a genanki Note from a card dict (single-book decks)."""
     char = card.get("character", "")
     character_html = char_display(char)
 
     # Enrich components_detail with img tags
     components = enrich_components_detail(card.get("components_detail", ""))
-
-    sort_val = sort_map.get(char, card.get("keyword", char))
 
     tags_str = card.get("tags", "")
 
@@ -252,7 +394,9 @@ def build_note(card, sort_map):
         fields=[
             character_html,
             card.get("keyword", ""),
+            card.get("primitive_meanings", ""),
             card.get("reading", ""),
+            card.get("variants", ""),
             card.get("decomposition", ""),
             components,
             card.get("spatial", ""),
@@ -260,7 +404,52 @@ def build_note(card, sort_map):
             card.get("RSH_number", ""),
             card.get("RTK_number", ""),
             "",  # Heisig Explanation — filled by the add-on
-            sort_val,
+        ],
+        tags=tags_str.split() if tags_str else [],
+    )
+    return note
+
+
+def build_ultimate_note(card):
+    """Build a genanki Note for Ultimate deck (with variant fields)."""
+    char = card.get("character", "")
+    character_html = char_display(char)
+
+    # Enrich components for canonical and variants
+    components = enrich_components_detail(card.get("components_detail", ""))
+    simp_components = enrich_components_detail(card.get("simplified_components", ""))
+    jp_components = enrich_components_detail(card.get("japanese_components", ""))
+
+    # Handle simplified/japanese character display
+    simp_char = card.get("simplified", "")
+    simp_html = char_display(simp_char) if simp_char else ""
+    jp_char = card.get("japanese", "")
+    jp_html = char_display(jp_char) if jp_char else ""
+
+    tags_str = card.get("tags", "")
+
+    note = genanki.Note(
+        model=ultimate_model,
+        fields=[
+            character_html,
+            card.get("keyword", ""),
+            card.get("primitive_meanings", ""),
+            card.get("reading", ""),
+            card.get("decomposition", ""),
+            components,
+            card.get("spatial", ""),
+            card.get("RTH_number", ""),
+            card.get("RSH_number", ""),
+            card.get("RTK_number", ""),
+            simp_html,
+            card.get("simplified_reading", ""),
+            card.get("simplified_decomposition", ""),
+            simp_components,
+            jp_html,
+            card.get("japanese_decomposition", ""),
+            jp_components,
+            "",  # Heisig Explanation — filled by the add-on
+            "",  # ReviewNotes — for user corrections
         ],
         tags=tags_str.split() if tags_str else [],
     )
@@ -288,7 +477,7 @@ def collect_media_files():
     return media
 
 
-def build_deck(name, csv_path, output_path):
+def build_deck(name, csv_path, output_path, use_ultimate_model=False):
     """Build an .apkg file from a CSV deck."""
     deck_id = DECK_IDS.get(name, hash(name) % (2**31))
     deck = genanki.Deck(deck_id, f"Heisig::{name}")
@@ -296,9 +485,10 @@ def build_deck(name, csv_path, output_path):
     cards = load_csv_cards(csv_path)
     # Drop entries with no keyword
     cards = [c for c in cards if c.get("keyword", "").strip()]
-    sort_map = build_sort_field_map(cards)
+
+    note_builder = build_ultimate_note if use_ultimate_model else build_note
     for card in cards:
-        note = build_note(card, sort_map)
+        note = note_builder(card)
         deck.add_note(note)
 
     media = collect_media_files()
@@ -313,11 +503,12 @@ def build_deck(name, csv_path, output_path):
 def main():
     os.chdir(ROOT)
 
+    # (name, csv_file, apkg_file, use_ultimate_model)
     decks = [
-        ("RTH", "RTH_deck.csv", "RTH_deck.apkg"),
-        ("RSH", "RSH_deck.csv", "RSH_deck.apkg"),
-        ("RTK", "RTK_deck.csv", "RTK_deck.apkg"),
-        ("Ultimate", "Ultimate_deck.csv", "Ultimate_deck.apkg"),
+        ("RTH", "RTH_deck.csv", "RTH_deck.apkg", False),
+        ("RSH", "RSH_deck.csv", "RSH_deck.apkg", False),
+        ("RTK", "RTK_deck.csv", "RTK_deck.apkg", False),
+        ("Ultimate", "Ultimate_deck.csv", "Ultimate_deck.apkg", True),
     ]
 
     print("Building .apkg decks...")
@@ -326,12 +517,12 @@ def main():
     media = collect_media_files()
     print(f"Media files to embed: {len(media)}")
 
-    for name, csv_file, apkg_file in decks:
+    for name, csv_file, apkg_file, use_ultimate in decks:
         csv_path = ROOT / csv_file
         if not csv_path.exists():
             print(f"  SKIP {name}: {csv_file} not found (run build_decks.py first)")
             continue
-        n = build_deck(name, csv_path, ROOT / apkg_file)
+        n = build_deck(name, csv_path, ROOT / apkg_file, use_ultimate_model=use_ultimate)
         print(f"  {apkg_file}: {n} cards")
 
     print("\nDone!")
